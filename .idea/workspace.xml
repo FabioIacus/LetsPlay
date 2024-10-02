@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GraphicController/homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/letsplay/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/letsplay/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/letsplay/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/hello-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="initialization scene builder" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,11 +84,32 @@
       <workItem from="1727804556441" duration="21000" />
       <workItem from="1727856702532" duration="699000" />
       <workItem from="1727872677829" duration="485000" />
-      <workItem from="1727875916670" duration="1223000" />
+      <workItem from="1727875916670" duration="1527000" />
     </task>
+    <task id="LOCAL-00001" summary="initialization scene builder">
+      <option name="closed" value="true" />
+      <created>1727877296104</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727877296104</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initialization scene builder">
+      <option name="closed" value="true" />
+      <created>1727877421045</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727877421045</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initialization scene builder" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialization scene builder" />
   </component>
 </project>
