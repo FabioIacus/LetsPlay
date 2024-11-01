@@ -1,4 +1,4 @@
-package GraphicController;
+package com.letsplay.controller;
 import javafx.fxml.FXML;
 import javafx.scene.layout.BorderPane;
 

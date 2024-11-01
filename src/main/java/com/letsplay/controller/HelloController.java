@@ -1,4 +1,4 @@
-package com.letsplay;
+package com.letsplay.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
