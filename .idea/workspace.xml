@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="initialization scene builder">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/AbstractCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/CLIHome.java" afterDir="false" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="showMenu() and CLIMain creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GraphicController/homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/GUIMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homepage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,26 +50,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CLIMain.executor": "Run",
-    "Application.GUIMain.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/39377/Desktop/Università/Corsi/ISPW/LetsPlay",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CLIMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GUIMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/39377/Desktop/Università/Corsi/ISPW/Codici/GoF1/EsempiInClasse&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.letsplay" />
@@ -119,7 +108,9 @@
       <workItem from="1730129847555" duration="612000" />
       <workItem from="1730280091077" duration="962000" />
       <workItem from="1730367865274" duration="5344000" />
-      <workItem from="1730470237342" duration="10491000" />
+      <workItem from="1730470237342" duration="11164000" />
+      <workItem from="1730494734614" duration="636000" />
+      <workItem from="1730644130830" duration="603000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -145,14 +136,34 @@
       <option name="project" value="LOCAL" />
       <updated>1727877631601</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="showMenu() and CLIMain creation">
+      <option name="closed" value="true" />
+      <created>1730484622045</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730484622045</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialization scene builder" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialization scene builder" />
+    <MESSAGE value="showMenu() and CLIMain creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="showMenu() and CLIMain creation" />
   </component>
 </project>
