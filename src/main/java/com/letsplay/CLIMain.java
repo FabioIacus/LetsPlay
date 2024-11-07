@@ -1,11 +1,10 @@
 package com.letsplay;
 
 import com.letsplay.controller.graphic_controller.CLI.CLIHome;
-
-import java.io.IOException;
+import com.letsplay.exception.InvalidInputException;
 
 public class CLIMain {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws InvalidInputException {
         CLIHome applicationController = new CLIHome();
         applicationController.start();
     }
