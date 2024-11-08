@@ -4,13 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="showMenu() and CLIMain creation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/InvalidInputException.java" afterDir="false" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="continuo della CLIHome e aggiunta cartelle tra cui Role">
+      <change afterPath="$PROJECT_DIR$/db.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/CLIHomeCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/Exception1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/RegistrationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/RegistrationDAO_FileSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/RegistrationDAO_JDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/TournamentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Registration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Tournament.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/properties/config_DB.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/properties/config_filesystem.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/UserBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/AbstractCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/AbstractCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/CLIHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/CLIHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/InvalidInputException.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +35,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -73,6 +90,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -121,7 +139,8 @@
       <workItem from="1730734148080" duration="212000" />
       <workItem from="1730806203575" duration="3210000" />
       <workItem from="1730969366791" duration="111000" />
-      <workItem from="1730976090322" duration="4683000" />
+      <workItem from="1730976090322" duration="7376000" />
+      <workItem from="1731061828243" duration="13212000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -163,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730729511028</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="continuo della CLIHome e aggiunta cartelle tra cui Role">
+      <option name="closed" value="true" />
+      <created>1730991224516</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730991224516</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +210,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialization scene builder" />
     <MESSAGE value="showMenu() and CLIMain creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="showMenu() and CLIMain creation" />
+    <MESSAGE value="continuo della CLIHome e aggiunta cartelle tra cui Role" />
+    <option name="LAST_COMMIT_MESSAGE" value="continuo della CLIHome e aggiunta cartelle tra cui Role" />
   </component>
 </project>

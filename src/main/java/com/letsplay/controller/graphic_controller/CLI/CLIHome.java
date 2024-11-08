@@ -2,17 +2,15 @@ package com.letsplay.controller.graphic_controller.CLI;
 
 import com.letsplay.bean.UserBean;
 import com.letsplay.controller.LoginController;
-import com.letsplay.exception.InvalidInputException;
+import com.letsplay.exception.Exception1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLException;
-import java.util.logging.Level;
 
 public class CLIHome extends AbstractCLI{
 
-    public void start() throws InvalidInputException {
+    public void start() throws Exception1 {
         while (true) {
             int choice;
             try {
@@ -21,10 +19,10 @@ public class CLIHome extends AbstractCLI{
                     case 1 -> login();
                    // case 2 -> new CLISignUpGraphicController().start();
                     case 3 -> System.exit(0);
-                    default -> throw new InvalidInputException("Invalid choice");
+                    default -> throw new Exception1("PORCODIO");
                 }
-            } catch (InvalidInputException e) {
-                throw new InvalidInputException(e.getMessage());
+            } catch (Exception1 e) {
+                throw new Exception1("PORCODIO");
             }
         }
     }
@@ -38,20 +36,19 @@ public class CLIHome extends AbstractCLI{
         return getChoice(1, 3);
     }
 
-    private void login() {
+    private void login() throws Exception1 {
         LoginController loginController = new LoginController();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
-            System.out.print("Username: ");
-            String username = reader.readLine();
+            System.out.print("Email: ");
+            String email = reader.readLine();
             System.out.print("Password: ");
             String password = reader.readLine();
-            UserBean bean = new UserBean(username, password);
-            loginController.login(bean);
-
-            new CLIHomeGraphicController().start();
-        } catch (InvalidFormatException | DAOException | IOException | SQLException e) {
-            logger.log(Level.INFO, e.getMessage());
+            UserBean login = new UserBean(email, password);
+            loginController.login(login);
+            new CLIHomeCustomer().start();
+        } catch (Exception1 | IOException e) {
+            System.out.println(e.getMessage());
             start();
         }
     }

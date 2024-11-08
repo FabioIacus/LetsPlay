@@ -17,4 +17,10 @@ public class AbstractCLI {
         }
         return choice;
     }
+
+    protected void logout(){
+        //new LoginController().logout();
+        //new CLILoginGraphicController().start();
+    }
+
 }
