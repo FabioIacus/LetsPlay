@@ -7,6 +7,7 @@ import com.letsplay.exception.Exception1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.InputMismatchException;
 
 public class CLIHome extends AbstractCLI{
 
@@ -19,10 +20,10 @@ public class CLIHome extends AbstractCLI{
                     case 1 -> login();
                    // case 2 -> new CLISignUpGraphicController().start();
                     case 3 -> System.exit(0);
-                    default -> throw new Exception1("PORCODIO");
+                   // default -> throw new Exception1("PORCODIO");
                 }
-            } catch (Exception1 e) {
-                throw new Exception1("PORCODIO");
+            } catch (InputMismatchException e) {
+                throw new Exception1("You have entered an incorrect input");
             }
         }
     }
