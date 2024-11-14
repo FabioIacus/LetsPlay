@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="login completed">
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="risolto errore sicurezza sonarcloud sul printstacktrace">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLILogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLISignUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/ConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/AbstractCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/AbstractCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLIHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/CLIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLIHomeCustomer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +135,7 @@
       <workItem from="1731061828243" duration="15063000" />
       <workItem from="1731081546380" duration="518000" />
       <workItem from="1731399296875" duration="26343000" />
-      <workItem from="1731597998934" duration="1991000" />
+      <workItem from="1731597998934" duration="7751000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -220,7 +225,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731598867537</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="risolto errore sicurezza sonarcloud sul printstacktrace">
+      <option name="closed" value="true" />
+      <created>1731600025768</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731600025768</updated>
+    </task>
+    <task id="LOCAL-00013" summary="risolto errore sicurezza sonarcloud sul printstacktrace">
+      <option name="closed" value="true" />
+      <created>1731600329279</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731600329279</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +265,8 @@
     <MESSAGE value="commit 8/11" />
     <MESSAGE value="commit first exception" />
     <MESSAGE value="login completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="login completed" />
+    <MESSAGE value="risolto errore sicurezza sonarcloud sul printstacktrace" />
+    <option name="LAST_COMMIT_MESSAGE" value="risolto errore sicurezza sonarcloud sul printstacktrace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

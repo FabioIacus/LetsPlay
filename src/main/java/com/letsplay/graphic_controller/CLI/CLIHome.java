@@ -1,4 +1,4 @@
-package com.letsplay.controller.graphic_controller.CLI;
+package com.letsplay.graphic_controller.CLI;
 
 import com.letsplay.bean.UserBean;
 import com.letsplay.controller.LoginController;
@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 import java.util.InputMismatchException;
 
-public class ApplicationController extends AbstractCLI {
+public class CLIHome extends AbstractCLI {
 
     //metodo iniziale
     public void start() throws Exception1 {
@@ -20,8 +20,8 @@ public class ApplicationController extends AbstractCLI {
             try {
                 choice = showMenu();
                 switch (choice) {
-                    case 1 -> login();
-                   // case 2 -> new CLISignUpGraphicController().start();
+                    case 1 -> new CLILogin().start();
+                    case 2 -> new CLISignUp().start();
                     case 3 -> System.exit(0);
                     default -> throw new Exception1("You have entered an incorrect input");
                 }
@@ -41,27 +41,4 @@ public class ApplicationController extends AbstractCLI {
         return getChoice(1, 3);
     }
 
-    //metodo login
-    private void login() throws Exception1 {
-
-        LoginController loginController = new LoginController();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            System.out.print("Email: ");
-            String email = reader.readLine();
-            System.out.print("Password: ");
-            String password = reader.readLine();
-
-            //passaggio delle credenziali per il login
-            UserBean userBean = new UserBean(email, password);
-            loginController.login(userBean);
-
-            //accesso pagina iniziale
-            new CLIHomeCustomer().start();
-
-        } catch (Exception1 | IOException | SQLException | DAOException e) {
-            System.out.println(e.getMessage());
-            start();
-        }
-    }
 }

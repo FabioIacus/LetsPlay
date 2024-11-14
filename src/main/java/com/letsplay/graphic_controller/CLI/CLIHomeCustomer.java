@@ -1,4 +1,4 @@
-package com.letsplay.controller.graphic_controller.CLI;
+package com.letsplay.graphic_controller.CLI;
 
 import com.letsplay.exception.Exception1;
 
