@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class UserDAO {
     private static final String NAME = "Name";
@@ -52,12 +54,13 @@ public class UserDAO {
                 if (stmt != null)
                     stmt.close();
             } catch (SQLException se2) {
+                Logger.getAnonymousLogger().log(Level.INFO, "Errore: ", se2.getMessage());
             }
             try {
                 if (conn != null)
                     conn.close();
             } catch (SQLException se) {
-                se.printStackTrace();
+                Logger.getAnonymousLogger().log(Level.INFO, "Errore: ", se.getMessage());
             }
         }
 
