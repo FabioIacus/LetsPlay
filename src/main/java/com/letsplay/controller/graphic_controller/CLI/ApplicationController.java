@@ -2,15 +2,18 @@ package com.letsplay.controller.graphic_controller.CLI;
 
 import com.letsplay.bean.UserBean;
 import com.letsplay.controller.LoginController;
+import com.letsplay.exception.DAOException;
 import com.letsplay.exception.Exception1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 import java.util.InputMismatchException;
 
-public class CLIHome extends AbstractCLI{
+public class ApplicationController extends AbstractCLI {
 
+    //metodo iniziale
     public void start() throws Exception1 {
         while (true) {
             int choice;
@@ -20,7 +23,7 @@ public class CLIHome extends AbstractCLI{
                     case 1 -> login();
                    // case 2 -> new CLISignUpGraphicController().start();
                     case 3 -> System.exit(0);
-                   // default -> throw new Exception1("PORCODIO");
+                    default -> throw new Exception1("You have entered an incorrect input");
                 }
             } catch (InputMismatchException e) {
                 throw new Exception1("You have entered an incorrect input");
@@ -28,6 +31,7 @@ public class CLIHome extends AbstractCLI{
         }
     }
 
+    //stampa menu iniziale
     private int showMenu() {
         System.out.println("---Menu---");
         System.out.println("1. Login");
@@ -37,7 +41,9 @@ public class CLIHome extends AbstractCLI{
         return getChoice(1, 3);
     }
 
+    //metodo login
     private void login() throws Exception1 {
+
         LoginController loginController = new LoginController();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
@@ -45,10 +51,15 @@ public class CLIHome extends AbstractCLI{
             String email = reader.readLine();
             System.out.print("Password: ");
             String password = reader.readLine();
-            UserBean login = new UserBean(email, password);
-            loginController.login(login);
+
+            //passaggio delle credenziali per il login
+            UserBean userBean = new UserBean(email, password);
+            loginController.login(userBean);
+
+            //accesso pagina iniziale
             new CLIHomeCustomer().start();
-        } catch (Exception1 | IOException e) {
+
+        } catch (Exception1 | IOException | SQLException | DAOException e) {
             System.out.println(e.getMessage());
             start();
         }

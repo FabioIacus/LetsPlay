@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="commit first exception" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="commit first exception">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/DAOException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/ConnectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/SessionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/properties/FS.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/AbstractCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/AbstractCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/CLIHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/CLIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/graphic_controller/CLI/CLIHomeCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/properties/config_DB.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/properties/DB.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/properties/config_filesystem.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.csv" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Exception" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
       </list>
     </option>
@@ -62,17 +77,23 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/39377/Desktop/Università/Corsi/ISPW/Codici/secExceptions",
+    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.32.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\39377\Desktop\Università\Corsi\ISPW\LetsPlay\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.letsplay" />
     </key>
@@ -119,6 +140,8 @@
       <workItem from="1730969366791" duration="111000" />
       <workItem from="1730976090322" duration="7376000" />
       <workItem from="1731061828243" duration="15063000" />
+      <workItem from="1731081546380" duration="518000" />
+      <workItem from="1731399296875" duration="26343000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -184,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731081348869</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="commit first exception">
+      <option name="closed" value="true" />
+      <created>1731081556543</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731081556543</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,5 +239,19 @@
     <MESSAGE value="commit 8/11" />
     <MESSAGE value="commit first exception" />
     <option name="LAST_COMMIT_MESSAGE" value="commit first exception" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

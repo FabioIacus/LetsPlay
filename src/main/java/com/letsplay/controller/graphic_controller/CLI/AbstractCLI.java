@@ -2,7 +2,7 @@ package com.letsplay.controller.graphic_controller.CLI;
 
 import java.util.Scanner;
 
-public class AbstractCLI {
+public abstract class AbstractCLI {
 
     protected int getChoice(int min, int max) {
         Scanner input = new Scanner(System.in);

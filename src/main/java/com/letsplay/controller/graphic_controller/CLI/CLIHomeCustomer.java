@@ -15,11 +15,11 @@ public class CLIHomeCustomer extends AbstractCLI {
                     case 3 -> logout();
                     case 4 -> viewProfile();
                     case 5 -> System.exit(0);
-                    default -> throw new Exception1("PORCODIO");
+                    default -> throw new Exception1("You have entered an incorrect input");
                 }
             }
             catch (Exception1 e){
-                throw new Exception1("PORCODIO");
+                throw new Exception1("You have entered an incorrect input");
             }
         }
     }
