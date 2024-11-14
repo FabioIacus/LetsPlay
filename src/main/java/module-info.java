@@ -1,4 +1,4 @@
-module com.letsplay.letsplay {
+module com.letsplay {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
