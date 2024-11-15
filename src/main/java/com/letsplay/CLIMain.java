@@ -1,6 +1,6 @@
 package com.letsplay;
 
-import com.letsplay.graphicController.CLI.CLIHome;
+import com.letsplay.graphicscontroller.CLI.CLIHome;
 import com.letsplay.exception.InputException;
 
 public class CLIMain {

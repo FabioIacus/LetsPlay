@@ -1,4 +1,4 @@
-package com.letsplay.graphicController.CLI;
+package com.letsplay.graphicscontroller.CLI;
 
 import java.util.Scanner;
 

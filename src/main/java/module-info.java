@@ -9,8 +9,8 @@ module com.letsplay {
     exports com.letsplay.controller;
     exports com.letsplay.bean;
     exports com.letsplay.exception;
-    exports com.letsplay.graphicController.CLI;
-    exports com.letsplay.graphicController.GUI;
+    exports com.letsplay.graphicscontroller.CLI;
+    exports com.letsplay.graphicscontroller.GUI;
     exports com.letsplay.model.DAO;
     exports com.letsplay.model.domain;
 

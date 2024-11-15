@@ -1,4 +1,4 @@
-package com.letsplay.graphicController.CLI;
+package com.letsplay.graphicscontroller.CLI;
 
 import com.letsplay.bean.UserBean;
 import com.letsplay.controller.LoginController;

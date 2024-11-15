@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="creazione di CLILogin">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/SignUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/EmailException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/RegistrationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/GUI/GUIHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/UserBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/Exception1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/InputException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLIHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLIHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLIHomeCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLILogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphic_controller/CLI/CLISignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-    </list>
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="rename in graphicController" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +129,7 @@
       <workItem from="1731399296875" duration="26343000" />
       <workItem from="1731597998934" duration="7931000" />
       <workItem from="1731618363240" duration="4139000" />
-      <workItem from="1731667438894" duration="12806000" />
+      <workItem from="1731667438894" duration="13551000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -260,7 +243,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731608242891</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="implementazione registrazione utenti">
+      <option name="closed" value="true" />
+      <created>1731683242932</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731683242932</updated>
+    </task>
+    <task id="LOCAL-00016" summary="rename in graphicController">
+      <option name="closed" value="true" />
+      <created>1731683862683</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731683862683</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +285,9 @@
     <MESSAGE value="login completed" />
     <MESSAGE value="risolto errore sicurezza sonarcloud sul printstacktrace" />
     <MESSAGE value="creazione di CLILogin" />
-    <option name="LAST_COMMIT_MESSAGE" value="creazione di CLILogin" />
+    <MESSAGE value="implementazione registrazione utenti" />
+    <MESSAGE value="rename in graphicController" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename in graphicController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
