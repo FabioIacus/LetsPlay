@@ -3,7 +3,7 @@ package com.letsplay.controller;
 import com.letsplay.bean.UserBean;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.RegistrationException;
-import com.letsplay.model.DAO.UserDAO;
+import com.letsplay.model.dao.UserDAO;
 import com.letsplay.model.domain.Role;
 import com.letsplay.model.domain.User;
 

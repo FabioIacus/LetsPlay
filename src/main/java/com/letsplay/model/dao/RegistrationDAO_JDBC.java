@@ -1,4 +1,4 @@
-package com.letsplay.model.DAO;
+package com.letsplay.model.dao;
 
 public class RegistrationDAO_JDBC implements RegistrationDAO {
 }

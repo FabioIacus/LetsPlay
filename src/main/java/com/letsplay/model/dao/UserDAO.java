@@ -1,4 +1,4 @@
-package com.letsplay.model.DAO;
+package com.letsplay.model.dao;
 
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.EmailException;

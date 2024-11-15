@@ -2,8 +2,8 @@ package com.letsplay.controller;
 
 import com.letsplay.bean.UserBean;
 import com.letsplay.exception.DAOException;
-import com.letsplay.model.DAO.SessionManager;
-import com.letsplay.model.DAO.UserDAO;
+import com.letsplay.model.dao.SessionManager;
+import com.letsplay.model.dao.UserDAO;
 import com.letsplay.model.domain.User;
 
 import java.sql.SQLException;
@@ -14,7 +14,7 @@ public class LoginController {
         //creo l'entità utente
         User cred  = new User(userBean.getEmail(), userBean.getPassword());
 
-        //per effettuare il login chiamo il DAO
+        //per effettuare il login chiamo il dao
         User user = new UserDAO().login(cred);
 
         //invoco il gestore delle sessioni per avere l'unica istanza

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="rename in graphicController" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="rename in graphicscontroller" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +129,7 @@
       <workItem from="1731399296875" duration="26343000" />
       <workItem from="1731597998934" duration="7931000" />
       <workItem from="1731618363240" duration="4139000" />
-      <workItem from="1731667438894" duration="13551000" />
+      <workItem from="1731667438894" duration="14511000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -259,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731683862683</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="rename in graphicscontroller">
+      <option name="closed" value="true" />
+      <created>1731684830640</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731684830640</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +295,8 @@
     <MESSAGE value="creazione di CLILogin" />
     <MESSAGE value="implementazione registrazione utenti" />
     <MESSAGE value="rename in graphicController" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename in graphicController" />
+    <MESSAGE value="rename in graphicscontroller" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename in graphicscontroller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
