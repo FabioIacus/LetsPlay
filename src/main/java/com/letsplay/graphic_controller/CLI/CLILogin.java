@@ -3,7 +3,7 @@ package com.letsplay.graphic_controller.CLI;
 import com.letsplay.bean.UserBean;
 import com.letsplay.controller.LoginController;
 import com.letsplay.exception.DAOException;
-import com.letsplay.exception.Exception1;
+import com.letsplay.exception.InputException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class CLILogin {
 
-    public void start() throws Exception1 {
+    public void start() throws InputException {
         LoginController loginController = new LoginController();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
@@ -28,7 +28,7 @@ public class CLILogin {
             //accesso pagina iniziale
             new CLIHomeCustomer().start();
 
-        } catch (Exception1 | IOException | SQLException | DAOException e) {
+        } catch (InputException | IOException | SQLException | DAOException e) {
             System.out.println(e.getMessage());
             start();
         }

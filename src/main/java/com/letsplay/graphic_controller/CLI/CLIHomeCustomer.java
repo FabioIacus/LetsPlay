@@ -1,10 +1,10 @@
 package com.letsplay.graphic_controller.CLI;
 
-import com.letsplay.exception.Exception1;
+import com.letsplay.exception.InputException;
 
 public class CLIHomeCustomer extends AbstractCLI {
 
-    public void start() throws Exception1 {
+    public void start() throws InputException {
         while (true) {
             int choice;
             try{
@@ -15,11 +15,11 @@ public class CLIHomeCustomer extends AbstractCLI {
                     case 3 -> logout();
                     case 4 -> viewProfile();
                     case 5 -> System.exit(0);
-                    default -> throw new Exception1("You have entered an incorrect input");
+                    default -> throw new InputException("You have entered an incorrect input");
                 }
             }
-            catch (Exception1 e){
-                throw new Exception1("You have entered an incorrect input");
+            catch (InputException e){
+                throw new InputException("You have entered an incorrect input");
             }
         }
     }

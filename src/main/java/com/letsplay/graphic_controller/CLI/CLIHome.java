@@ -1,20 +1,13 @@
 package com.letsplay.graphic_controller.CLI;
 
-import com.letsplay.bean.UserBean;
-import com.letsplay.controller.LoginController;
-import com.letsplay.exception.DAOException;
-import com.letsplay.exception.Exception1;
+import com.letsplay.exception.InputException;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.sql.SQLException;
 import java.util.InputMismatchException;
 
 public class CLIHome extends AbstractCLI {
 
     //metodo iniziale
-    public void start() throws Exception1 {
+    public void start() throws InputException {
         while (true) {
             int choice;
             try {
@@ -23,10 +16,10 @@ public class CLIHome extends AbstractCLI {
                     case 1 -> new CLILogin().start();
                     case 2 -> new CLISignUp().start();
                     case 3 -> System.exit(0);
-                    default -> throw new Exception1("You have entered an incorrect input");
+                    default -> throw new InputException("You have entered an incorrect input");
                 }
             } catch (InputMismatchException e) {
-                throw new Exception1("You have entered an incorrect input");
+                throw new InputException("You have entered an incorrect input");
             }
         }
     }

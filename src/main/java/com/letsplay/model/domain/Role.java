@@ -1,25 +1,16 @@
 package com.letsplay.model.domain;
 
 public enum Role {
-    CUSTOMER(1),
-    MANAGER(2);
+    CUSTOMER("customer"),
+    MANAGER("manager");
 
-    private final int id;
+    private final String id;
 
-    private Role(int id) {
+    Role(String id) {
         this.id = id;
     }
 
-    public static Role fromInt(int id) {
-        for (Role type : values()) {
-            if (type.getId() == id) {
-                return type;
-            }
-        }
-        return null;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 }

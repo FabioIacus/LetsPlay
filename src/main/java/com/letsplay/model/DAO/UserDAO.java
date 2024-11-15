@@ -1,6 +1,8 @@
 package com.letsplay.model.DAO;
 
 import com.letsplay.exception.DAOException;
+import com.letsplay.exception.EmailException;
+import com.letsplay.exception.RegistrationException;
 import com.letsplay.model.domain.Role;
 import com.letsplay.model.domain.User;
 
@@ -53,18 +55,61 @@ public class UserDAO {
             try {
                 if (stmt != null)
                     stmt.close();
-            } catch (SQLException se2) {
-                Logger.getAnonymousLogger().log(Level.INFO, "Errore: ", se2.getMessage());
-            }
-            try {
-                if (conn != null)
-                    conn.close();
             } catch (SQLException se) {
-                Logger.getAnonymousLogger().log(Level.INFO, "Errore: ", se.getMessage());
+                Logger.getAnonymousLogger().log(Level.INFO, "Error: ", se.getMessage());
             }
         }
 
         return user;
+    }
+
+    public int signUp(User cred) throws DAOException, SQLException {
+        PreparedStatement stmt = null;
+        Connection conn = null;
+        User user = null;
+
+        conn = ConnectionFactory.getConnection();
+        try {
+            String sql1 = "SELECT * FROM user WHERE " + EMAIL + " = ?";
+            stmt = conn.prepareStatement(sql1, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            stmt.setString(1, cred.getEmail());
+            ResultSet rs = stmt.executeQuery();
+            //se il result set non è vuoto
+            if (rs.next()) {
+                throw new EmailException("Email already exists");
+            }
+        } catch(EmailException e) {
+            Logger.getAnonymousLogger().log(Level.INFO, "Error: ", e.getMessage());
+        }
+        try {
+            String sql2 = "INSERT INTO user (" + NAME + ", " + SURNAME +", " + USERNAME +", " + EMAIL + ", " + PASSWORD + ", " + ROLE + ")"
+                    + " VALUES(?, ?, ?, ?, ?, ?)";
+            stmt = conn.prepareStatement(sql2, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            stmt.setString(1, cred.getName());
+            stmt.setString(2, cred.getSurname());
+            stmt.setString(3, cred.getUsername());
+            stmt.setString(4, cred.getEmail());
+            stmt.setString(5, cred.getPassword());
+            stmt.setString(6, cred.getRole().toString());
+            int rows = stmt.executeUpdate();
+            if (rows == 0) {
+                throw new RegistrationException("Registration failed");
+            } else {
+                Logger.getAnonymousLogger().log(Level.INFO, "Registration completed");
+            }
+        } catch(SQLException | RegistrationException e) {
+            Logger.getAnonymousLogger().log(Level.INFO, "Error: ", e.getMessage());
+        }
+        finally {
+            //clean-up
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException se) {
+                Logger.getAnonymousLogger().log(Level.INFO, "Error: ", se.getMessage());
+            }
+        }
+        return 0;
     }
 
     protected User getUser(ResultSet rs) throws SQLException {
