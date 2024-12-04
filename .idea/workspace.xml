@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="rename packages">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/CLIMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/GUIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/GUIMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/Homepage.java" afterDir="false" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="rename classes and variables">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/39377/Desktop/Università/Corsi passati/Basi di dati/Progetto basi di dati/client-gestionetaxi",
+    "last_opened_file_path": "C:/Users/39377/Desktop/SESSIONE/ISPW/Nicola/easyGuide",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -133,7 +131,14 @@
       <workItem from="1731399296875" duration="26343000" />
       <workItem from="1731597998934" duration="7931000" />
       <workItem from="1731618363240" duration="4139000" />
-      <workItem from="1731667438894" duration="14869000" />
+      <workItem from="1731667438894" duration="15384000" />
+      <workItem from="1731927000169" duration="614000" />
+      <workItem from="1732529095563" duration="20000" />
+      <workItem from="1732701598618" duration="703000" />
+      <workItem from="1732804828958" duration="458000" />
+      <workItem from="1733140467956" duration="621000" />
+      <workItem from="1733153688981" duration="103000" />
+      <workItem from="1733318891948" duration="567000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -279,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731684990504</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="rename classes and variables">
+      <option name="closed" value="true" />
+      <created>1731685623969</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731685623969</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +322,8 @@
     <MESSAGE value="rename in graphicController" />
     <MESSAGE value="rename in graphicscontroller" />
     <MESSAGE value="rename packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename packages" />
+    <MESSAGE value="rename classes and variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename classes and variables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
