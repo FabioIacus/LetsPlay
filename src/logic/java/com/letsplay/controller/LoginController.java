@@ -10,24 +10,27 @@ import java.sql.SQLException;
 
 public class LoginController {
 
-    public void login(UserBean userBean) throws SQLException, DAOException {
-        //creo l'entità utente
-        User cred  = new User(userBean.getEmail(), userBean.getPassword());
+    public Object[] login(UserBean userBean) throws SQLException, DAOException {
+        //creazione oggetto 'credenziali' che verrà passato al DAO
+        User credentials  = new User(userBean.getEmail(), userBean.getPassword());
 
-        //per effettuare il login chiamo il dao
-        User user = new UserDAO().login(cred);
+        //per effettuare il login chiamo il DAO
+        User user = new UserDAO().login(credentials);
 
         //invoco il gestore delle sessioni per avere l'unica istanza
         SessionManager sessionManager = SessionManager.getInstance();
 
-        //setto l'utente corrente
+        //istanzio utente corrente
         User currentUser = new User(user.getUsername(), user.getEmail(), user.getName(), user.getSurname(), user.getRole());
 
         //il session manager tiene traccia dell'utente corrente
         sessionManager.login(currentUser);
+
+        return new Object[] {currentUser.getUsername(), currentUser.getRole().toString()};
     }
 
     public void logout() {
-
+        SessionManager sessionManager = SessionManager.getInstance();
+        sessionManager.logout();
     }
 }

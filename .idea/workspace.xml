@@ -4,8 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="rename classes and variables">
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="rename from &quot;main&quot; to &quot;logic&quot; and creation &quot;test&quot; directory">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/JoinTournamentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOFileSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/queries/RegistrationQueries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/queries/UserQueries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/RequestStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/exception/RegistrationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/exception/DatabaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/AbstractCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/AbstractCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLILogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLISignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/ConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO_FileSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO_JDBC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Registration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +40,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -53,30 +78,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CLIMain.executor": "Run",
-    "Application.GUIMain.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/39377/Desktop/SESSIONE/ISPW/Nicola/easyGuide",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CLIMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GUIMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/39377/Desktop/Università/Corsi/ISPW/LetsPlay&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\39377\Desktop\Università\Corsi\ISPW\LetsPlay\src\main\resources" />
@@ -138,7 +168,26 @@
       <workItem from="1732804828958" duration="458000" />
       <workItem from="1733140467956" duration="621000" />
       <workItem from="1733153688981" duration="103000" />
-      <workItem from="1733318891948" duration="567000" />
+      <workItem from="1733318891948" duration="1119000" />
+      <workItem from="1733415024806" duration="2739000" />
+      <workItem from="1733851129153" duration="131000" />
+      <workItem from="1734001071315" duration="1427000" />
+      <workItem from="1734095855396" duration="633000" />
+      <workItem from="1734103040607" duration="1215000" />
+      <workItem from="1734104680080" duration="5000" />
+      <workItem from="1734124067094" duration="163000" />
+      <workItem from="1734633329438" duration="714000" />
+      <workItem from="1734701732526" duration="990000" />
+      <workItem from="1734964499188" duration="7099000" />
+      <workItem from="1735153096843" duration="11689000" />
+      <workItem from="1735241045360" duration="8000" />
+      <workItem from="1735935842117" duration="1196000" />
+      <workItem from="1735985591360" duration="3462000" />
+      <workItem from="1736009023509" duration="6352000" />
+      <workItem from="1736015577392" duration="6000" />
+      <workItem from="1736087513189" duration="8345000" />
+      <workItem from="1736100819940" duration="1459000" />
+      <workItem from="1736102302372" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -292,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731685623969</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="rename from &quot;main&quot; to &quot;logic&quot; and creation &quot;test&quot; directory">
+      <option name="closed" value="true" />
+      <created>1733319687005</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733319687005</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +380,8 @@
     <MESSAGE value="rename in graphicscontroller" />
     <MESSAGE value="rename packages" />
     <MESSAGE value="rename classes and variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename classes and variables" />
+    <MESSAGE value="rename from &quot;main&quot; to &quot;logic&quot; and creation &quot;test&quot; directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename from &quot;main&quot; to &quot;logic&quot; and creation &quot;test&quot; directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

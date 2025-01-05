@@ -2,14 +2,12 @@ package com.letsplay.model.dao;
 
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.EmailException;
-import com.letsplay.exception.RegistrationException;
+import com.letsplay.exception.DatabaseException;
+import com.letsplay.model.dao.queries.UserQueries;
 import com.letsplay.model.domain.Role;
 import com.letsplay.model.domain.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -22,35 +20,41 @@ public class UserDAO {
     private static final String ROLE = "Role";
 
     public User login(User cred) throws DAOException, SQLException {
-        PreparedStatement stmt = null;
-        Connection conn = null;
-        User user = null;
+        Statement stmt = null;
+        Connection conn;
+        User user;
+        Role role;
+
+        //applicazione del pattern Factory
+        conn = ConnectionFactory.getConnection();
 
         try {
-            //applicazione del pattern Factory
-            conn = ConnectionFactory.getConnection();
+            stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
 
-            //stringa SQL
-            String sql = "SELECT * FROM User WHERE " + EMAIL + " = ? AND " + PASSWORD + " = ?;";
-            //utilizzo di prepare statement poiché più sicuro di statement
-            stmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            stmt.setString(1, cred.getEmail());
-            stmt.setString(2, cred.getPassword());
-            //ottengo il risultato della query
-            ResultSet rs = stmt.executeQuery();
+            // In pratica i risultati delle query possono essere visti come un Array Associativo o un Map
+            ResultSet rs = UserQueries.login(stmt, cred.getEmail(), cred.getPassword());
 
             //se il rs è vuoto:
             if (!rs.first()) {
                 throw new DAOException("Incorrect email or password");
             }
+
             //riposiziono il result set al primo record
             rs.first();
-            //chiamo il metodo per popolare i campi di user
-            user = getUser(rs);
+
+            //ricavo il ruolo dell'utente
+            if(rs.getString(ROLE).equals("Customer")) {
+                role = Role.CUSTOMER;
+            } else {
+                role = Role.MANAGER;
+            }
+            //creo oggetto user
+            user = new User(rs.getString(USERNAME), rs.getString(EMAIL), rs.getString(NAME), rs.getString(SURNAME), role);
+
             //chiusura rs
             rs.close();
-        }
-        finally{
+        } finally{
             //clean-up
             try {
                 if (stmt != null)
@@ -64,41 +68,28 @@ public class UserDAO {
     }
 
     public int signUp(User cred) throws DAOException, SQLException {
-        PreparedStatement stmt = null;
-        Connection conn = null;
-        User user = null;
+        Statement stmt = null;
+        Connection conn;
 
+        //applicazione del pattern Factory
         conn = ConnectionFactory.getConnection();
+
         try {
-            String sql1 = "SELECT * FROM user WHERE " + EMAIL + " = ?";
-            stmt = conn.prepareStatement(sql1, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            stmt.setString(1, cred.getEmail());
-            ResultSet rs = stmt.executeQuery();
+            stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = UserQueries.checkEmail(stmt, cred.getEmail());
             //se il result set non è vuoto
             if (rs.next()) {
                 throw new EmailException("Email already exists");
             }
-        } catch(EmailException e) {
-            Logger.getAnonymousLogger().log(Level.INFO, "Error: ", e.getMessage());
-        }
-        try {
-            String sql2 = "INSERT INTO user (" + NAME + ", " + SURNAME +", " + USERNAME +", " + EMAIL + ", " + PASSWORD + ", " + ROLE + ")"
-                    + " VALUES(?, ?, ?, ?, ?, ?)";
-            stmt = conn.prepareStatement(sql2, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            stmt.setString(1, cred.getName());
-            stmt.setString(2, cred.getSurname());
-            stmt.setString(3, cred.getUsername());
-            stmt.setString(4, cred.getEmail());
-            stmt.setString(5, cred.getPassword());
-            stmt.setString(6, cred.getRole().toString());
-            int rows = stmt.executeUpdate();
-            if (rows == 0) {
-                throw new RegistrationException("Registration failed");
-            } else {
-                Logger.getAnonymousLogger().log(Level.INFO, "Registration completed");
+            //se l'email non esiste già posso continuare la registrazione
+            int rows = UserQueries.signUp(stmt, cred.getName(), cred.getSurname(), cred.getUsername(), cred.getEmail(), cred.getPassword(), cred.getRole().toString());
+            if (rows == -1) {
+                throw new DatabaseException("Database error");
             }
-        } catch(SQLException | RegistrationException e) {
-            Logger.getAnonymousLogger().log(Level.INFO, "Error: ", e.getMessage());
+        } catch (EmailException | SQLException | DatabaseException e) {
+            System.out.println("Error: " + e.getMessage());
+            return 1;
         }
         finally {
             //clean-up
@@ -123,6 +114,7 @@ public class UserDAO {
             role = Role.MANAGER;
         }
 
+        //creo oggetto user
         user = new User(rs.getString(USERNAME), rs.getString(EMAIL), rs.getString(NAME), rs.getString(SURNAME), role);
 
         return user;

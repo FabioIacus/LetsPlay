@@ -3,7 +3,7 @@ package com.letsplay.graphicscontroller.cli;
 import com.letsplay.bean.UserBean;
 import com.letsplay.controller.SignUpController;
 import com.letsplay.exception.InputException;
-import com.letsplay.exception.RegistrationException;
+import com.letsplay.exception.DatabaseException;
 import com.letsplay.model.domain.Role;
 
 import java.io.BufferedReader;
@@ -36,19 +36,18 @@ public class CLISignUp {
                 role = Role.MANAGER;
             }
             else {
-                throw new InputException("Invalid role");
+                throw new InputException("Invalid role!");
             }
 
             UserBean userBean = new UserBean(username, name, surname, email, password, role.getId());
-
             int registration = signUpController.signUp(userBean);
             if (registration == 0) {
-                System.out.println("Registration completed");
+                System.out.println("Registration successful!");
             } else {
-                System.out.println("Registration failed");
+                System.out.println("Registration failed!");
             }
-        } catch (IOException | InputException | RegistrationException e) {
-            System.err.println(e.getMessage());
+        } catch (IOException | InputException | DatabaseException e) {
+            System.out.println(e.getMessage());
             start();
         }
     }

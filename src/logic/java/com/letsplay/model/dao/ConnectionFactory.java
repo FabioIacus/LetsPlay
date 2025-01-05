@@ -17,7 +17,7 @@ public class ConnectionFactory {
 
     static {
         // Does not work if generating a jar file
-        try (InputStream input = new FileInputStream("src/main/resources/com/letsplay/properties/DB.properties")) {
+        try (InputStream input = new FileInputStream("src/logic/resources/com/letsplay/properties/DB.properties")) {
             Properties properties = new Properties();
             properties.load(input);
 

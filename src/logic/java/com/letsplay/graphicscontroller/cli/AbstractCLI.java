@@ -1,5 +1,8 @@
 package com.letsplay.graphicscontroller.cli;
 
+import com.letsplay.controller.LoginController;
+import com.letsplay.exception.InputException;
+
 import java.util.Scanner;
 
 public abstract class AbstractCLI {
@@ -13,14 +16,15 @@ public abstract class AbstractCLI {
             if (choice >= min && choice <= max) {
                 break;
             }
-            System.out.println("Invalid option\n");
+            System.out.println("Invalid option. You must enter a number between " + min + " and " + max + ".");
         }
         return choice;
     }
 
-    protected void logout(){
-        //new LoginController().logout();
-        //new CLILoginGraphicController().start();
+    protected void logout() throws InputException {
+        new LoginController().logout();
+        System.out.println("You are about to be logged out...");
+        new CLIHome().start();
     }
 
 }
