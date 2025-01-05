@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="rename from &quot;main&quot; to &quot;logic&quot; and creation &quot;test&quot; directory">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/JoinTournamentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOFileSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOJDBC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/queries/RegistrationQueries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/queries/UserQueries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/RequestStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/exception/RegistrationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/exception/DatabaseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/AbstractCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/AbstractCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLILogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLISignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO_FileSystem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO_JDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Registration.java" afterDir="false" />
-    </list>
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="completamento login/registrazione&#10;implementazione registrationdaojdbc (da finire)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,6 +161,7 @@
       <workItem from="1736087513189" duration="8345000" />
       <workItem from="1736100819940" duration="1459000" />
       <workItem from="1736102302372" duration="12000" />
+      <workItem from="1736102340360" duration="104000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -349,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733319687005</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="completamento login/registrazione&#10;implementazione registrationdaojdbc (da finire)">
+      <option name="closed" value="true" />
+      <created>1736102429098</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1736102429098</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +363,8 @@
     <MESSAGE value="rename packages" />
     <MESSAGE value="rename classes and variables" />
     <MESSAGE value="rename from &quot;main&quot; to &quot;logic&quot; and creation &quot;test&quot; directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename from &quot;main&quot; to &quot;logic&quot; and creation &quot;test&quot; directory" />
+    <MESSAGE value="completamento login/registrazione&#10;implementazione registrationdaojdbc (da finire)" />
+    <option name="LAST_COMMIT_MESSAGE" value="completamento login/registrazione&#10;implementazione registrationdaojdbc (da finire)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
