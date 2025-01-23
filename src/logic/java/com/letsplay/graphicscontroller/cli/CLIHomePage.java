@@ -2,12 +2,10 @@ package com.letsplay.graphicscontroller.cli;
 
 import com.letsplay.exception.InputException;
 
-import java.util.InputMismatchException;
-
-public class CLIHome extends AbstractCLI {
+public class CLIHomePage extends AbstractCLI {
 
     //metodo iniziale
-    public void start() throws InputException {
+    public void start() {
         while (true) {
             int choice;
             try {
@@ -15,22 +13,24 @@ public class CLIHome extends AbstractCLI {
                 switch (choice) {
                     case 1 -> new CLILogin().start();
                     case 2 -> new CLISignUp().start();
-                    case 3 -> System.exit(0);
-                    default -> throw new InputException("You have entered an incorrect input");
+                    case 3 -> {
+                        System.out.println("Exiting the application...");
+                        System.exit(0);
+                    }
+                    default -> System.out.println("Unexpected error!");
                 }
-            } catch (InputMismatchException e) {
-                throw new InputException("You have entered an incorrect input");
+            } catch (InputException e) {
+                System.out.println(e.getMessage());
             }
         }
     }
 
     //stampa menu iniziale
-    private int showMenu() {
-        System.out.println("--- Welcome to Let's Play! ---");
+    private int showMenu() throws InputException {
         System.out.println("--- What would you like to do? ---");
         System.out.println("1) Log in");
-        System.out.println("2) Sign Up");
-        System.out.println("3) Exit");
+        System.out.println("2) Sign up");
+        System.out.println("3) Exit program");
 
         return getChoice(1, 3);
     }

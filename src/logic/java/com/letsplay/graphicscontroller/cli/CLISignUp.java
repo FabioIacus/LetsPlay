@@ -2,8 +2,10 @@ package com.letsplay.graphicscontroller.cli;
 
 import com.letsplay.bean.UserBean;
 import com.letsplay.controller.SignUpController;
+import com.letsplay.exception.EmailException;
 import com.letsplay.exception.InputException;
 import com.letsplay.exception.DatabaseException;
+import com.letsplay.exception.UsernameException;
 import com.letsplay.model.domain.Role;
 
 import java.io.BufferedReader;
@@ -13,9 +15,9 @@ import java.io.InputStreamReader;
 public class CLISignUp {
     public void start() {
         SignUpController signUpController = new SignUpController();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Role role;
         try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.print("Name: ");
             String name = reader.readLine();
             System.out.print("Surname: ");
@@ -28,8 +30,8 @@ public class CLISignUp {
             String username = reader.readLine();
             System.out.print("Role (customer or manager): ");
             String roleStr = reader.readLine().toLowerCase();
-
-            if(roleStr.equals("customer")) {
+            //settaggio ruolo
+            if (roleStr.equals("customer")) {
                 role = Role.CUSTOMER;
             }
             else if (roleStr.equals("manager")) {
@@ -38,17 +40,15 @@ public class CLISignUp {
             else {
                 throw new InputException("Invalid role!");
             }
-
-            UserBean userBean = new UserBean(username, name, surname, email, password, role.getId());
+            //creazione bean
+            UserBean userBean = new UserBean(name, surname, email, password, username, role.getId());
             int registration = signUpController.signUp(userBean);
             if (registration == 0) {
                 System.out.println("Registration successful!");
-            } else {
-                System.out.println("Registration failed!");
             }
-        } catch (IOException | InputException | DatabaseException e) {
+        } catch (IOException | InputException | DatabaseException | EmailException | UsernameException e) {
             System.out.println(e.getMessage());
-            start();
+            new CLIHomePage().start();
         }
     }
 }

@@ -10,15 +10,13 @@ public class Registration {
     private RequestStatus status;
     private String message;
 
-    public Registration(String customerEmail, String managerEmail, String team, int numPlayers, String captain, String tournament, RequestStatus status, String message) {
+    public Registration(String customerEmail, String managerEmail, String team, int numPlayers, String captain, String tournament) {
         this.customerEmail = customerEmail;
         this.managerEmail = managerEmail;
         this.team = team;
         this.numPlayers = numPlayers;
         this.captain = captain;
         this.tournament = tournament;
-        this.status = status;
-        this.message = message;
     }
 
     public String getCustomerEmail() {

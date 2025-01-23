@@ -4,7 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="completamento login/registrazione&#10;implementazione registrationdaojdbc (da finire)" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="completamento login/registrazione&#10;implementazione registrationdaojdbc (da finire)">
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/bean/RegistrationBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/bean/SearchTournamentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/bean/SelectedTournamentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/bean/SimpleTournamentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/bean/TournamentBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/exception/EmptyFieldsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/exception/RequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/exception/UsernameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLISelectTournament.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLITournamentSignUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIViewDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/CLIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/CLIMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/bean/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/bean/UserBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/JoinTournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/JoinTournamentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/AbstractCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/AbstractCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLIHomeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLILogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/graphicscontroller/cli/CLISignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOFileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOFileSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/RegistrationDAOJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/TournamentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/TournamentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/queries/RegistrationQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/queries/TournamentQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/queries/UserQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/dao/queries/UserQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/Tournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/com/letsplay/model/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/resources/db.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/resources/DBFile.csv" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,9 +53,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Exception" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -42,6 +81,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -62,7 +104,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/39377/Desktop/Università/Corsi/ISPW/LetsPlay&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/39377/Desktop/SESSIONE/ISPW/Nicola/easyGuide&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -71,7 +113,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -162,6 +204,19 @@
       <workItem from="1736100819940" duration="1459000" />
       <workItem from="1736102302372" duration="12000" />
       <workItem from="1736102340360" duration="104000" />
+      <workItem from="1736102477482" duration="109000" />
+      <workItem from="1736332502218" duration="12390000" />
+      <workItem from="1736348617165" duration="5570000" />
+      <workItem from="1736605315643" duration="15438000" />
+      <workItem from="1736800400170" duration="6069000" />
+      <workItem from="1736849253212" duration="26997000" />
+      <workItem from="1736974257442" duration="3681000" />
+      <workItem from="1737122739404" duration="2000" />
+      <workItem from="1737196043782" duration="24457000" />
+      <workItem from="1737568030285" duration="3262000" />
+      <workItem from="1737639577373" duration="2548000" />
+      <workItem from="1737643937051" duration="2465000" />
+      <workItem from="1737646980972" duration="426000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -331,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736102429098</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="completamento login/registrazione&#10;implementazione registrationdaojdbc (da finire)">
+      <option name="closed" value="true" />
+      <created>1736102510696</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1736102510696</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -23,21 +23,21 @@ public class CLILogin {
 
             //passaggio delle credenziali per il login
             UserBean userBean = new UserBean(email, password);
-            //String username = loginController.login(userBean);
             Object[] result = loginController.login(userBean);
-            System.out.println("-- Hi " + result[0] + "! --");
 
+            //login eseguito correttamente
+            System.out.println("-- Hi " + result[0] + "! --");
             //accesso pagina iniziale
             if (result[1].equals("CUSTOMER")) {
                 new CLIHomeCustomer().start();
             } else {
                 new CLIHomeManager().start();
             }
-
         } catch (InputException | IOException | SQLException | DAOException e) {
             System.out.println(e.getMessage());
-            start();
+            new CLIHomePage().start();
         }
+
     }
 
 }
