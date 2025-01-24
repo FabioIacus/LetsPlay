@@ -1,6 +1,7 @@
 package com.letsplay.graphicscontroller.cli;
 
 import com.letsplay.bean.RegistrationBean;
+import com.letsplay.bean.SimpleTournamentBean;
 import com.letsplay.bean.TournamentBean;
 import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.exception.DatabaseException;
@@ -13,10 +14,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.SQLException;
+import java.util.List;
 
 
 public class CLITournamentSignUp extends AbstractCLI {
-    public void start(TournamentBean tournamentBean) {
+    public void start(TournamentBean tournamentBean, List<SimpleTournamentBean> tournamentList) {
         try {
             RegistrationBean registrationBean = new RegistrationBean(
                     SessionManager.getInstance().getCurrentUser().getEmail(),
@@ -33,7 +35,7 @@ public class CLITournamentSignUp extends AbstractCLI {
                         case 3 -> insertCaptain(registrationBean);
                         case 4 -> sendRequest(registrationBean);
                         case 5 -> goHome();
-                        //case 6 -> goBack(specifiedTourBeans);
+                        case 6 -> goBack(tournamentBean.getName(), tournamentBean.getFootballFacility(), tournamentList);
                         case 7 -> viewMessages();
                         case 8 -> viewProfile();
                         case 9 -> {
@@ -145,11 +147,7 @@ public class CLITournamentSignUp extends AbstractCLI {
         }
     }
 
-    /*private void goBack(List<SpecifiedTourBean> specifiedTourBeans) throws InvalidFormatException, SQLException {
-        TourSearchBean bean = new TourSearchBean(specifiedTourBeans.getFirst().getCity());
-        List<TourBean> listOfTours = new JoinTourController().findTourOfCity(bean);
-        new CLISelectTourGraphicController().start(listOfTours);
-    }*/
-
-
+    private void goBack(String name, String footballFacility, List<SimpleTournamentBean> list) throws DatabaseException {
+        new CLIViewDetails().start(name, footballFacility, list);
+    }
 }

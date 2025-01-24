@@ -19,7 +19,7 @@ public class CLIViewDetails extends AbstractCLI {
             try {
                 choice = showMenu();
                 switch (choice) {
-                    case 1 -> new CLITournamentSignUp().start(tournamentBean);
+                    case 1 -> new CLITournamentSignUp().start(tournamentBean, tournamentList);
                     case 2 -> goHome();
                     case 3 -> goBack(tournamentList);
                     case 4 -> viewMessages();
