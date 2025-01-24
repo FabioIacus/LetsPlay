@@ -3,6 +3,7 @@ module com.letsplay {
     requires javafx.fxml;
     requires java.sql;
     requires jdk.jshell;
+    requires com.opencsv;
 
 
     opens com.letsplay to javafx.fxml;
@@ -13,7 +14,9 @@ module com.letsplay {
     exports com.letsplay.graphicscontroller.cli;
     exports com.letsplay.graphicscontroller.gui;
     exports com.letsplay.model.dao;
+    exports com.letsplay.model.dao.queries;
     exports com.letsplay.model.domain;
+    exports com.letsplay.pattern;
 
     opens com.letsplay.controller to javafx.fxml;
 }

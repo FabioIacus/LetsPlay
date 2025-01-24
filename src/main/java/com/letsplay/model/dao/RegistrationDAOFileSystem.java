@@ -7,6 +7,7 @@ import java.io.*;
 import java.util.List;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
+import com.opencsv.exceptions.CsvException;
 
 public class RegistrationDAOFileSystem implements RegistrationDAO {
     private static final String FILE_NAME = "DBFile.csv";
@@ -29,7 +30,7 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
     }
 
     @Override
-    public void registerRequest(Registration registration) throws FileNotFoundException {
+    public void registerRequest(Registration registration) throws IOException, CsvException {
         CSVReader reader = new CSVReader(new BufferedReader(new FileReader(fd)));
         try {
             List<String[]> csvBody = reader.readAll();
@@ -43,7 +44,6 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
                         && strArray[INDEX_TOURNAMENT].equalsIgnoreCase(registration.getTournament())
                     ) {
                     reader.close();
-                    return -1;
                 }
             }
         }
@@ -57,18 +57,16 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
             registrationRecord[INDEX_CUSTOMER_EMAIL] = registration.getCustomerEmail();
             registrationRecord[INDEX_TEAM] = registration.getTeam();
             registrationRecord[INDEX_NUM_PLAYERS] = String.valueOf(registration.getNumPlayers());
-            registrationRecord[INDEX_CAPTAIN] = registration.getTime().toString();
-            registrationRecord[INDEX_MANAGER_EMAIL] = registration.getDate().toString();
+            registrationRecord[INDEX_CAPTAIN] = registration.getCaptain();
+            registrationRecord[INDEX_MANAGER_EMAIL] = registration.getManagerEmail();
             registrationRecord[INDEX_STATUS] = "Pending";
             registrationRecord[INDEX_TOURNAMENT] = registration.getTournament();
             csvWriter.writeNext(registrationRecord);
             csvWriter.flush();
-            return 1;
         }
         finally {
             csvWriter.close();
         }
-
     }
 
     @Override

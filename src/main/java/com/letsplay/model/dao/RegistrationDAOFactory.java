@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 
 public class RegistrationDAOFactory {
     public RegistrationDAO createRegistrationDAO() throws IOException {
-        try (InputStream input = new FileInputStream("src/logic/java/com/letsplay/model/dao/config.properties")) {
+        try (InputStream input = new FileInputStream("src/main/java/com/letsplay/properties/config.properties")) {
             Properties properties = new Properties();
             properties.load(input);
 

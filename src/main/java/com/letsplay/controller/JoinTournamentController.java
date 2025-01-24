@@ -8,6 +8,7 @@ import com.letsplay.model.dao.RegistrationDAOFactory;
 import com.letsplay.model.domain.Registration;
 import com.letsplay.model.domain.Tournament;
 import com.letsplay.model.dao.TournamentDAO;
+import com.opencsv.exceptions.CsvException;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -64,8 +65,7 @@ public class JoinTournamentController {
         return tournamentBean;
     }
 
-    public void signUpTeam(RegistrationBean registrationBean) throws IOException, RequestException, SQLException {
-        int result;
+    public void signUpTeam(RegistrationBean registrationBean) throws IOException, RequestException, SQLException, CsvException {
         Registration registration = new Registration(
                 registrationBean.getCustomerEmail(),
                 registrationBean.getManagerEmail(),
@@ -78,7 +78,7 @@ public class JoinTournamentController {
         try {
             RegistrationDAO registrationDAO = factory.createRegistrationDAO();
             registrationDAO.registerRequest(registration);
-        } catch (RequestException | SQLException e) {
+        } catch (RequestException | SQLException | CsvException e) {
             throw e;
         }
     }

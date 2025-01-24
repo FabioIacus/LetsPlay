@@ -7,6 +7,7 @@ import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.EmptyFieldsException;
 import com.letsplay.exception.InputException;
 import com.letsplay.model.dao.SessionManager;
+import com.opencsv.exceptions.CsvException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -139,7 +140,7 @@ public class CLITournamentSignUp extends AbstractCLI {
             System.out.println("Request sent successfully!");
             System.out.println("--------------------------------");
             new CLIHomeCustomer().start();
-        } catch (SQLException e) {
+        } catch (SQLException | CsvException e) {
             System.out.println(e.getMessage());
         }
     }
