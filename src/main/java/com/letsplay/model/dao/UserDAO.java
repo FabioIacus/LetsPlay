@@ -61,7 +61,7 @@ public class UserDAO {
         return user;
     }
 
-    public int signUp(User cred) throws EmailException, DatabaseException, DAOException, SQLException {
+    public int signUp(User cred) throws EmailException, DatabaseException, SQLException {
         Statement stmt = null;
         Connection conn;
 

@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class Subject {
     private List<Observer> observers;
-    public Subject() {
+    protected Subject() {
         observers = new ArrayList<>();
     }
     public void attach(Observer observer) {

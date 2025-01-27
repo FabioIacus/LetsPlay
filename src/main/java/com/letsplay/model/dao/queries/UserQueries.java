@@ -3,6 +3,8 @@ package com.letsplay.model.dao.queries;
 import java.sql.*;
 
 public class UserQueries {
+    private UserQueries() {}
+
     public static ResultSet login(Statement stmt, String email, String password) throws SQLException {
         String sql = "SELECT * FROM User WHERE Email = '" + email + "' AND Password = '" + password + "'";
         return stmt.executeQuery(sql);
