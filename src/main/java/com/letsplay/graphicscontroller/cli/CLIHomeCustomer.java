@@ -78,19 +78,17 @@ public class CLIHomeCustomer extends AbstractCLI {
                     new CLISelectTournament().start(simpleTournamentBean);
                     break;
                 }
-            } catch (IOException | InputException | DatabaseException e) {
+            } catch (IOException | InputException | DatabaseException | SQLException e) {
                 System.out.println("Error: " + e.getMessage());
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
             }
         }
     }
 
-    private void reservePitch() throws InputException {
+    private void reservePitch() {
         System.out.println("This feature has not been implemented yet!");
     }
 
-    private void joinSharedMatch() throws InputException {
+    private void joinSharedMatch() {
         System.out.println("This feature has not been implemented yet!");
     }
 

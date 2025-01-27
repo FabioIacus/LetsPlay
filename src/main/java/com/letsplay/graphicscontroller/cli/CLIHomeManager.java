@@ -3,6 +3,7 @@ package com.letsplay.graphicscontroller.cli;
 import com.letsplay.exception.InputException;
 
 public class CLIHomeManager extends AbstractCLI {
+    private final String NOT_IMPLEMENTED = "This feature has not been implemented yet!";
     public void start() throws InputException {
         while (true) {
             int choice;
@@ -40,20 +41,20 @@ public class CLIHomeManager extends AbstractCLI {
         return getChoice(1,7);
     }
 
-    private void viewRequests() throws InputException {
-        System.out.println("This feature has not been implemented yet!");
+    private void viewRequests() {
+        System.out.println(NOT_IMPLEMENTED);
     }
 
-    private void createTournament() throws InputException {
-        System.out.println("This feature has not been implemented yet!");
+    private void createTournament() {
+        System.out.println(NOT_IMPLEMENTED);
     }
 
-    private void deleteTournament() throws InputException {
-        System.out.println("This feature has not been implemented yet!");
+    private void deleteTournament() {
+        System.out.println(NOT_IMPLEMENTED);
     }
 
-    private void editTournament() throws InputException {
-        System.out.println("This feature has not been implemented yet!");
+    private void editTournament() {
+        System.out.println(NOT_IMPLEMENTED);
     }
 
 }

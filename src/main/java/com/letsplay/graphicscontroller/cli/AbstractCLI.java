@@ -19,9 +19,9 @@ import static com.letsplay.model.domain.Role.CUSTOMER;
 
 public abstract class AbstractCLI {
 
-    protected int getChoice(int min, int max) throws InputException {
+    protected int getChoice(int min, int max) {
         Scanner input = new Scanner(System.in);
-        int choice = 0;
+        int choice;
         while (true) {
             try {
                 System.out.print("Please enter your choice: ");
@@ -45,7 +45,7 @@ public abstract class AbstractCLI {
         return choice;
     }
 
-    protected void logout() throws InputException {
+    protected void logout() {
         new LoginController().logout();
         System.out.println("You are about to be logged out...");
         new CLIHomePage().start();
