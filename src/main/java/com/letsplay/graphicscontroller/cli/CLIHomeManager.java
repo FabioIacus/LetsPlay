@@ -1,10 +1,8 @@
 package com.letsplay.graphicscontroller.cli;
 
-import com.letsplay.exception.InputException;
-
 public class CLIHomeManager extends AbstractCLI {
-    private final static String NOTIMPLEMENTED = "This feature has not been implemented yet!";
-    public void start() throws InputException {
+    private static final String NOTIMPLEMENTED = "This feature has not been implemented yet!";
+    public void start() {
         while (true) {
             int choice;
             choice = showMenu();

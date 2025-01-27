@@ -17,42 +17,38 @@ import java.util.List;
 
 
 public class CLITournamentSignUp extends AbstractCLI {
-    public void start(TournamentBean tournamentBean, List<SimpleTournamentBean> tournamentList) {
-        try {
-            RegistrationBean registrationBean = new RegistrationBean(
-                    SessionManager.getInstance().getCurrentUser().getEmail(),
-                    tournamentBean.getManagerEmail(),
-                    tournamentBean.getName()
-            );
-            while (true) {
-                int choice;
-                try {
-                    choice = showMenu();
-                    switch (choice) {
-                        case 1 -> insertTeamName(registrationBean);
-                        case 2 -> insertNumMember(registrationBean, tournamentBean);
-                        case 3 -> insertCaptain(registrationBean);
-                        case 4 -> sendRequest(registrationBean);
-                        case 5 -> goHome();
-                        case 6 -> goBack(tournamentBean.getName(), tournamentBean.getFootballFacility(), tournamentList);
-                        case 7 -> viewNotifications();
-                        case 8 -> viewProfile();
-                        case 9 -> {
-                            System.out.println("Exiting the application...");
-                            System.exit(0);
-                        }
-                        default -> System.out.println("Unexpected error!");
+    public void start(TournamentBean tournamentBean, List<SimpleTournamentBean> tournamentList) throws IOException, InputException, DAOException, SQLException, EmptyFieldsException, DatabaseException, CsvValidationException {
+        RegistrationBean registrationBean = new RegistrationBean(
+                SessionManager.getInstance().getCurrentUser().getEmail(),
+                tournamentBean.getManagerEmail(),
+                tournamentBean.getName()
+        );
+        while (true) {
+            int choice;
+            try {
+                choice = showMenu();
+                switch (choice) {
+                    case 1 -> insertTeamName(registrationBean);
+                    case 2 -> insertNumMember(registrationBean, tournamentBean);
+                    case 3 -> insertCaptain(registrationBean);
+                    case 4 -> sendRequest(registrationBean);
+                    case 5 -> goHome();
+                    case 6 -> goBack(tournamentBean.getName(), tournamentBean.getFootballFacility(), tournamentList);
+                    case 7 -> viewNotifications();
+                    case 8 -> viewProfile();
+                    case 9 -> {
+                        System.out.println("Exiting the application...");
+                        System.exit(0);
                     }
-                } catch (InputException | DAOException | SQLException | EmptyFieldsException | DatabaseException | CsvValidationException e) {
-                    System.out.println(e.getMessage());
+                    default -> System.out.println("Unexpected error!");
                 }
+            } catch (InputException | DAOException | SQLException | EmptyFieldsException | DatabaseException | CsvValidationException e) {
+                System.out.println(e.getMessage());
             }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
         }
     }
 
-    private int showMenu() throws InputException {
+    private int showMenu() {
         System.out.println("-- Registration Form --");
         System.out.println("What would you like to do?");
         System.out.println("1) Insert team name");

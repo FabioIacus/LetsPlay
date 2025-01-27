@@ -56,7 +56,7 @@ public class CLIViewDetails extends AbstractCLI {
         System.out.println("Manager Email: " + tournamentBean.getManagerEmail());
     }
 
-    private int showMenu() throws InputException {
+    private int showMenu() {
         System.out.println("-------------------------");
         System.out.println("What would you like to do?");
         System.out.println("1. Sign up");
@@ -69,11 +69,11 @@ public class CLIViewDetails extends AbstractCLI {
         return getChoice(1, 6);
     }
 
-    private void goBack(List<SimpleTournamentBean> tournamentList) throws InputException {
+    private void goBack(List<SimpleTournamentBean> tournamentList) {
         new CLISelectTournament().start(tournamentList);
     }
 
-    private void tournamentSignUp(TournamentBean tournamentBean, List<SimpleTournamentBean> tournamentList) {
+    private void tournamentSignUp(TournamentBean tournamentBean, List<SimpleTournamentBean> tournamentList) throws DAOException, CsvValidationException, SQLException, InputException, IOException, DatabaseException {
         new CLITournamentSignUp().start(tournamentBean, tournamentList);
     }
 }

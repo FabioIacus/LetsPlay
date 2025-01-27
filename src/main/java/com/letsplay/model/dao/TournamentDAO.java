@@ -29,8 +29,7 @@ public class TournamentDAO {
 
                 //se il rs è vuoto:
                 if (!rs.next()) {
-                    DatabaseException e = new DatabaseException("No tournament found in the specified city!");
-                    throw e;
+                    throw new DatabaseException("No tournament found in the specified city!");
                 }
 
                 //riposiziono il result set al primo record
@@ -52,8 +51,6 @@ public class TournamentDAO {
                 }
 
                 rs.close();
-            } catch (SQLException e) {
-                throw e;
             } finally {
                 //clean-up
                 if (stmt != null)
@@ -67,7 +64,7 @@ public class TournamentDAO {
             Statement stmt = null;
             Connection conn;
             conn = ConnectionFactory.getConnection();
-            Tournament tournament = null;
+            Tournament tournament;
             Type type;
 
             try {
@@ -79,8 +76,7 @@ public class TournamentDAO {
 
                 //se il rs è vuoto:
                 if (!rs.next()) {
-                    DatabaseException e = new DatabaseException("No tournament found in the specified city!");
-                    throw e;
+                    throw new DatabaseException("No tournament found in the specified city!");
                 }
 
                 //riposiziono il result set al primo record

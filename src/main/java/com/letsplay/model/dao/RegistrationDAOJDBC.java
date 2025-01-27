@@ -16,7 +16,7 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
     @Override
     public void registerRequest(Registration registration) throws SQLException {
         Statement stmt = null;
-        Connection conn = null;
+        Connection conn;
         conn = ConnectionFactory.getConnection();
         try {
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
@@ -25,10 +25,7 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
             if (rs == -1) {
                 throw new RequestException("Request not sent, something went wrong!");
             }
-        } catch (SQLException | RequestException e) {
-            throw e;
-        }
-        finally {
+        } finally {
             //clean-up
             if (stmt != null)
                 stmt.close();
@@ -50,7 +47,7 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
     @Override
     public List<Registration> showResponses(User user) throws SQLException, DatabaseException {
         Statement stmt = null;
-        Connection conn = null;
+        Connection conn;
         conn = ConnectionFactory.getConnection();
         List<Registration> registrationList = new ArrayList<>();
         RequestStatus status;
@@ -60,8 +57,7 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
             ResultSet rs = TournamentQueries.retrieveResponses(stmt, user.getEmail());
             //se il rs è vuoto:
             if (!rs.next()) {
-                DatabaseException e = new DatabaseException("No requests found!");
-                throw e;
+                throw new DatabaseException("No requests found!");
             }
 
             //riposiziono il result set al primo record
@@ -84,9 +80,6 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
             }
 
             rs.close();
-
-        } catch (SQLException | DatabaseException e) {
-            throw e;
         } finally {
             //clean-up
             if (stmt != null)

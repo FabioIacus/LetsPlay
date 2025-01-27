@@ -43,7 +43,7 @@ public class CLINotifications extends AbstractCLI {
         }
     }
 
-    private int showMenu() throws InputException {
+    private int showMenu() {
         System.out.println("What would you like to do?");
         System.out.println("1. Go home");
         System.out.println("2. Go back");

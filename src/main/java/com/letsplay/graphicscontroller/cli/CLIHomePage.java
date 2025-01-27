@@ -26,7 +26,7 @@ public class CLIHomePage extends AbstractCLI {
     }
 
     //stampa menu iniziale
-    private int showMenu() throws InputException {
+    private int showMenu() {
         System.out.println("--- What would you like to do? ---");
         System.out.println("1) Log in");
         System.out.println("2) Sign up");

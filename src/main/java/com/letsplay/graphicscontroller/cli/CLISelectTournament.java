@@ -44,7 +44,7 @@ public class CLISelectTournament extends AbstractCLI {
     }
 
     //stampa dei tornei disponibili con le altre opzioni
-    private int showMenu(List<SimpleTournamentBean> tournaments) throws InputException {
+    private int showMenu(List<SimpleTournamentBean> tournaments) {
         int i = 1;
         System.out.println("Select a tournament: ");
         for (SimpleTournamentBean tournament : tournaments){

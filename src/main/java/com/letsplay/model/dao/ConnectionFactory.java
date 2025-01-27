@@ -7,8 +7,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ConnectionFactory {
     private static Connection connection;
@@ -27,7 +25,7 @@ public class ConnectionFactory {
 
             connection = DriverManager.getConnection(connectionUrl, user, pass);
         } catch (IOException | SQLException e) {
-            Logger.getAnonymousLogger().log(Level.INFO, "Error: ", e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
