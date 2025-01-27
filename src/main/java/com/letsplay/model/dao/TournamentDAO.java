@@ -56,12 +56,8 @@ public class TournamentDAO {
                 throw e;
             } finally {
                 //clean-up
-                try {
-                    if (stmt != null)
-                        stmt.close();
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
+                if (stmt != null)
+                    stmt.close();
             }
 
             return tournaments;
@@ -110,12 +106,8 @@ public class TournamentDAO {
                 rs.close();
             } finally {
                 //clean-up
-                try {
-                    if (stmt != null)
-                        stmt.close();
-                } catch (SQLException se) {
-                    throw new RuntimeException(se);
-                }
+                if (stmt != null)
+                    stmt.close();
             }
 
             return tournament;

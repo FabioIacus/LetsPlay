@@ -1,8 +1,6 @@
 package com.letsplay.model.dao;
 
-import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
-import com.letsplay.exception.EmailException;
 import com.letsplay.exception.RequestException;
 import com.letsplay.model.dao.queries.TournamentQueries;
 import com.letsplay.model.domain.*;
@@ -13,8 +11,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class RegistrationDAOJDBC implements RegistrationDAO {
     @Override
@@ -34,12 +30,8 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
         }
         finally {
             //clean-up
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException se) {
-                throw se;
-            }
+            if (stmt != null)
+                stmt.close();
         }
     }
 
@@ -97,12 +89,8 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
             throw e;
         } finally {
             //clean-up
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
+            if (stmt != null)
+                stmt.close();
         }
         return registrationList;
     }

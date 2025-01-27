@@ -54,12 +54,8 @@ public class UserDAO {
             rs.close();
         } finally{
             //clean-up
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException se) {
-                throw new RuntimeException(se);
-            }
+            if (stmt != null)
+                stmt.close();
         }
 
         return user;
@@ -95,12 +91,8 @@ public class UserDAO {
         }
         finally {
             //clean-up
-            try {
-                if (stmt != null)
-                    stmt.close();
-            } catch (SQLException se) {
-                throw new RuntimeException(se);
-            }
+            if (stmt != null)
+                stmt.close();
         }
         return 0;
     }
