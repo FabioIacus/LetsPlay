@@ -70,7 +70,7 @@ public class CLISelectTournament extends AbstractCLI {
         new CLIHomeCustomer().start();
     }
 
-    private void viewDetails(List<SimpleTournamentBean> listOfTournaments, int tournament) throws DatabaseException {
+    private void viewDetails(List<SimpleTournamentBean> listOfTournaments, int tournament) throws DatabaseException, SQLException {
         new CLIViewDetails().start(listOfTournaments.get(tournament).getName(), listOfTournaments.get(tournament).getFootballFacility(), listOfTournaments);
     }
 }

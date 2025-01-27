@@ -37,36 +37,31 @@ public class JoinTournamentController {
         return simpleTournamentBeanList;
     }
 
-    public TournamentBean showDetails(SelectedTournamentBean selectedTournamentBean) throws DatabaseException {
+    public TournamentBean showDetails(SelectedTournamentBean selectedTournamentBean) throws DatabaseException, SQLException {
         Tournament selectedTournament = new Tournament();
         selectedTournament.setName(selectedTournamentBean.getTournament());
         selectedTournament.setFootballFacility(selectedTournamentBean.getFootballFacility());
-        TournamentBean tournamentBean = null;
-        try {
-            //recupera i dettagli del torneo selezionato
-            Tournament details = new TournamentDAO().tournamentDetails(selectedTournament);
-            if (details == null) {
-                throw new DatabaseException("No details found. Try later.");
-            }
-            tournamentBean = new TournamentBean(
-                    details.getName(),
-                    details.getFootballFacility(),
-                    details.getCity(),
-                    details.getAddress(),
-                    details.getStartDate(),
-                    details.getEndDate(),
-                    details.getParticipationFee(),
-                    details.getNumberTeams(),
-                    details.getPrize(),
-                    details.getRequirements(),
-                    details.getType().getValue(),
-                    details.getManagerEmail()
-            );
-        } catch (DatabaseException e) {
-            throw e;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        TournamentBean tournamentBean;
+
+        //recupera i dettagli del torneo selezionato
+        Tournament details = new TournamentDAO().tournamentDetails(selectedTournament);
+        if (details == null) {
+            throw new DatabaseException("No details found. Try later.");
         }
+        tournamentBean = new TournamentBean(
+                details.getName(),
+                details.getFootballFacility(),
+                details.getCity(),
+                details.getAddress(),
+                details.getStartDate(),
+                details.getEndDate(),
+                details.getParticipationFee(),
+                details.getNumberTeams(),
+                details.getPrize(),
+                details.getRequirements(),
+                details.getType().getValue(),
+                details.getManagerEmail()
+        );
         return tournamentBean;
     }
 
@@ -80,35 +75,27 @@ public class JoinTournamentController {
                 registrationBean.getTournament()
         );
         RegistrationDAOFactory factory = new RegistrationDAOFactory();
-        try {
-            RegistrationDAO registrationDAO = factory.createRegistrationDAO();
-            registrationDAO.registerRequest(registration);
-            registration.notifyManager();
-        } catch (RequestException | SQLException | CsvException e) {
-            throw e;
-        }
+        RegistrationDAO registrationDAO = factory.createRegistrationDAO();
+        registrationDAO.registerRequest(registration);
+        registration.notifyManager();
     }
 
     public List<RegistrationBean> getResponses() throws DAOException, SQLException, IOException, DatabaseException, CsvValidationException {
         User user = SessionManager.getInstance().getCurrentUser();
         List<RegistrationBean> registrationBeanList = new ArrayList<>();
         RegistrationDAOFactory registrationDAOFactory= new RegistrationDAOFactory();
-        try {
-            RegistrationDAO registrationDAO = registrationDAOFactory.createRegistrationDAO();
-            List<Registration> registrationList = registrationDAO.showResponses(user);
-            for (Registration registration : registrationList) {
-                RegistrationBean registrationBean = new RegistrationBean(
-                        registration.getTournament(),
-                        registration.getTeam(),
-                        registration.getNumPlayers(),
-                        registration.getCaptain(),
-                        registration.getManagerEmail(),
-                        registration.getStatus(),
-                        registration.getMessage());
-                registrationBeanList.add(registrationBean);
-            }
-        } catch (IOException | DAOException | SQLException | DatabaseException | CsvValidationException e) {
-            throw e;
+        RegistrationDAO registrationDAO = registrationDAOFactory.createRegistrationDAO();
+        List<Registration> registrationList = registrationDAO.showResponses(user);
+        for (Registration registration : registrationList) {
+            RegistrationBean registrationBean = new RegistrationBean(
+                    registration.getTournament(),
+                    registration.getTeam(),
+                    registration.getNumPlayers(),
+                    registration.getCaptain(),
+                    registration.getManagerEmail(),
+                    registration.getStatus(),
+                    registration.getMessage());
+            registrationBeanList.add(registrationBean);
         }
         return registrationBeanList;
     }

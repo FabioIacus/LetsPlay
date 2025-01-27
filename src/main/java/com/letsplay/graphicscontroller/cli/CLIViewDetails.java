@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class CLIViewDetails extends AbstractCLI {
-    public void start(String tournament, String footballFacility, List<SimpleTournamentBean> tournamentList) throws DatabaseException {
+    public void start(String tournament, String footballFacility, List<SimpleTournamentBean> tournamentList) throws DatabaseException, SQLException {
         SelectedTournamentBean selectedTournamentBean = new SelectedTournamentBean(tournament, footballFacility);
         TournamentBean tournamentBean = new JoinTournamentController().showDetails(selectedTournamentBean);
         showDetails(tournamentBean);

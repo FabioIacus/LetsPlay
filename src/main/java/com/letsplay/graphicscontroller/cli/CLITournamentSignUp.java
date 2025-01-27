@@ -146,7 +146,7 @@ public class CLITournamentSignUp extends AbstractCLI {
         }
     }
 
-    private void goBack(String name, String footballFacility, List<SimpleTournamentBean> list) throws DatabaseException {
+    private void goBack(String name, String footballFacility, List<SimpleTournamentBean> list) throws DatabaseException, SQLException {
         new CLIViewDetails().start(name, footballFacility, list);
     }
 }
