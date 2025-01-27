@@ -11,8 +11,8 @@ public class CLIHomePage extends AbstractCLI {
             try {
                 choice = showMenu();
                 switch (choice) {
-                    case 1 -> new CLILogin().start();
-                    case 2 -> new CLISignUp().start();
+                    case 1 -> login();
+                    case 2 -> signUp();
                     case 3 -> {
                         System.out.println("Exiting the application...");
                         System.exit(0);
@@ -33,6 +33,14 @@ public class CLIHomePage extends AbstractCLI {
         System.out.println("3) Exit program");
 
         return getChoice(1, 3);
+    }
+
+    private void login() throws InputException {
+        new CLILogin().start();
+    }
+
+    private void signUp() {
+        new CLISignUp().start();
     }
 
 }

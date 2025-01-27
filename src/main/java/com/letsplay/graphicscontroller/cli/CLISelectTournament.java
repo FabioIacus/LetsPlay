@@ -1,9 +1,13 @@
 package com.letsplay.graphicscontroller.cli;
 
 import com.letsplay.bean.SimpleTournamentBean;
+import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
+import com.opencsv.exceptions.CsvValidationException;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class CLISelectTournament extends AbstractCLI {
@@ -22,10 +26,10 @@ public class CLISelectTournament extends AbstractCLI {
                     choice -= size-1;
                 }
                 switch (choice) {
-                    case 1 -> new CLIViewDetails().start(listOfTournaments.get(tournament).getName(), listOfTournaments.get(tournament).getFootballFacility(), listOfTournaments);
+                    case 1 -> viewDetails(listOfTournaments, tournament);
                     case 2 -> goHome();
                     case 3 -> goBack();
-                    case 4 -> viewMessages();
+                    case 4 -> viewNotifications();
                     case 5 -> viewProfile();
                     case 6 -> {
                         System.out.println("Exiting the application...");
@@ -33,7 +37,7 @@ public class CLISelectTournament extends AbstractCLI {
                     }
                     default -> System.out.println("Unexpected error!");
                 }
-            } catch (InputException | DatabaseException e) {
+            } catch (InputException | DatabaseException | DAOException | SQLException | IOException | CsvValidationException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -66,4 +70,7 @@ public class CLISelectTournament extends AbstractCLI {
         new CLIHomeCustomer().start();
     }
 
+    private void viewDetails(List<SimpleTournamentBean> listOfTournaments, int tournament) throws DatabaseException {
+        new CLIViewDetails().start(listOfTournaments.get(tournament).getName(), listOfTournaments.get(tournament).getFootballFacility(), listOfTournaments);
+    }
 }

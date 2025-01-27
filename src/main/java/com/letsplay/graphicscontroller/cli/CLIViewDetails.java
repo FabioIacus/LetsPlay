@@ -4,9 +4,13 @@ import com.letsplay.bean.SelectedTournamentBean;
 import com.letsplay.bean.SimpleTournamentBean;
 import com.letsplay.bean.TournamentBean;
 import com.letsplay.controller.JoinTournamentController;
+import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
+import com.opencsv.exceptions.CsvValidationException;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class CLIViewDetails extends AbstractCLI {
@@ -19,10 +23,10 @@ public class CLIViewDetails extends AbstractCLI {
             try {
                 choice = showMenu();
                 switch (choice) {
-                    case 1 -> new CLITournamentSignUp().start(tournamentBean, tournamentList);
+                    case 1 -> tournamentSignUp(tournamentBean, tournamentList);
                     case 2 -> goHome();
                     case 3 -> goBack(tournamentList);
-                    case 4 -> viewMessages();
+                    case 4 -> viewNotifications();
                     case 5 -> logout();
                     case 6 -> {
                         System.out.println("Exiting the application...");
@@ -30,7 +34,7 @@ public class CLIViewDetails extends AbstractCLI {
                     }
                     default -> System.out.println("Unexpected error!");
                 }
-            } catch (InputException e) {
+            } catch (InputException | DAOException | SQLException | IOException | CsvValidationException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -67,5 +71,9 @@ public class CLIViewDetails extends AbstractCLI {
 
     private void goBack(List<SimpleTournamentBean> tournamentList) throws InputException {
         new CLISelectTournament().start(tournamentList);
+    }
+
+    private void tournamentSignUp(TournamentBean tournamentBean, List<SimpleTournamentBean> tournamentList) {
+        new CLITournamentSignUp().start(tournamentBean, tournamentList);
     }
 }

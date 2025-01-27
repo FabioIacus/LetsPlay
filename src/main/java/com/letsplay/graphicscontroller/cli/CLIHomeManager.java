@@ -9,11 +9,10 @@ public class CLIHomeManager extends AbstractCLI {
             try {
                 choice = showMenu();
                 switch (choice){
-                    //CONTINUARE A MODIFICARE
-                    case 1 -> System.out.println("Hai scelto 1");
-                    case 2 -> System.out.println("Hai scelto 2");
-                    case 3 -> System.out.println("Hai scelto 3");
-                    case 4 -> System.out.println("Hai scelto 4");
+                    case 1 -> viewRequests();
+                    case 2 -> createTournament();
+                    case 3 -> deleteTournament();
+                    case 4 -> editTournament();
                     case 5 -> viewProfile();
                     case 6 -> logout();
                     case 7 -> {
@@ -31,13 +30,30 @@ public class CLIHomeManager extends AbstractCLI {
 
     private int showMenu() throws InputException {
         System.out.println("-- Manager Menù --");
-        System.out.println("1) Create tournament");
-        System.out.println("2) Delete tournament");
-        System.out.println("3) Edit tournament");
-        System.out.println("4) Manage registration request");
+        System.out.println("1) Manage registration requests");
+        System.out.println("2) Create tournament");
+        System.out.println("3) Delete tournament");
+        System.out.println("4) Edit tournament");
         System.out.println("5) View profile");
         System.out.println("6) Log out");
         System.out.println("7) Exit program");
         return getChoice(1,7);
     }
+
+    private void viewRequests() throws InputException {
+        System.out.println("This feature has not been implemented yet!");
+    }
+
+    private void createTournament() throws InputException {
+        System.out.println("This feature has not been implemented yet!");
+    }
+
+    private void deleteTournament() throws InputException {
+        System.out.println("This feature has not been implemented yet!");
+    }
+
+    private void editTournament() throws InputException {
+        System.out.println("This feature has not been implemented yet!");
+    }
+
 }

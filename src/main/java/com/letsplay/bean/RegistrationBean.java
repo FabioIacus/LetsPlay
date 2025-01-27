@@ -18,6 +18,16 @@ public class RegistrationBean {
         this.tournament = tournament;
     }
 
+    public RegistrationBean(String tournament, String team, int numPlayers, String captain, String managerEmail, RequestStatus status, String message) {
+        this.tournament = tournament;
+        this.team = team;
+        this.numPlayers = numPlayers;
+        this.captain = captain;
+        this.managerEmail = managerEmail;
+        this.status = status;
+        this.message = message;
+    }
+
     public String getCustomerEmail() {
         return customerEmail;
     }

@@ -1,9 +1,9 @@
 package com.letsplay.model.domain;
 
 public enum RequestStatus {
-    ACCEPTED("accepted"),
-    PENDING("pending"),
-    REJECTED("rejected");
+    ACCEPTED("Accepted"),
+    PENDING("Pending"),
+    REJECTED("Rejected");
 
     private final String id;
 

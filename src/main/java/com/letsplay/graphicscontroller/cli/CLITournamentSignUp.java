@@ -4,11 +4,10 @@ import com.letsplay.bean.RegistrationBean;
 import com.letsplay.bean.SimpleTournamentBean;
 import com.letsplay.bean.TournamentBean;
 import com.letsplay.controller.JoinTournamentController;
-import com.letsplay.exception.DatabaseException;
-import com.letsplay.exception.EmptyFieldsException;
-import com.letsplay.exception.InputException;
+import com.letsplay.exception.*;
 import com.letsplay.model.dao.SessionManager;
 import com.opencsv.exceptions.CsvException;
+import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,7 +35,7 @@ public class CLITournamentSignUp extends AbstractCLI {
                         case 4 -> sendRequest(registrationBean);
                         case 5 -> goHome();
                         case 6 -> goBack(tournamentBean.getName(), tournamentBean.getFootballFacility(), tournamentList);
-                        case 7 -> viewMessages();
+                        case 7 -> viewNotifications();
                         case 8 -> viewProfile();
                         case 9 -> {
                             System.out.println("Exiting the application...");
@@ -44,7 +43,7 @@ public class CLITournamentSignUp extends AbstractCLI {
                         }
                         default -> System.out.println("Unexpected error!");
                     }
-                } catch (InputException | EmptyFieldsException | DatabaseException e) {
+                } catch (InputException | DAOException | SQLException | EmptyFieldsException | DatabaseException | CsvValidationException e) {
                     System.out.println(e.getMessage());
                 }
             }
@@ -142,7 +141,7 @@ public class CLITournamentSignUp extends AbstractCLI {
             System.out.println("Request sent successfully!");
             System.out.println("--------------------------------");
             new CLIHomeCustomer().start();
-        } catch (SQLException | CsvException e) {
+        } catch (SQLException | CsvException | EmailException e) {
             System.out.println(e.getMessage());
         }
     }

@@ -3,8 +3,10 @@ package com.letsplay.graphicscontroller.cli;
 import com.letsplay.bean.SearchTournamentBean;
 import com.letsplay.bean.SimpleTournamentBean;
 import com.letsplay.controller.JoinTournamentController;
+import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
+import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,7 +39,7 @@ public class CLIHomeCustomer extends AbstractCLI {
                     default -> System.out.println("Unexpected error");
                 }
             }
-            catch (InputException e) {
+            catch (InputException | DAOException | SQLException | IOException | DatabaseException | CsvValidationException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -45,18 +47,14 @@ public class CLIHomeCustomer extends AbstractCLI {
 
     private int showMenu() throws InputException {
         System.out.println("-- Customer Menù --");
-        System.out.println("1) Reserve a pitch");
+        System.out.println("1) Reserve a pitch (not available)");
         System.out.println("2) Join tournament");
         System.out.println("3) Join shared match (not available)");
-        System.out.println("4) Notifications");
-        System.out.println("5) Profile");
+        System.out.println("4) View notifications");
+        System.out.println("5) View profile");
         System.out.println("6) Log out");
         System.out.println("7) Exit program");
         return getChoice(1,7);
-    }
-
-    private void reservePitch() throws InputException {
-        System.out.println("This feature has not been implemented yet!");
     }
 
     private void joinTournament() throws InputException {
@@ -88,11 +86,11 @@ public class CLIHomeCustomer extends AbstractCLI {
         }
     }
 
-    private void joinSharedMatch() throws InputException {
+    private void reservePitch() throws InputException {
         System.out.println("This feature has not been implemented yet!");
     }
 
-    private void viewNotifications() throws InputException {
+    private void joinSharedMatch() throws InputException {
         System.out.println("This feature has not been implemented yet!");
     }
 

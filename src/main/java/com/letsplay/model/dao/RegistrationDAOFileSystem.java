@@ -1,13 +1,19 @@
 package com.letsplay.model.dao;
 
 import com.letsplay.model.domain.Registration;
+import com.letsplay.model.domain.RequestStatus;
 import com.letsplay.model.domain.User;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import com.mysql.cj.Session;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvException;
+import com.opencsv.exceptions.CsvValidationException;
 
 public class RegistrationDAOFileSystem implements RegistrationDAO {
     private static final String FILE_NAME = "DBFile.csv";
@@ -80,7 +86,40 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
     }
 
     @Override
-    public List<Registration> findTourStatus(User user) {
-        return List.of();
+    public List<Registration> showResponses(User user) throws IOException, CsvValidationException {
+        CSVReader csvReader = new CSVReader(new BufferedReader(new FileReader(fd)));
+        try {
+            String[] registrationRecord;
+            List<Registration> registrationList = new ArrayList<>();
+
+            while ((registrationRecord = csvReader.readNext()) != null) {
+                String customerEmail = registrationRecord[INDEX_CUSTOMER_EMAIL];
+                if (Objects.equals(customerEmail, SessionManager.getInstance().getCurrentUser().getEmail())) {
+                    String team = registrationRecord[INDEX_TEAM];
+                    int numPlayers = Integer.parseInt(registrationRecord[INDEX_NUM_PLAYERS]);
+                    String captain = registrationRecord[INDEX_CAPTAIN];
+                    String managerEmail = registrationRecord[INDEX_MANAGER_EMAIL];
+                    RequestStatus status = RequestStatus.valueOf(registrationRecord[INDEX_STATUS].toUpperCase());
+                    String message = registrationRecord[INDEX_MESSAGE];
+                    String tournament = registrationRecord[INDEX_TOURNAMENT];
+
+                    Registration registration = new Registration(
+                            customerEmail,
+                            team,
+                            numPlayers,
+                            captain,
+                            managerEmail,
+                            status,
+                            message,
+                            tournament
+                    );
+
+                    registrationList.add(registration);
+                }
+            }
+            return registrationList;
+        } finally {
+            csvReader.close();
+        }
     }
 }

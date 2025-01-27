@@ -15,6 +15,11 @@ public class TournamentQueries {
         }
     }
 
+    public static ResultSet retrieveResponses(Statement stmt, String email) throws SQLException {
+        String sql = "SELECT * FROM registration WHERE customerEmail = '" + email + "'";
+        return stmt.executeQuery(sql);
+    }
+
     public static ResultSet retrieveTournaments(Statement stmt, String city) throws SQLException {
         String sql = "SELECT * FROM tournament WHERE city = '" + city + "'";
         return stmt.executeQuery(sql);

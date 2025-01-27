@@ -1,10 +1,18 @@
 package com.letsplay.graphicscontroller.cli;
 
+import com.letsplay.bean.RegistrationBean;
+import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.controller.LoginController;
+import com.letsplay.exception.DAOException;
+import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
 import com.letsplay.model.dao.SessionManager;
+import com.opencsv.exceptions.CsvValidationException;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 import static com.letsplay.model.domain.Role.CUSTOMER;
@@ -43,24 +51,14 @@ public abstract class AbstractCLI {
         new CLIHomePage().start();
     }
 
-    protected void viewMessages(){
-        /*if (SessionManager.getInstance().getCurrentUser().getRole() == CUSTOMER) {
-            List<RequestsInfoBean> tourInfo = new JoinTourController().showMessages();
-            new CLIMessagesGraphicController().start(tourInfo);
+    protected void viewNotifications() throws InputException, DAOException, SQLException, IOException, DatabaseException, CsvValidationException {
+        if (SessionManager.getInstance().getCurrentUser().getRole() == CUSTOMER) {
+            List<RegistrationBean> registrationBeanList = new JoinTournamentController().getResponses();
+            new CLINotifications().start(registrationBeanList);
         } else {
-            CLIPrinter.printNumbers(1);
-            CLIPrinter.printMessage("Show messages\n");
-            CLIPrinter.printNumbers(2);
-            CLIPrinter.printMessage("Show requests\n");
-            int choice = getMenuChoice(1, 2);
-            if (choice == 1) {
-                List<RequestsInfoBean> tourInfo = new JoinTourController().showMessages();
-                new CLIMessagesGraphicController().start(tourInfo);
-            } else if (choice == 2) {
-                List<ReservationInfoBean> tourInfo = new JoinTourController().showRequests();
-                new CLIRequestsGraphicController().start(tourInfo);
-            }
-        }*/
+            List<RegistrationBean> registrationBeanList = new JoinTournamentController().getRequests();
+            new CLIRequests().start(registrationBeanList);
+        }
     }
 
     protected void viewProfile() {
@@ -72,6 +70,7 @@ public abstract class AbstractCLI {
             new CLIHomeCustomer().start();
         } else {
             new CLIHomeManager().start();
-        }    }
+        }
+    }
 
 }

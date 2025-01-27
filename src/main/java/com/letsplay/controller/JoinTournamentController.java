@@ -1,14 +1,19 @@
 package com.letsplay.controller;
 
 import com.letsplay.bean.*;
+import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
+import com.letsplay.exception.EmailException;
 import com.letsplay.exception.RequestException;
 import com.letsplay.model.dao.RegistrationDAO;
 import com.letsplay.model.dao.RegistrationDAOFactory;
+import com.letsplay.model.dao.SessionManager;
 import com.letsplay.model.domain.Registration;
 import com.letsplay.model.domain.Tournament;
 import com.letsplay.model.dao.TournamentDAO;
+import com.letsplay.model.domain.User;
 import com.opencsv.exceptions.CsvException;
+import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -65,7 +70,7 @@ public class JoinTournamentController {
         return tournamentBean;
     }
 
-    public void signUpTeam(RegistrationBean registrationBean) throws IOException, RequestException, SQLException, CsvException {
+    public void signUpTeam(RegistrationBean registrationBean) throws IOException, RequestException, SQLException, CsvException, EmailException {
         Registration registration = new Registration(
                 registrationBean.getCustomerEmail(),
                 registrationBean.getManagerEmail(),
@@ -78,8 +83,37 @@ public class JoinTournamentController {
         try {
             RegistrationDAO registrationDAO = factory.createRegistrationDAO();
             registrationDAO.registerRequest(registration);
+            registration.notifyManager();
         } catch (RequestException | SQLException | CsvException e) {
             throw e;
         }
+    }
+
+    public List<RegistrationBean> getResponses() throws DAOException, SQLException, IOException, DatabaseException, CsvValidationException {
+        User user = SessionManager.getInstance().getCurrentUser();
+        List<RegistrationBean> registrationBeanList = new ArrayList<>();
+        RegistrationDAOFactory registrationDAOFactory= new RegistrationDAOFactory();
+        try {
+            RegistrationDAO registrationDAO = registrationDAOFactory.createRegistrationDAO();
+            List<Registration> registrationList = registrationDAO.showResponses(user);
+            for (Registration registration : registrationList) {
+                RegistrationBean registrationBean = new RegistrationBean(
+                        registration.getTournament(),
+                        registration.getTeam(),
+                        registration.getNumPlayers(),
+                        registration.getCaptain(),
+                        registration.getManagerEmail(),
+                        registration.getStatus(),
+                        registration.getMessage());
+                registrationBeanList.add(registrationBean);
+            }
+        } catch (IOException | DAOException | SQLException | DatabaseException | CsvValidationException e) {
+            throw e;
+        }
+        return registrationBeanList;
+    }
+
+    public List<RegistrationBean> getRequests() {
+        return List.of();
     }
 }
