@@ -45,7 +45,7 @@ public class CLIHomeCustomer extends AbstractCLI {
         }
     }
 
-    private int showMenu() throws InputException {
+    private int showMenu() {
         System.out.println("-- Customer Menù --");
         System.out.println("1) Reserve a pitch (not available)");
         System.out.println("2) Join tournament");
