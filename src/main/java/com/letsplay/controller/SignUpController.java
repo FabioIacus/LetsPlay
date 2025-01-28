@@ -1,7 +1,6 @@
 package com.letsplay.controller;
 
 import com.letsplay.bean.UserBean;
-import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.EmailException;
 import com.letsplay.exception.UsernameException;
@@ -17,7 +16,7 @@ public class SignUpController {
         int result;
         try {
             result = new UserDAO().signUp(user);
-        } catch (DAOException | SQLException e) {
+        } catch (SQLException e) {
             throw new DatabaseException(e.getMessage());
         } catch (EmailException e) {
             throw new EmailException(e.getMessage());

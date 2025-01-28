@@ -16,7 +16,7 @@ public class TournamentBean {
     private String type;
     private String managerEmail;
 
-    public TournamentBean(String name, String footballFacility, String city, String address, Date startDate, Date endDate, int participationFee, int numTeams, String prize, String requirements, String type, String managerEmail) {
+    public TournamentBean(String name, String footballFacility, String city, String address, Date startDate, Date endDate, int participationFee) {
         this.name = name;
         this.footballFacility = footballFacility;
         this.city = city;
@@ -24,11 +24,6 @@ public class TournamentBean {
         this.startDate = startDate;
         this.endDate = endDate;
         this.participationFee = participationFee;
-        this.numTeams = numTeams;
-        this.prize = prize;
-        this.requirements = requirements;
-        this.type = type;
-        this.managerEmail = managerEmail;
     }
 
     public String getName() {
@@ -81,30 +76,6 @@ public class TournamentBean {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setFootballFacility(String footballFacility) {
-        this.footballFacility = footballFacility;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
-
-    public void setParticipationFee(int participationFee) {
-        this.participationFee = participationFee;
     }
 
     public void setNumTeams(int numTeams) {

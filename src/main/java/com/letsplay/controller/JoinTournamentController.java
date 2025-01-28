@@ -55,13 +55,13 @@ public class JoinTournamentController {
                 details.getAddress(),
                 details.getStartDate(),
                 details.getEndDate(),
-                details.getParticipationFee(),
-                details.getNumberTeams(),
-                details.getPrize(),
-                details.getRequirements(),
-                details.getType().getValue(),
-                details.getManagerEmail()
+                details.getParticipationFee()
         );
+        tournamentBean.setNumTeams(details.getNumberTeams());
+        tournamentBean.setPrize(details.getPrize());
+        tournamentBean.setRequirements(details.getRequirements());
+        tournamentBean.setType(details.getType().getValue());
+        tournamentBean.setManagerEmail(details.getManagerEmail());
         return tournamentBean;
     }
 
