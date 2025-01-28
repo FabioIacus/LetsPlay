@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="tolti code smells">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/RegistrationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/RegistrationBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLITournamentSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLITournamentSignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/TournamentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/TournamentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Tournament.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,7 @@
       <workItem from="1737709028783" duration="23481000" />
       <workItem from="1737970555260" duration="20841000" />
       <workItem from="1738059931335" duration="21000" />
-      <workItem from="1738073945921" duration="1780000" />
+      <workItem from="1738073945921" duration="2635000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -457,7 +457,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738074789974</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="tolti code smells">
+      <option name="closed" value="true" />
+      <created>1738076130741</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1738076130741</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -16,7 +16,7 @@ public class Tournament {
     private Type type;
     private String managerEmail;
 
-    public Tournament(String name, String footballFacility, String address, Date startDate, Date endDate, int participationFee, int numberTeams, String prize, String requirements, String city, Type type, String managerEmail) {
+    public Tournament(String name, String footballFacility, String address, Date startDate, Date endDate, int participationFee, int numberTeams) {
         this.name = name;
         this.footballFacility = footballFacility;
         this.address = address;
@@ -24,10 +24,25 @@ public class Tournament {
         this.endDate = endDate;
         this.participationFee = participationFee;
         this.numberTeams = numberTeams;
+    }
+
+    public void setPrize(String prize) {
         this.prize = prize;
+    }
+
+    public void setRequirements(String requirements) {
         this.requirements = requirements;
+    }
+
+    public void setCity(String city) {
         this.city = city;
+    }
+
+    public void setType(Type type){
         this.type = type;
+    }
+
+    public void setManagerEmail(String managerEmail) {
         this.managerEmail = managerEmail;
     }
 
@@ -50,64 +65,32 @@ public class Tournament {
         return requirements;
     }
 
-    public void setRequirements(String requirements) {
-        this.requirements = requirements;
-    }
-
     public String getPrize() {
         return prize;
-    }
-
-    public void setPrize(String prize) {
-        this.prize = prize;
     }
 
     public int getNumberTeams() {
         return numberTeams;
     }
 
-    public void setNumberTeams(int numberTeams) {
-        this.numberTeams = numberTeams;
-    }
-
     public int getParticipationFee() {
         return participationFee;
-    }
-
-    public void setParticipationFee(int participationFee) {
-        this.participationFee = participationFee;
     }
 
     public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
-
     public Date getStartDate() {
         return startDate;
-    }
-
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getCity() {
         return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     public String getFootballFacility() {
@@ -130,15 +113,8 @@ public class Tournament {
         return type;
     }
 
-    public void setType(Type type){
-        this.type = type;
-    }
-
     public String getManagerEmail() {
         return managerEmail;
     }
 
-    public void setManagerEmail(String managerEmail) {
-        this.managerEmail = managerEmail;
-    }
 }

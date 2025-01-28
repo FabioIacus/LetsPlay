@@ -91,13 +91,13 @@ public class TournamentDAO {
                         rs.getDate("startDate"),
                         rs.getDate("endDate"),
                         rs.getInt("participationFee"),
-                        rs.getInt("numberTeams"),
-                        rs.getString("prize"),
-                        rs.getString("requirements"),
-                        rs.getString("city"),
-                        type,
-                        rs.getString("managerEmail")
+                        rs.getInt("numberTeams")
                 );
+                tournament.setPrize(rs.getString("prize"));
+                tournament.setRequirements(rs.getString("requirements"));
+                tournament.setCity(rs.getString("city"));
+                tournament.setType(type);
+                tournament.setManagerEmail(rs.getString("managerEmail"));
 
                 rs.close();
             } finally {
