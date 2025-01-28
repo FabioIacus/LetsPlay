@@ -93,8 +93,8 @@ public class JoinTournamentController {
                     registration.getNumPlayers(),
                     registration.getCaptain(),
                     registration.getManagerEmail(),
-                    registration.getStatus(),
-                    registration.getMessage());
+                    registration.getStatus());
+            registrationBean.setMessage(registration.getMessage());
             registrationBeanList.add(registrationBean);
         }
         return registrationBeanList;

@@ -187,7 +187,7 @@
       <workItem from="1737709028783" duration="23481000" />
       <workItem from="1737970555260" duration="20841000" />
       <workItem from="1738059931335" duration="21000" />
-      <workItem from="1738073945921" duration="3099000" />
+      <workItem from="1738073945921" duration="3401000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -469,7 +469,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738076609122</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="tolti code smells">
+      <option name="closed" value="true" />
+      <created>1738077203000</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1738077203000</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
