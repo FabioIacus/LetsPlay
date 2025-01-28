@@ -39,15 +39,14 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
         CSVReader reader = new CSVReader(new BufferedReader(new FileReader(fd)));
         try {
             List<String[]> csvBody = reader.readAll();
-            for(int i=0; i<csvBody.size(); i++){
-                String[] strArray = csvBody.get(i);
-                if (    strArray[INDEX_CUSTOMER_EMAIL].equalsIgnoreCase(registration.getCustomerEmail())
+            for (String[] strArray : csvBody) {
+                if (strArray[INDEX_CUSTOMER_EMAIL].equalsIgnoreCase(registration.getCustomerEmail())
                         && strArray[INDEX_TEAM].equalsIgnoreCase(registration.getTeam())
                         && strArray[INDEX_NUM_PLAYERS].equalsIgnoreCase(String.valueOf(registration.getNumPlayers()))
                         && strArray[INDEX_CAPTAIN].equalsIgnoreCase(registration.getCaptain())
                         && strArray[INDEX_MANAGER_EMAIL].equalsIgnoreCase(registration.getManagerEmail())
                         && strArray[INDEX_TOURNAMENT].equalsIgnoreCase(registration.getTournament())
-                    ) {
+                ) {
                     reader.close();
                 }
             }
@@ -108,10 +107,10 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
                             numPlayers,
                             captain,
                             managerEmail,
-                            status,
-                            message,
-                            tournament
+                            status
                     );
+                    registration.setMessage(message);
+                    registration.setTournament(tournament);
 
                     registrationList.add(registration);
                 }

@@ -60,14 +60,6 @@ public class RegistrationBean {
         return message;
     }
 
-    public void setCustomerEmail(String customerEmail) {
-        this.customerEmail = customerEmail;
-    }
-
-    public void setManagerEmail(String managerEmail) {
-        this.managerEmail = managerEmail;
-    }
-
     public void setTeam(String team) {
         this.team = team;
     }
@@ -82,10 +74,6 @@ public class RegistrationBean {
 
     public void setTournament(String tournament) {
         this.tournament = tournament;
-    }
-
-    public void setStatus(RequestStatus status) {
-        this.status = status;
     }
 
     public void setMessage(String message) {

@@ -127,7 +127,7 @@ public class CLITournamentSignUp extends AbstractCLI {
         }
     }
 
-    private void sendRequest(RegistrationBean registrationBean) throws EmptyFieldsException, InputException, IOException, DatabaseException {
+    private void sendRequest(RegistrationBean registrationBean) throws EmptyFieldsException, InputException, IOException {
         if (registrationBean.getTeam() == null || registrationBean.getNumPlayers() == 0 || registrationBean.getCaptain() == null){
             throw new EmptyFieldsException("There are empty fields!");
         }

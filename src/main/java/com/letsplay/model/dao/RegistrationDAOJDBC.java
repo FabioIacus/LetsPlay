@@ -34,9 +34,8 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
 
     @Override
     public List<Registration> findTourToAcceptOrDecline(User user) {
-        List<Registration> registrations = new ArrayList<>();
 
-        return registrations;
+        return new ArrayList<>();
     }
 
     @Override
@@ -72,9 +71,9 @@ public class RegistrationDAOJDBC implements RegistrationDAO {
                         rs.getInt("numPlayers"),
                         rs.getString("captain"),
                         rs.getString("managerEmail"),
-                        status,
-                        rs.getString("message"),
-                        rs.getString("tournament"));
+                        status);
+                registration.setMessage(rs.getString("message"));
+                registration.setTournament(rs.getString("tournament"));
                 //aggiungi il torneo alla lista
                 registrationList.add(registration);
             }

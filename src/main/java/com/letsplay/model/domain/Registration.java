@@ -26,14 +26,20 @@ public class Registration extends Subject {
         this.attach(notificationSystem);
     }
 
-    public Registration(String customerEmail, String team, int numPlayers, String captain, String managerEmail, RequestStatus status, String message, String tournament) {
+    public Registration(String customerEmail, String team, int numPlayers, String captain, String managerEmail, RequestStatus status) {
         this.customerEmail = customerEmail;
         this.team = team;
         this.numPlayers = numPlayers;
         this.captain = captain;
         this.managerEmail = managerEmail;
         this.status = status;
+    }
+
+    public void setMessage(String message) {
         this.message = message;
+    }
+
+    public void setTournament(String tournament) {
         this.tournament = tournament;
     }
 
