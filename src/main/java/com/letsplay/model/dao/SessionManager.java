@@ -7,6 +7,10 @@ public class SessionManager {
     private User currentUser;
 
     //applicazione del pattern Singleton sulla sessione
+    protected SessionManager() {
+        currentUser = null;
+    }
+
     public static SessionManager getInstance() {
         if (SessionManager.instance == null)
             SessionManager.instance = new SessionManager();
