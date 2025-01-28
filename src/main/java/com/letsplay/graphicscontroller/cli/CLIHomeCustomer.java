@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class CLIHomeCustomer extends AbstractCLI {
+    private static final String NOTIMPLEMENTED = "This feature has not been implemented yet!";
     JoinTournamentController joinTournamentController;
     public CLIHomeCustomer(){
         joinTournamentController = new JoinTournamentController();
@@ -85,11 +86,11 @@ public class CLIHomeCustomer extends AbstractCLI {
     }
 
     private void reservePitch() {
-        System.out.println("This feature has not been implemented yet!");
+        System.out.println(NOTIMPLEMENTED);
     }
 
     private void joinSharedMatch() {
-        System.out.println("This feature has not been implemented yet!");
+        System.out.println(NOTIMPLEMENTED);
     }
 
 }
