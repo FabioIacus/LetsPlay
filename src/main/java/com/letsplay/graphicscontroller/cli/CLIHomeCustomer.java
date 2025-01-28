@@ -26,23 +26,27 @@ public class CLIHomeCustomer extends AbstractCLI {
             int choice;
             try {
                 choice = showMenu();
-                switch (choice){
-                    case 1 -> reservePitch();
-                    case 2 -> joinTournament();
-                    case 3 -> joinSharedMatch();
-                    case 4 -> viewNotifications();
-                    case 5 -> viewProfile();
-                    case 6 -> logout();
-                    case 7 -> {
-                        System.out.println("Exiting the application...");
-                        System.exit(0);
-                    }
-                    default -> System.out.println("Unexpected error");
-                }
+                executeChoice(choice);
+            } catch (InputException | DAOException | SQLException | IOException | DatabaseException |
+                     CsvValidationException e) {
+                handleException(e);
             }
-            catch (InputException | DAOException | SQLException | IOException | DatabaseException | CsvValidationException e) {
-                System.out.println(e.getMessage());
-            }
+        }
+    }
+
+    private void handleException(Exception e) {
+        System.out.println("An error occurred: " + e.getMessage());
+    }
+
+    private void executeChoice(int choice) throws InputException, DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
+        switch (choice) {
+            case 1, 3 -> showNotImplementedMessage();
+            case 2 -> joinTournament();
+            case 4 -> viewNotifications();
+            case 5 -> viewProfile();
+            case 6 -> logout();
+            case 7 -> exitApplication();
+            default -> System.out.println("Unexpected error");
         }
     }
 
@@ -58,9 +62,10 @@ public class CLIHomeCustomer extends AbstractCLI {
         return getChoice(1,7);
     }
 
-    private void joinTournament() throws InputException {
+    private void joinTournament() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        while (true) {
+        boolean isTournamentSelected = false;
+        while (!isTournamentSelected) {
             try {
                 //ricava città
                 System.out.print("Please specify a city to search in: ");
@@ -77,7 +82,7 @@ public class CLIHomeCustomer extends AbstractCLI {
                 } else {
                     //passa alla selezione del torneo
                     new CLISelectTournament().start(simpleTournamentBean);
-                    break;
+                    isTournamentSelected = true;
                 }
             } catch (IOException | InputException | DatabaseException | SQLException e) {
                 System.out.println("Error: " + e.getMessage());
@@ -85,12 +90,12 @@ public class CLIHomeCustomer extends AbstractCLI {
         }
     }
 
-    private void reservePitch() {
+    private void showNotImplementedMessage() {
         System.out.println(NOTIMPLEMENTED);
     }
 
-    private void joinSharedMatch() {
-        System.out.println(NOTIMPLEMENTED);
+    private void exitApplication() {
+        System.out.println("Exiting the application...");
+        System.exit(0);
     }
-
 }
