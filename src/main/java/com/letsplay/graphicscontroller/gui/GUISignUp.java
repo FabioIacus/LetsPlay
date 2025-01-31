@@ -52,7 +52,7 @@ public class GUISignUp extends NavigationController {
             int registration = signUpController.signUp(userBean);
             if (registration == 0) {
                 logger.log(Level.INFO, "Registration successful!");
-                showInfoAlert("Registration", "Registration successful!", "");
+                showInfoAlert("Registration", "Registration successful!", "You can now log in to the application.");
                 goToPage("homepage.fxml");
             }
         } catch (UsernameException e) {
