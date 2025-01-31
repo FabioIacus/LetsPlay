@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="fine parte CLI">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeCustomer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" afterDir="false" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="inizio parte GUI - homepage e login">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/signup.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/GUIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/GUIMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homepage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/wallpaper.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/images/wallpaper.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +23,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Exception" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -280,7 +274,7 @@
       <workItem from="1738147536488" duration="22556000" />
       <workItem from="1738182070784" duration="8850000" />
       <workItem from="1738230239887" duration="25259000" />
-      <workItem from="1738320060212" duration="12986000" />
+      <workItem from="1738320060212" duration="20537000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -602,7 +596,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738321621006</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="inizio parte GUI - homepage e login">
+      <option name="closed" value="true" />
+      <created>1738339323036</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1738339323036</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +644,8 @@
     <MESSAGE value="tolti throw nel blocco finally" />
     <MESSAGE value="tolti code smells" />
     <MESSAGE value="fine parte CLI" />
-    <option name="LAST_COMMIT_MESSAGE" value="fine parte CLI" />
+    <MESSAGE value="inizio parte GUI - homepage e login" />
+    <option name="LAST_COMMIT_MESSAGE" value="inizio parte GUI - homepage e login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -28,10 +28,7 @@ public class GUILogin extends NavigationController {
     @FXML
     public void login(ActionEvent event) {
         try {
-            UserBean credentials = new UserBean(
-                    emailField.getText(),
-                    passwordField.getText()
-            );
+            UserBean credentials = new UserBean(emailField.getText(), passwordField.getText());
             loginController.login(credentials);
             goToPage("homeCustomer.fxml");
         } catch (DAOException e) {
@@ -53,9 +50,9 @@ public class GUILogin extends NavigationController {
         super.initialize();
         loginController = new LoginController();
 
-        assert loginButton != null : "fx:id=\"loginButton\" was not injected: check your FXML file 'login.fxml'.";
-        assert passwordField != null : "fx:id=\"passwordField\" was not injected: check your FXML file 'login.fxml'.";
-        assert emailField != null : "fx:id=\"emailField\" was not injected: check your FXML file 'login.fxml'.";
+        assert loginButton != null : "fx:id=loginButton was not injected: check your FXML file 'login.fxml'.";
+        assert passwordField != null : "fx:id=passwordField was not injected: check your FXML file 'login.fxml'.";
+        assert emailField != null : "fx:id=emailField was not injected: check your FXML file 'login.fxml'.";
 
     }
 }

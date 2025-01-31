@@ -22,8 +22,14 @@
                   <Font name="System Bold" size="36.0" />
                </font>
             </Text>
-            <Button fx:id="loginButton" layoutX="427.0" layoutY="213.0" mnemonicParsing="false" onAction="#login" text="Log In" textAlignment="CENTER" />
-            <Button fx:id="signupButton" layoutX="488.0" layoutY="213.0" mnemonicParsing="false" text="Sign Up" onAction="#signup" textAlignment="CENTER" />
+            <Button fx:id="loginButton" layoutX="203.0" layoutY="308.0" mnemonicParsing="false" onAction="#login" prefHeight="48.0" prefWidth="90.0" style="-fx-background-color: FFB347; -fx-background-radius: 20; -fx-border-radius: 20;" text="Log In" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+            <Button fx:id="signupButton" layoutX="311.0" layoutY="308.0" mnemonicParsing="false" onAction="#signup" prefHeight="48.0" prefWidth="90.0" style="-fx-background-color: FFB347; -fx-border-radius: 20; -fx-background-radius: 20;" text="Sign Up" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
          </children>
       </Pane>
    </center>
