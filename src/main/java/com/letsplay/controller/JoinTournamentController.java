@@ -7,8 +7,9 @@ import com.letsplay.exception.EmailException;
 import com.letsplay.exception.RequestException;
 import com.letsplay.model.dao.RegistrationDAO;
 import com.letsplay.model.dao.RegistrationDAOFactory;
-import com.letsplay.model.dao.SessionManager;
+import com.letsplay.session.SessionManager;
 import com.letsplay.model.domain.Registration;
+import com.letsplay.model.domain.RequestStatus;
 import com.letsplay.model.domain.Tournament;
 import com.letsplay.model.dao.TournamentDAO;
 import com.letsplay.model.domain.User;
@@ -77,7 +78,7 @@ public class JoinTournamentController {
         RegistrationDAOFactory factory = new RegistrationDAOFactory();
         RegistrationDAO registrationDAO = factory.createRegistrationDAO();
         registrationDAO.registerRequest(registration);
-        registration.notifyManager();
+        registration.notifyUser();
     }
 
     public List<RegistrationBean> getResponses() throws DAOException, SQLException, IOException, DatabaseException, CsvValidationException {
@@ -100,7 +101,57 @@ public class JoinTournamentController {
         return registrationBeanList;
     }
 
-    public List<RegistrationBean> getRequests() {
-        return List.of();
+    public List<RegistrationBean> getRequests() throws IOException, SQLException, DatabaseException, CsvValidationException {
+        User user = SessionManager.getInstance().getCurrentUser();
+        List<RegistrationBean> registrationBeanList = new ArrayList<>();
+        RegistrationDAOFactory registrationDAOFactory= new RegistrationDAOFactory();
+        RegistrationDAO registrationDAO = registrationDAOFactory.createRegistrationDAO();
+        List<Registration> requestsList = registrationDAO.showRequests(user);
+        for (Registration request : requestsList) {
+            RegistrationBean registrationBean = new RegistrationBean(
+                    request.getTournament(),
+                    request.getTeam(),
+                    request.getNumPlayers(),
+                    request.getCaptain(),
+                    request.getCustomerEmail());
+            registrationBean.setMessage(request.getMessage());
+            registrationBean.setManagerEmail(request.getManagerEmail());
+
+            registrationBeanList.add(registrationBean);
+        }
+        return registrationBeanList;
+    }
+
+    public void manageRequest(RegistrationBean request, ResponseBean responseBean) throws EmailException, IOException, SQLException, CsvException {
+        Registration registration;
+        //se la richiesta viene accettata
+        if (responseBean.getChoice() == 1) {
+            registration = new Registration(
+                    request.getCustomerEmail(),
+                    request.getTeam(),
+                    request.getNumPlayers(),
+                    request.getCaptain(),
+                    request.getTournament(),
+                    responseBean.getMessage(),
+                    RequestStatus.ACCEPTED
+            );
+        } else {
+            registration = new Registration(
+                    request.getCustomerEmail(),
+                    request.getTeam(),
+                    request.getNumPlayers(),
+                    request.getCaptain(),
+                    request.getTournament(),
+                    responseBean.getMessage(),
+                    RequestStatus.REJECTED
+            );
+        }
+        registration.setManagerEmail(request.getManagerEmail());
+
+        RegistrationDAOFactory factory = new RegistrationDAOFactory();
+        RegistrationDAO registrationDAO = factory.createRegistrationDAO();
+
+        registrationDAO.acceptOrReject(registration);
+        registration.notifyUser();
     }
 }

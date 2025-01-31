@@ -2,7 +2,7 @@ package com.letsplay.controller;
 
 import com.letsplay.bean.UserBean;
 import com.letsplay.exception.DAOException;
-import com.letsplay.model.dao.SessionManager;
+import com.letsplay.session.SessionManager;
 import com.letsplay.model.dao.UserDAO;
 import com.letsplay.model.domain.User;
 

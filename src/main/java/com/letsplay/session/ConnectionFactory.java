@@ -1,4 +1,4 @@
-package com.letsplay.model.dao;
+package com.letsplay.session;
 
 import java.io.FileInputStream;
 import java.io.IOException;

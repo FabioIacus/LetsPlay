@@ -34,10 +34,6 @@ public class CLIHomeCustomer extends AbstractCLI {
         }
     }
 
-    private void handleException(Exception e) {
-        System.out.println("An error occurred: " + e.getMessage());
-    }
-
     private void executeChoice(int choice) throws InputException, DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         switch (choice) {
             case 1, 3 -> showNotImplementedMessage();
@@ -97,5 +93,9 @@ public class CLIHomeCustomer extends AbstractCLI {
     private void exitApplication() {
         System.out.println("Exiting the application...");
         System.exit(0);
+    }
+
+    private void handleException(Exception e) {
+        System.out.println("An error occurred: " + e.getMessage());
     }
 }

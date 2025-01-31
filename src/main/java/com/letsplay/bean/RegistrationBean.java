@@ -27,6 +27,14 @@ public class RegistrationBean {
         this.status = status;
     }
 
+    public RegistrationBean(String tournament, String team, int numPlayers, String captain, String customerEmail) {
+        this.tournament = tournament;
+        this.team = team;
+        this.numPlayers = numPlayers;
+        this.captain = captain;
+        this.customerEmail = customerEmail;
+    }
+
     public String getCustomerEmail() {
         return customerEmail;
     }
@@ -77,5 +85,9 @@ public class RegistrationBean {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public void setManagerEmail(String managerEmail) {
+        this.managerEmail = managerEmail;
     }
 }

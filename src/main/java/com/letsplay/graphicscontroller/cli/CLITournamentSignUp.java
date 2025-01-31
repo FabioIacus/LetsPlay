@@ -5,7 +5,7 @@ import com.letsplay.bean.SimpleTournamentBean;
 import com.letsplay.bean.TournamentBean;
 import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.exception.*;
-import com.letsplay.model.dao.SessionManager;
+import com.letsplay.session.SessionManager;
 import com.opencsv.exceptions.CsvException;
 import com.opencsv.exceptions.CsvValidationException;
 

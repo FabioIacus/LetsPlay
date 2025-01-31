@@ -1,20 +1,21 @@
 package com.letsplay.graphicscontroller.cli;
 
 import com.letsplay.bean.RegistrationBean;
+import com.letsplay.exception.DAOException;
+import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
+import com.opencsv.exceptions.CsvValidationException;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class CLINotifications extends AbstractCLI {
-    public void start(List<RegistrationBean> registrationBeanList) throws InputException {
+    public void start(List<RegistrationBean> registrationBeanList) throws InputException, DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         int choice;
         int i = 1;
         while (true) {
             System.out.println("-- Requests Sent --");
-            if (registrationBeanList.isEmpty()) {
-                System.out.println("No requests found!");
-                break;
-            }
             for (RegistrationBean registrationBean : registrationBeanList){
                 System.out.println(i + "   Tournament: " + registrationBean.getTournament());
                 System.out.println("    Registered team: " + registrationBean.getTeam());

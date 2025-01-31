@@ -1,8 +1,8 @@
 package com.letsplay.model.domain;
 
 import com.letsplay.exception.EmailException;
-import com.letsplay.pattern.NotificationSystem;
-import com.letsplay.pattern.Subject;
+import com.letsplay.notification.NotificationSystem;
+import com.letsplay.notification.Subject;
 
 public class Registration extends Subject {
     private String customerEmail;
@@ -35,6 +35,19 @@ public class Registration extends Subject {
         this.status = status;
     }
 
+    public Registration(String customerEmail, String team, int numPlayers, String captain, String tournament, String message, RequestStatus status) {
+        this.customerEmail = customerEmail;
+        this.team = team;
+        this.numPlayers = numPlayers;
+        this.captain = captain;
+        this.tournament = tournament;
+        this.message = message;
+        this.status = status;
+        NotificationSystem notificationSystem = new NotificationSystem(this);
+        this.attach(notificationSystem);
+    }
+
+
     public void setMessage(String message) {
         this.message = message;
     }
@@ -49,6 +62,10 @@ public class Registration extends Subject {
 
     public String getManagerEmail() {
         return managerEmail;
+    }
+
+    public void setManagerEmail(String managerEmail) {
+        this.managerEmail = managerEmail;
     }
 
     public String getTeam() {
@@ -75,7 +92,8 @@ public class Registration extends Subject {
         return message;
     }
 
-    public void notifyManager() {
+    public void notifyUser() {
         super.notifyObservers();
     }
+
 }

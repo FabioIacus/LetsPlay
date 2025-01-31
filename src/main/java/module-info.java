@@ -5,6 +5,7 @@ module com.letsplay {
     requires jdk.jshell;
     requires com.opencsv;
     requires mysql.connector.j;
+    requires jdk.compiler;
 
 
     opens com.letsplay to javafx.fxml;
@@ -17,7 +18,8 @@ module com.letsplay {
     exports com.letsplay.model.dao;
     exports com.letsplay.model.dao.queries;
     exports com.letsplay.model.domain;
-    exports com.letsplay.pattern;
+    exports com.letsplay.notification;
 
     opens com.letsplay.controller to javafx.fxml;
+    exports com.letsplay.session;
 }

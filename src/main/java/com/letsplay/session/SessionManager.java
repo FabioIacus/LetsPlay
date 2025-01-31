@@ -1,4 +1,4 @@
-package com.letsplay.model.dao;
+package com.letsplay.session;
 
 import com.letsplay.model.domain.User;
 
@@ -6,7 +6,7 @@ public class SessionManager {
     private static SessionManager instance = null;
     private User currentUser;
 
-    //applicazione del pattern Singleton sulla sessione
+    //applicazione del notification Singleton sulla sessione
     protected SessionManager() {
         currentUser = null;
     }

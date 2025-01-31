@@ -7,6 +7,7 @@ import com.letsplay.exception.UsernameException;
 import com.letsplay.model.dao.queries.UserQueries;
 import com.letsplay.model.domain.Role;
 import com.letsplay.model.domain.User;
+import com.letsplay.session.ConnectionFactory;
 
 import java.sql.*;
 
@@ -23,7 +24,7 @@ public class UserDAO {
         User user;
         Role role;
 
-        //applicazione del pattern Factory
+        //applicazione del notification Factory
         conn = ConnectionFactory.getConnection();
 
         try {
@@ -65,7 +66,7 @@ public class UserDAO {
         Statement stmt = null;
         Connection conn;
 
-        //applicazione del pattern Factory
+        //applicazione del notification Factory
         conn = ConnectionFactory.getConnection();
 
         try {

@@ -16,6 +16,12 @@ public class Tournament {
     private Type type;
     private String managerEmail;
 
+    public Tournament() {}
+
+    public Tournament(String city) {
+        this.city = city;
+    }
+
     public Tournament(String name, String footballFacility, String address, Date startDate, Date endDate, int participationFee, int numberTeams) {
         this.name = name;
         this.footballFacility = footballFacility;
@@ -24,32 +30,6 @@ public class Tournament {
         this.endDate = endDate;
         this.participationFee = participationFee;
         this.numberTeams = numberTeams;
-    }
-
-    public void setPrize(String prize) {
-        this.prize = prize;
-    }
-
-    public void setRequirements(String requirements) {
-        this.requirements = requirements;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setType(Type type){
-        this.type = type;
-    }
-
-    public void setManagerEmail(String managerEmail) {
-        this.managerEmail = managerEmail;
-    }
-
-    public Tournament() {}
-
-    public Tournament(String city) {
-        this.city = city;
     }
 
     public Tournament(String name, String footballFacility, String address, java.sql.Date startDate, java.sql.Date endDate, Type type) {
@@ -115,6 +95,26 @@ public class Tournament {
 
     public String getManagerEmail() {
         return managerEmail;
+    }
+
+    public void setPrize(String prize) {
+        this.prize = prize;
+    }
+
+    public void setRequirements(String requirements) {
+        this.requirements = requirements;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setType(Type type){
+        this.type = type;
+    }
+
+    public void setManagerEmail(String managerEmail) {
+        this.managerEmail = managerEmail;
     }
 
 }

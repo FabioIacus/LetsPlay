@@ -17,8 +17,18 @@ public class TournamentQueries {
         }
     }
 
+    public static ResultSet check(Statement stmt, String email, String tournament) throws SQLException {
+        String sql = "SELECT * FROM registration WHERE customerEmail = '" + email + "' AND tournament = '" + tournament + "' AND (status = 'Pending' OR status = 'Accepted')";
+        return stmt.executeQuery(sql);
+    }
+
     public static ResultSet retrieveResponses(Statement stmt, String email) throws SQLException {
         String sql = "SELECT * FROM registration WHERE customerEmail = '" + email + "'";
+        return stmt.executeQuery(sql);
+    }
+
+    public static ResultSet retrieveRequests(Statement stmt, String email) throws SQLException {
+        String sql = "SELECT * FROM registration WHERE managerEmail = '" + email + "' and status = 'Pending'";
         return stmt.executeQuery(sql);
     }
 
@@ -32,4 +42,23 @@ public class TournamentQueries {
         return stmt.executeQuery(sql);
     }
 
+    public static int acceptRequest(Statement stmt, String customerEmail, String tournament, String message) throws SQLException {
+        String sql = "UPDATE registration SET status = 'Accepted', message = '" + message + "' WHERE customerEmail = '" + customerEmail + "' AND tournament = '" + tournament + "' AND status = 'Pending'";
+        int rows = stmt.executeUpdate(sql);
+        if (rows > 0) {
+            return rows;
+        } else {
+            return -1;
+        }
+    }
+
+    public static int rejectRequest(Statement stmt, String customerEmail, String tournament, String message) throws SQLException {
+        String sql = "UPDATE registration SET status = 'Rejected', message = '" + message + "'WHERE customerEmail = '" + customerEmail + "' AND tournament = '" + tournament + "' AND status = 'Pending'";
+        int rows = stmt.executeUpdate(sql);
+        if (rows > 0) {
+            return rows;
+        } else {
+            return -1;
+        }
+    }
 }

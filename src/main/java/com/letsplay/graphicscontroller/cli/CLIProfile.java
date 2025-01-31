@@ -3,7 +3,7 @@ package com.letsplay.graphicscontroller.cli;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
-import com.letsplay.model.dao.SessionManager;
+import com.letsplay.session.SessionManager;
 import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.IOException;
@@ -54,7 +54,7 @@ public class CLIProfile extends AbstractCLI {
         System.out.println("-------------------");
     }
 
-    private void goBack() throws InputException {
+    private void goBack() throws InputException, DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         if (SessionManager.getInstance().getCurrentUser().getRole().getId().equals("customer")) {
             new CLIHomeCustomer().start();
         } else {

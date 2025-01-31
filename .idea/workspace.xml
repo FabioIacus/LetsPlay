@@ -5,8 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="tolti code smells">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/ResponseBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/exception/FileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/session/Navigator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestRegistrationDAOFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestTournamentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestUserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DBFile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/GUIMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/GUIMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/RegistrationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/bean/RegistrationBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/JoinTournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/JoinTournamentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/AbstractCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/AbstractCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIHomeCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIHomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIHomeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLILogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLINotifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLINotifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLITournamentSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLITournamentSignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/session/ConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOFileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOFileSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/session/SessionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/TournamentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/TournamentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/queries/TournamentQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/queries/TournamentQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Tournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/pattern/NotificationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/notification/NotificationSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/pattern/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/notification/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/pattern/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/notification/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/properties/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/properties/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,35 +92,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CLIMain.executor": "Run",
-    "Application.GUIMain.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/39377/Desktop/SESSIONE/ISPW/Nicola/easyGuide",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CLIMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GUIMain.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestRegistrationDAOFactory.testCreateReservationDAO.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestTournamentDAO.testFindTournaments.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestUserDAO.testSignUp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/39377/Desktop/SESSIONE/ISPW/Nicola/easyGuide&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\39377\Desktop\Università\Corsi\ISPW\LetsPlay" />
@@ -96,6 +134,77 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.letsplay" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.GUIMain">
+    <configuration name="GUIMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.letsplay.GUIMain" />
+      <module name="LetsPlay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letsplay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRegistrationDAOFactory.testCreateReservationDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LetsPlay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letsplay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.letsplay" />
+      <option name="MAIN_CLASS_NAME" value="com.letsplay.TestRegistrationDAOFactory" />
+      <option name="METHOD_NAME" value="testCreateReservationDAO" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestTournamentDAO.testFindTournaments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LetsPlay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letsplay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.letsplay" />
+      <option name="MAIN_CLASS_NAME" value="com.letsplay.TestTournamentDAO" />
+      <option name="METHOD_NAME" value="testFindTournaments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUserDAO.testSignUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LetsPlay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.letsplay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.letsplay" />
+      <option name="MAIN_CLASS_NAME" value="com.letsplay.TestUserDAO" />
+      <option name="METHOD_NAME" value="testSignUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GUIMain" />
+        <item itemvalue="JUnit.TestTournamentDAO.testFindTournaments" />
+        <item itemvalue="JUnit.TestUserDAO.testSignUp" />
+        <item itemvalue="JUnit.TestRegistrationDAOFactory.testCreateReservationDAO" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -190,7 +299,11 @@
       <workItem from="1737709028783" duration="23481000" />
       <workItem from="1737970555260" duration="20841000" />
       <workItem from="1738059931335" duration="21000" />
-      <workItem from="1738073945921" duration="4398000" />
+      <workItem from="1738073945921" duration="18478000" />
+      <workItem from="1738147536488" duration="22556000" />
+      <workItem from="1738182070784" duration="8850000" />
+      <workItem from="1738230239887" duration="25259000" />
+      <workItem from="1738320060212" duration="495000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -496,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738077730168</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="tolti code smells">
+      <option name="closed" value="true" />
+      <created>1738078664094</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1738078664094</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

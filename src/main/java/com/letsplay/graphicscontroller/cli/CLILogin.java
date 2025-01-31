@@ -3,7 +3,9 @@ package com.letsplay.graphicscontroller.cli;
 import com.letsplay.bean.UserBean;
 import com.letsplay.controller.LoginController;
 import com.letsplay.exception.DAOException;
+import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
+import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,11 +35,10 @@ public class CLILogin {
             } else {
                 new CLIHomeManager().start();
             }
-        } catch (InputException | IOException | SQLException | DAOException e) {
+        } catch (InputException | IOException | SQLException | DAOException | CsvValidationException | DatabaseException e) {
             System.out.println(e.getMessage());
             new CLIHomePage().start();
         }
-
     }
 
 }

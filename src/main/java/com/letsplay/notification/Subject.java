@@ -1,4 +1,4 @@
-package com.letsplay.pattern;
+package com.letsplay.notification;
 
 import java.util.ArrayList;
 import java.util.List;

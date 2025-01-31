@@ -4,6 +4,7 @@ import com.letsplay.exception.DatabaseException;
 import com.letsplay.model.dao.queries.TournamentQueries;
 import com.letsplay.model.domain.Tournament;
 import com.letsplay.model.domain.Type;
+import com.letsplay.session.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

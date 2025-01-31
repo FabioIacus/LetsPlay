@@ -6,7 +6,7 @@ import com.letsplay.controller.LoginController;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
-import com.letsplay.model.dao.SessionManager;
+import com.letsplay.session.SessionManager;
 import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.IOException;
@@ -52,12 +52,24 @@ public abstract class AbstractCLI {
     }
 
     protected void viewNotifications() throws InputException, DAOException, SQLException, IOException, DatabaseException, CsvValidationException {
-        if (SessionManager.getInstance().getCurrentUser().getRole() == CUSTOMER) {
-            List<RegistrationBean> registrationBeanList = new JoinTournamentController().getResponses();
-            new CLINotifications().start(registrationBeanList);
-        } else {
-            List<RegistrationBean> registrationBeanList = new JoinTournamentController().getRequests();
-            new CLIRequests().start(registrationBeanList);
+        try {
+            if (SessionManager.getInstance().getCurrentUser().getRole() == CUSTOMER) {
+                List<RegistrationBean> registrationBeanList = new JoinTournamentController().getResponses();
+                if (registrationBeanList.isEmpty()) {
+                    System.out.println("No requests found!");
+                    return;
+                }
+                new CLINotifications().start(registrationBeanList);
+            } else {
+                List<RegistrationBean> requestsBeanList = new JoinTournamentController().getRequests();
+                if (requestsBeanList.isEmpty()) {
+                    System.out.println("No requests found!");
+                    return;
+                }
+                new CLIRequests().start(requestsBeanList);
+            }
+        } catch (InputException | DAOException | SQLException | IOException | DatabaseException | CsvValidationException e){
+            System.out.println(e.getMessage());
         }
     }
 
@@ -65,7 +77,7 @@ public abstract class AbstractCLI {
         new CLIProfile().start();
     }
 
-    protected void goHome() throws InputException {
+    protected void goHome() throws InputException, DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         if (SessionManager.getInstance().getCurrentUser().getRole().getId().equals("customer")) {
             new CLIHomeCustomer().start();
         } else {

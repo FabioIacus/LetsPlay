@@ -1,5 +1,6 @@
 package com.letsplay.model.dao;
 
+import com.letsplay.exception.EmailException;
 import com.letsplay.model.domain.Registration;
 import com.letsplay.model.domain.RequestStatus;
 import com.letsplay.model.domain.User;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.letsplay.session.SessionManager;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvException;
@@ -35,26 +37,25 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
     }
 
     @Override
-    public void registerRequest(Registration registration) throws IOException, CsvException {
+    public void registerRequest(Registration registration) throws IOException, EmailException, CsvException {
         CSVReader reader = new CSVReader(new BufferedReader(new FileReader(fd)));
         try {
+            //controllo se già esiste una riga nel file csv con gli stessi dati
             List<String[]> csvBody = reader.readAll();
             for (String[] strArray : csvBody) {
                 if (strArray[INDEX_CUSTOMER_EMAIL].equalsIgnoreCase(registration.getCustomerEmail())
-                        && strArray[INDEX_TEAM].equalsIgnoreCase(registration.getTeam())
-                        && strArray[INDEX_NUM_PLAYERS].equalsIgnoreCase(String.valueOf(registration.getNumPlayers()))
-                        && strArray[INDEX_CAPTAIN].equalsIgnoreCase(registration.getCaptain())
-                        && strArray[INDEX_MANAGER_EMAIL].equalsIgnoreCase(registration.getManagerEmail())
                         && strArray[INDEX_TOURNAMENT].equalsIgnoreCase(registration.getTournament())
-                ) {
+                        && (strArray[INDEX_STATUS].equalsIgnoreCase("pending")
+                        || strArray[INDEX_STATUS].equalsIgnoreCase("accepted"))) {
                     reader.close();
+                    throw new EmailException("You have already sent a request for this tournament!");
                 }
             }
-        }
-        finally {
+        } finally {
             reader.close();
         }
 
+        //se il controllo è andato bene, posso inserire la nuova riga
         CSVWriter csvWriter = new CSVWriter(new BufferedWriter(new FileWriter(fd, true)));
         try {
             String[] registrationRecord = new String[9];
@@ -64,6 +65,7 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
             registrationRecord[INDEX_CAPTAIN] = registration.getCaptain();
             registrationRecord[INDEX_MANAGER_EMAIL] = registration.getManagerEmail();
             registrationRecord[INDEX_STATUS] = "Pending";
+            registrationRecord[INDEX_MESSAGE] = "";
             registrationRecord[INDEX_TOURNAMENT] = registration.getTournament();
             csvWriter.writeNext(registrationRecord);
             csvWriter.flush();
@@ -71,16 +73,6 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
         finally {
             csvWriter.close();
         }
-    }
-
-    @Override
-    public List<Registration> findTourToAcceptOrDecline(User user) {
-        return List.of();
-    }
-
-    @Override
-    public void changeStatus(Registration reservation) {
-
     }
 
     @Override
@@ -120,4 +112,77 @@ public class RegistrationDAOFileSystem implements RegistrationDAO {
             csvReader.close();
         }
     }
+
+    @Override
+    public List<Registration> showRequests(User user) throws IOException, CsvValidationException {
+        CSVReader csvReader = new CSVReader(new BufferedReader(new FileReader(fd)));
+        try {
+            String[] requestRecord;
+            List<Registration> requestsList = new ArrayList<>();
+
+            while ((requestRecord = csvReader.readNext()) != null) {
+                String managerEmail = requestRecord[INDEX_MANAGER_EMAIL];
+                if (Objects.equals(managerEmail, SessionManager.getInstance().getCurrentUser().getEmail()) && Objects.equals(requestRecord[INDEX_STATUS].toUpperCase(), "PENDING")) {
+                    String team = requestRecord[INDEX_TEAM];
+                    int numPlayers = Integer.parseInt(requestRecord[INDEX_NUM_PLAYERS]);
+                    String captain = requestRecord[INDEX_CAPTAIN];
+                    String customerEmail = requestRecord[INDEX_CUSTOMER_EMAIL];
+                    RequestStatus status = RequestStatus.valueOf(requestRecord[INDEX_STATUS].toUpperCase());
+                    String message = requestRecord[INDEX_MESSAGE];
+                    String tournament = requestRecord[INDEX_TOURNAMENT];
+
+                    Registration registration = new Registration(
+                            customerEmail,
+                            team,
+                            numPlayers,
+                            captain,
+                            managerEmail,
+                            status
+                    );
+                    registration.setMessage(message);
+                    registration.setTournament(tournament);
+
+                    requestsList.add(registration);
+                }
+            }
+            return requestsList;
+        } finally {
+            csvReader.close();
+        }
+    }
+
+    @Override
+    public void acceptOrReject(Registration registration) throws IOException, CsvException {
+        CSVReader reader = new CSVReader(new BufferedReader(new FileReader(fd)));
+        try {
+            List<String[]> csvBody = reader.readAll();
+            //cerco la riga corretta: devo avere la stessa email del customer, del manager ed il torneo passati come parametri
+            //in più, per non andare ad accettare vecchie richieste con gli stessi dati, prendo solo quella che risulta pending
+            //che sarà sicuramente unica
+            for (String[] strArray : csvBody) {
+                if (strArray[INDEX_CUSTOMER_EMAIL].equalsIgnoreCase(registration.getCustomerEmail())
+                        && strArray[INDEX_MANAGER_EMAIL].equalsIgnoreCase(registration.getManagerEmail())
+                        && strArray[INDEX_TOURNAMENT].equalsIgnoreCase(registration.getTournament())
+                        && strArray[INDEX_STATUS].equalsIgnoreCase("pending")
+                ) {
+                    strArray[INDEX_STATUS] = String.valueOf(registration.getStatus().getId());
+                    strArray[INDEX_MESSAGE] = registration.getMessage();
+                }
+            }
+
+            CSVWriter csvWriter = new CSVWriter(new BufferedWriter(new FileWriter(fd)));
+
+            try {
+                csvWriter.writeAll(csvBody);
+                csvWriter.flush();
+            }
+            finally {
+                csvWriter.close();
+            }
+        }
+        finally {
+            reader.close();
+        }
+    }
+
 }
