@@ -6,6 +6,8 @@ module com.letsplay {
     requires com.opencsv;
     requires mysql.connector.j;
     requires jdk.compiler;
+    opens com.letsplay.graphicscontroller.gui to javafx.fxml;
+
 
 
     opens com.letsplay to javafx.fxml;
