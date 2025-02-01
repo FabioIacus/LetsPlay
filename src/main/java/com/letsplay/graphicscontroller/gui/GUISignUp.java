@@ -5,18 +5,22 @@ import com.letsplay.controller.NavigationController;
 import com.letsplay.controller.SignUpController;
 import com.letsplay.exception.*;
 import com.letsplay.model.domain.Role;
+import com.opencsv.exceptions.CsvValidationException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.logging.Level;
 
 public class GUISignUp extends NavigationController {
 
     private SignUpController signUpController;
-
+    @FXML
+    private Button goBackButton;
     @FXML
     private TextField nameField;
     @FXML
@@ -78,15 +82,15 @@ public class GUISignUp extends NavigationController {
 
     @FXML
     @Override
-    public void initialize()  {
+    public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
         signUpController = new SignUpController();
 
-        assert signupButton != null : "fx:id=loginButton was not injected: check your FXML file 'login.fxml'.";
-        assert passwordField != null : "fx:id=passwordField was not injected: check your FXML file 'login.fxml'.";
-        assert emailField != null : "fx:id=emailField was not injected: check your FXML file 'login.fxml'.";
-        assert nameField != null : "fx:id=nameField was not injected: check your FXML file 'login.fxml'.";
-        assert surnameField != null : "fx:id=surnameField was not injected: check your FXML file 'login.fxml'.";
-        assert usernameField != null : "fx:id=usernameField was not injected: check your FXML file 'login.fxml'.";
+        assert signupButton != null : "fx:id=loginButton was not injected: check your FXML file 'signup.fxml'.";
+        assert passwordField != null : "fx:id=passwordField was not injected: check your FXML file 'signup.fxml'.";
+        assert emailField != null : "fx:id=emailField was not injected: check your FXML file 'signup.fxml'.";
+        assert nameField != null : "fx:id=nameField was not injected: check your FXML file 'signup.fxml'.";
+        assert surnameField != null : "fx:id=surnameField was not injected: check your FXML file 'signup.fxml'.";
+        assert usernameField != null : "fx:id=usernameField was not injected: check your FXML file 'signup.fxml'.";
     }
 }

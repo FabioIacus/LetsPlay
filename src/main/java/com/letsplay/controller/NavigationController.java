@@ -1,11 +1,15 @@
 package com.letsplay.controller;
 
+import com.letsplay.exception.DAOException;
+import com.letsplay.exception.DatabaseException;
 import com.letsplay.session.Navigator;
+import com.opencsv.exceptions.CsvValidationException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Optional;
 import java.util.logging.Level;
@@ -18,7 +22,7 @@ public class NavigationController {
     protected Logger logger = Logger.getAnonymousLogger();
 
     @FXML
-    public void initialize()  {
+    public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         errorAlert = new Alert(Alert.AlertType.ERROR);
         infoAlert = new Alert(Alert.AlertType.INFORMATION);
         confirmationAlert = new Alert(Alert.AlertType.CONFIRMATION);

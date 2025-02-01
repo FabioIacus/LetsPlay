@@ -1,62 +1,61 @@
 package com.letsplay.graphicscontroller.gui;
 
-import com.letsplay.controller.NavigationController;
+import com.letsplay.exception.DAOException;
+import com.letsplay.exception.DatabaseException;
+import com.opencsv.exceptions.CsvValidationException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 
-public class GUIHomeCustomer extends NavigationController {
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class GUIHomeCustomer extends AbstractGUI {
+    @FXML
+    private Button reservePitchButton;
+    @FXML
+    private Button joinTournamentButton;
+    @FXML
+    private Button sharedMatchButton;
+    @FXML
+    private Button homeButton;
+    @FXML
+    private Button notificationsButton;
+    @FXML
+    private Button profileButton;
     @FXML
     private Button logoutButton;
 
     @FXML
-    private ImageView messageButton;
-
-    @FXML
-    private Button searchButton;
-    @FXML
-    private ImageView profile;
-    @FXML
-    private TextField textField;
-
-    /*@FXML
-    void goProfile(MouseEvent event) {
-        goToPage("profileInfo.fxml");
+    public void reservePitch(ActionEvent event) {
+        showErrorAlert("Reserve a pitch", "It is not possible to reserve a pitch!", "This feature has not been implemented yet!");
     }
     @FXML
-    public void search(ActionEvent event) {
-        try {
-            TourSearchBean bean = new TourSearchBean(textField.getText());
-            List<TourBean> listOfTourBeans = joinTourController.findTourOfCity(bean);
-            if (!listOfTourBeans.isEmpty())
-                goToWithController("selectTour.fxml", new SelectTourGraphicController(listOfTourBeans));
-            else
-                showInfoAlert("No tour available","There are no tours for this city","Choose another city");
-
-        } catch (InvalidFormatException e) {
-            logger.log(Level.INFO, e.getMessage());
-            showErrorAlert("City error","Invalid format","City is in an invalid format");
-        }
-        catch (SQLException e){
-            logger.log(Level.INFO, e.getMessage());
-            showErrorAlert("DB error","","");
-        }
+    public void joinTournament(ActionEvent event) {
+        goToPage("selectTournament.fxml");
+    }
+    @FXML
+    public void joinSharedMatch(ActionEvent event) {
+        showErrorAlert("Join shared match", "It is not possible to join a shared match!", "This feature has not been implemented yet!");
+    }
+    @FXML
+    public void viewProfile(ActionEvent event) {
+        goToPage("profile.fxml");
     }
 
 
     @FXML @Override
-    public void initialize() {
+    public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
-        joinTournamentController = new JoinTournamentController();
 
+        assert reservePitchButton != null : "fx:id=reservePitchButton was not injected: check your FXML file 'homeCustomer.fxml'.";
+        assert joinTournamentButton != null : "fx:id=joinTournamentButton was not injected: check your FXML file 'homeCustomer.fxml'.";
+        assert sharedMatchButton != null : "fx:id=sharedMatchButton was not injected: check your FXML file 'homeCustomer.fxml'.";
+        assert homeButton != null : "fx:id=homeButton was not injected: check your FXML file 'homeCustomer.fxml'.";
+        assert notificationsButton != null : "fx:id=notificationsButton was not injected: check your FXML file 'homeCustomer.fxml'.";
+        assert profileButton != null : "fx:id=profileButton was not injected: check your FXML file 'homeCustomer.fxml'.";
+        assert logoutButton != null : "fx:id=logoutButton was not injected: check your FXML file 'homeCustomer.fxml'.";
 
-        assert logoutButton != null : "fx:id=\"logoutButton\" was not injected: check your FXML file 'home.fxml'.";
-        assert messageButton != null : "fx:id=\"messageButton\" was not injected: check your FXML file 'home.fxml'.";
-        assert profile != null : "fx:id=\"profile\" was not injected: check your FXML file 'home.fxml'.";
-        assert searchButton != null : "fx:id=\"searchButton\" was not injected: check your FXML file 'home.fxml'.";
-        assert textField != null : "fx:id=\"textField\" was not injected: check your FXML file 'home.fxml'.";
-
-    }*/
+    }
 
 }

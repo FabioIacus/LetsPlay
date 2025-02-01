@@ -24,7 +24,7 @@
          <top>
             <Pane prefHeight="89.0" prefWidth="600.0" style="-fx-background-color: #045F3B;" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="484.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="52.0" prefWidth="102.0" style="-fx-background-color: FFB347; -fx-background-radius: 50; -fx-border-color: FFFFFF; -fx-border-radius: 50; -fx-border-width: 5;" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="goBackButton" layoutX="484.0" layoutY="19.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="52.0" prefWidth="102.0" style="-fx-background-color: FFB347; -fx-background-radius: 50; -fx-border-color: FFFFFF; -fx-border-radius: 50; -fx-border-width: 5;" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Arial Black" size="30.0" />
                      </font>

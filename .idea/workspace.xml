@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="completamento login e signup">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeManager.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUINotifications.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/notifications.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/profile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +287,8 @@
       <workItem from="1738147536488" duration="22556000" />
       <workItem from="1738182070784" duration="8850000" />
       <workItem from="1738230239887" duration="25259000" />
-      <workItem from="1738320060212" duration="21217000" />
+      <workItem from="1738320060212" duration="21537000" />
+      <workItem from="1738401756204" duration="19311000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -611,7 +626,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738346993818</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="completamento login e signup">
+      <option name="closed" value="true" />
+      <created>1738347582611</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1738347582611</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

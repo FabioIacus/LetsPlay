@@ -4,24 +4,25 @@ import com.letsplay.bean.UserBean;
 import com.letsplay.controller.LoginController;
 import com.letsplay.controller.NavigationController;
 import com.letsplay.exception.DAOException;
-import com.letsplay.graphicscontroller.cli.CLIHomeCustomer;
-import com.letsplay.graphicscontroller.cli.CLIHomeManager;
+import com.letsplay.exception.DatabaseException;
+import com.opencsv.exceptions.CsvValidationException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 
 public class GUILogin extends NavigationController {
     @FXML
+    public Button backButton;
+    @FXML
     private Button loginButton;
-
     @FXML
     private PasswordField passwordField;
-
     @FXML
     private TextField emailField;
 
@@ -52,7 +53,7 @@ public class GUILogin extends NavigationController {
 
 
     @FXML @Override
-    public void initialize()  {
+    public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
         loginController = new LoginController();
 
