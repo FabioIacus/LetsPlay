@@ -53,7 +53,7 @@
             </Pane>
          </top>
          <center>
-            <Pane prefHeight="300.0" prefWidth="619.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="300.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
                   <TextField fx:id="emailField" layoutX="224.0" layoutY="43.0" />
                   <Text fill="WHITE" layoutX="269.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">

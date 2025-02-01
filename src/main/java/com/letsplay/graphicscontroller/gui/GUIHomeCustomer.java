@@ -55,7 +55,6 @@ public class GUIHomeCustomer extends AbstractGUI {
         assert notificationsButton != null : "fx:id=notificationsButton was not injected: check your FXML file 'homeCustomer.fxml'.";
         assert profileButton != null : "fx:id=profileButton was not injected: check your FXML file 'homeCustomer.fxml'.";
         assert logoutButton != null : "fx:id=logoutButton was not injected: check your FXML file 'homeCustomer.fxml'.";
-
     }
 
 }

@@ -27,7 +27,6 @@ public class GUINotifications extends AbstractGUI {
     public Button backButton;
     @FXML
     public ListView<String> listNotifications;
-    private ObservableList<String> items;
 
 
     @FXML
@@ -46,7 +45,7 @@ public class GUINotifications extends AbstractGUI {
             joinTournamentController = new JoinTournamentController();
             List<RegistrationBean> registrationBeanList = new JoinTournamentController().getResponses();
             // Creazione della lista osservabile
-            items = FXCollections.observableArrayList();
+            ObservableList<String> items = FXCollections.observableArrayList();
             String message;
             int i = 1;
             for (RegistrationBean bean : registrationBeanList) {
