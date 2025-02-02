@@ -1,5 +1,6 @@
 package com.letsplay.graphicscontroller.gui;
 
+import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.opencsv.exceptions.CsvValidationException;
@@ -32,21 +33,17 @@ public class GUIHomeCustomer extends AbstractGUI {
     }
     @FXML
     public void joinTournament(ActionEvent event) {
-        goToPage("selectTournament.fxml");
+        goToPage("searchTournament.fxml");
     }
     @FXML
     public void joinSharedMatch(ActionEvent event) {
         showErrorAlert("Join shared match", "It is not possible to join a shared match!", "This feature has not been implemented yet!");
     }
-    @FXML
-    public void viewProfile(ActionEvent event) {
-        goToPage("profile.fxml");
-    }
-
 
     @FXML @Override
     public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
+        joinTournamentController = new JoinTournamentController();
 
         assert reservePitchButton != null : "fx:id=reservePitchButton was not injected: check your FXML file 'homeCustomer.fxml'.";
         assert joinTournamentButton != null : "fx:id=joinTournamentButton was not injected: check your FXML file 'homeCustomer.fxml'.";

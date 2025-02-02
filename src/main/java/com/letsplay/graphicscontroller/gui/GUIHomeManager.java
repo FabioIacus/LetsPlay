@@ -1,5 +1,6 @@
 package com.letsplay.graphicscontroller.gui;
 
+import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.opencsv.exceptions.CsvValidationException;
@@ -38,14 +39,11 @@ public class GUIHomeManager extends AbstractGUI {
     public void editTournament(ActionEvent event) {
         showErrorAlert("Edit tournament", "It is not possible to edit a tournament!", "This feature has not been implemented yet!");
     }
-    @FXML
-    public void viewProfile(ActionEvent event) {
-        goToPage("profile.fxml");
-    }
 
     @FXML @Override
     public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
+        joinTournamentController = new JoinTournamentController();
 
         assert createTournamentButton != null : "fx:id=createTournamentButton was not injected: check your FXML file 'homeManager.fxml'.";
         assert deleteTournamentButton != null : "fx:id=deleteTournamentButton was not injected: check your FXML file 'homeManager.fxml'.";

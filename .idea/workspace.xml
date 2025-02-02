@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="completamento notifications, profile e homepagecustomer">
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="GUIHomeManager e GUIRequests completati">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISearchTournament.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/searchTournament.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeCustomer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUINotifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUINotifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeManager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/session/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/session/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +117,7 @@
       <recent name="com.letsplay" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GUIMain">
     <configuration name="GUIMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.letsplay.GUIMain" />
       <module name="LetsPlay" />
@@ -277,7 +286,8 @@
       <workItem from="1738182070784" duration="8850000" />
       <workItem from="1738230239887" duration="25259000" />
       <workItem from="1738320060212" duration="21537000" />
-      <workItem from="1738401756204" duration="23248000" />
+      <workItem from="1738401756204" duration="23585000" />
+      <workItem from="1738494129670" duration="25979000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -631,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738435861298</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="GUIHomeManager e GUIRequests completati">
+      <option name="closed" value="true" />
+      <created>1738449152375</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1738449152375</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +667,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initialization scene builder" />
     <MESSAGE value="showMenu() and CLIMain creation" />
     <MESSAGE value="continuo della CLIHome e aggiunta cartelle tra cui Role" />
     <MESSAGE value="commit 8/11" />
@@ -674,7 +691,8 @@
     <MESSAGE value="inizio parte GUI - homepage e login" />
     <MESSAGE value="completamento login e signup" />
     <MESSAGE value="completamento notifications, profile e homepagecustomer" />
-    <option name="LAST_COMMIT_MESSAGE" value="completamento notifications, profile e homepagecustomer" />
+    <MESSAGE value="GUIHomeManager e GUIRequests completati" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUIHomeManager e GUIRequests completati" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

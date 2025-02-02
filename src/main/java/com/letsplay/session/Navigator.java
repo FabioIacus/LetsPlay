@@ -1,7 +1,6 @@
 package com.letsplay.session;
 
 import com.letsplay.GUIMain;
-import com.sun.tools.javac.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;

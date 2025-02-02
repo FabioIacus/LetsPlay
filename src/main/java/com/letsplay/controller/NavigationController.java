@@ -16,6 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class NavigationController {
+
     protected Alert errorAlert;
     protected Alert infoAlert;
     protected Alert confirmationAlert;
@@ -54,16 +55,14 @@ public class NavigationController {
     protected void goToPage(String page){
         try{
             Navigator.getInstance().goToPage(page);
-        }
-        catch (IOException e){
+        } catch (IOException e){
             Logger.getAnonymousLogger().log(Level.INFO, e.getMessage());
         }
     }
     protected void goToWithController(String page, Object controller){
         try {
             Navigator.getInstance().goToWithController(page, controller);
-        }
-        catch (IOException e){
+        } catch (IOException e){
             Logger.getAnonymousLogger().log(Level.INFO, e.getMessage());
         }
     }

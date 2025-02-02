@@ -76,6 +76,7 @@ public class GUISignUp extends NavigationController {
         }
     }
 
+    @FXML
     public void goBack(ActionEvent event) {
         goToPage("homepage.fxml");
     }

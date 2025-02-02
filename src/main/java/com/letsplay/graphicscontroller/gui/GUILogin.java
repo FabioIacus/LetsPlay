@@ -47,6 +47,7 @@ public class GUILogin extends NavigationController {
         }
     }
 
+    @FXML
     public void goBack(ActionEvent event) {
         goToPage("homepage.fxml");
     }

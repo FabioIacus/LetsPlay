@@ -1,6 +1,5 @@
 package com.letsplay.graphicscontroller.gui;
 
-import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.letsplay.session.SessionManager;
@@ -42,10 +41,9 @@ public class GUIProfile extends AbstractGUI {
     @Override
     public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
-        joinTournamentController = new JoinTournamentController();
 
-        assert backButton != null : "fx:id=backButton was not injected: check your FXML file 'profileInfo.fxml'.";
-        assert homeButton != null : "fx:id=homeButton was not injected: check your FXML file 'profileInfo.fxml'.";
+        assert backButton != null : "fx:id=backButton was not injected: check your FXML file 'profile.fxml'.";
+        assert homeButton != null : "fx:id=homeButton was not injected: check your FXML file 'profile.fxml'.";
         this.nameField.setText(SessionManager.getInstance().getCurrentUser().getName());
         this.surnameField.setText(SessionManager.getInstance().getCurrentUser().getSurname());
         this.emailField.setText(SessionManager.getInstance().getCurrentUser().getEmail());

@@ -28,11 +28,6 @@ public class GUINotifications extends AbstractGUI {
     @FXML
     public ListView<String> listNotifications;
 
-
-    @FXML
-    public void viewProfile(ActionEvent event) {
-        goToPage("profile.fxml");
-    }
     @FXML
     public void goBack(ActionEvent event) {
         goHome(event);
@@ -41,8 +36,8 @@ public class GUINotifications extends AbstractGUI {
     @FXML
     public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
+
         try {
-            joinTournamentController = new JoinTournamentController();
             List<RegistrationBean> registrationBeanList = new JoinTournamentController().getResponses();
             // Creazione della lista osservabile
             ObservableList<String> items = FXCollections.observableArrayList();

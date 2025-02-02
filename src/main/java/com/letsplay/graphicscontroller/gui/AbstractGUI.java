@@ -32,6 +32,11 @@ public class AbstractGUI extends NavigationController {
             goToPage("homeManager.fxml");
         }
     }
+
+    @FXML
+    protected void viewProfile(ActionEvent event) {
+        goToPage("profile.fxml");
+    }
     @FXML
     protected void viewNotifications(ActionEvent event) {
         if (SessionManager.getInstance().getCurrentUser().getRole() == CUSTOMER) {
