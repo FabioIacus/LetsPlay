@@ -32,6 +32,8 @@ public class GUIRequests extends AbstractGUI {
     public Button backButton;
     @FXML
     public ListView<RegistrationBean> listRequests;
+    @FXML
+    public final String TITLE = "Notifications";
 
     @FXML
     public void acceptOrReject(MouseEvent event) {
@@ -43,7 +45,7 @@ public class GUIRequests extends AbstractGUI {
             if (selectedRequest == null) {
                 return;
             }
-            Optional<UserResponse> userResponse = showAcceptOrRejectAlert("Notifications", "Accept or reject request",
+            Optional<UserResponse> userResponse = showAcceptOrRejectAlert(TITLE, "Accept or reject request",
                     "Enter a message:");
             if (userResponse.isEmpty()) {
                 return;
@@ -53,10 +55,10 @@ public class GUIRequests extends AbstractGUI {
             String message = response.getMessage();
             ResponseBean responseBean = new ResponseBean(choice, message);
             new JoinTournamentController().manageRequest(selectedRequest, responseBean);
-            showConfirmationAlert("Notifications", "", "Request processed successfully!");
+            showConfirmationAlert(TITLE, "", "Request processed successfully!");
             goToPage("homeManager.fxml");
-        } catch (SQLException | EmailException | IOException | CsvException e) {
-            showErrorAlert("Notifications", "", e.getMessage());
+        } catch (SQLException | IOException | CsvException e) {
+            showErrorAlert(TITLE, "", e.getMessage());
         }
     }
 
@@ -68,6 +70,8 @@ public class GUIRequests extends AbstractGUI {
     @FXML @Override
     public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
+
+
         try {
             List<RegistrationBean> registrationBeanList = new JoinTournamentController().getRequests();
             // Creazione della lista osservabile
@@ -92,7 +96,7 @@ public class GUIRequests extends AbstractGUI {
                 }
             });
         } catch (SQLException | CsvValidationException | IOException | DatabaseException e) {
-            showErrorAlert("Notifications", "", "No requests found!");
+            showErrorAlert(TITLE, "", "No requests found!");
         }
     }
 }

@@ -2,7 +2,6 @@ package com.letsplay.controller;
 
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
-import com.letsplay.model.domain.User;
 import com.letsplay.session.Navigator;
 import com.opencsv.exceptions.CsvValidationException;
 import javafx.fxml.FXML;

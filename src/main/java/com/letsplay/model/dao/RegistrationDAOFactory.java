@@ -1,8 +1,5 @@
 package com.letsplay.model.dao;
 
-import com.letsplay.bean.RegistrationBean;
-import com.letsplay.model.domain.User;
-
 import java.io.IOException;
 import java.util.Properties;
 import java.io.InputStream;

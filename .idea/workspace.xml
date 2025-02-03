@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="progetto completato!" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="progetto completato!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/JoinTournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/JoinTournamentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIViewDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIViewDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/queries/TournamentQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/queries/TournamentQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/notification/NotificationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/notification/NotificationSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/session/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/session/ConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/letsplay/TestRegistrationDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestRegistrationDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/letsplay/TestTournamentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestTournamentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/letsplay/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestUserDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,8 +187,8 @@
       <list>
         <item itemvalue="Application.GUIMain" />
         <item itemvalue="JUnit.TestTournamentDAO.testFindTournaments" />
-        <item itemvalue="JUnit.TestUserDAO.testSignUp" />
         <item itemvalue="JUnit.TestRegistrationDAOFactory.testCreateReservationDAO" />
+        <item itemvalue="JUnit.TestUserDAO.testSignUp" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +294,7 @@
       <workItem from="1738494129670" duration="26508000" />
       <workItem from="1738539408663" duration="1014000" />
       <workItem from="1738540461103" duration="221000" />
-      <workItem from="1738577191322" duration="20548000" />
+      <workItem from="1738577191322" duration="24989000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -650,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738607611841</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="progetto completato!">
+      <option name="closed" value="true" />
+      <created>1738607830480</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1738607830480</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

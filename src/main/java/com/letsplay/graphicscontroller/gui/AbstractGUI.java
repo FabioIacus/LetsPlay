@@ -17,11 +17,6 @@ import java.sql.SQLException;
 import static com.letsplay.model.domain.Role.CUSTOMER;
 
 public class AbstractGUI extends NavigationController {
-    @FXML
-    private Button selectionMessagesButton;
-
-    @FXML
-    private Button selectionRequestButton;
     JoinTournamentController joinTournamentController;
 
     @FXML
@@ -50,21 +45,9 @@ public class AbstractGUI extends NavigationController {
         new LoginController().logout();
         goToPage("homepage.fxml");
     }
-    @FXML
-    protected void selectedViewMessages(ActionEvent event) {
-        goToPage("notifications.fxml");
-    }
-
-    @FXML
-    protected void selectedViewRequests(ActionEvent event) {
-        goToPage("requests.fxml");
-    }
     @FXML @Override
     public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
         joinTournamentController = new JoinTournamentController();
-
-        assert selectionMessagesButton != null : "fx:id=\"SelectionMessagesButton\" was not injected: check your FXML file 'selectionMessageOrRequests.fxml'.";
-        assert selectionRequestButton != null : "fx:id=\"SelectionRequestButton\" was not injected: check your FXML file 'selectionMessageOrRequests.fxml'.";
     }
 }

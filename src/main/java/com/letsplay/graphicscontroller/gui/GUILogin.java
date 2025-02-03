@@ -58,6 +58,7 @@ public class GUILogin extends NavigationController {
         super.initialize();
         loginController = new LoginController();
 
+        assert backButton != null : "fx:id=backButton was not injected: check your FXML file 'login.fxml'.";
         assert loginButton != null : "fx:id=loginButton was not injected: check your FXML file 'login.fxml'.";
         assert passwordField != null : "fx:id=passwordField was not injected: check your FXML file 'login.fxml'.";
         assert emailField != null : "fx:id=emailField was not injected: check your FXML file 'login.fxml'.";

@@ -26,18 +26,20 @@ public class GUIHomeManager extends AbstractGUI {
     public Button deleteTournamentButton;
     @FXML
     public Button editTournamentButton;
+    @FXML
+    public final String NOTIMPLEMENTED = "This feature has not been implemented yet!";
 
     @FXML
     public void createTournament(ActionEvent event) {
-        showErrorAlert("Create tournament", "It is not possible to create a tournament!", "This feature has not been implemented yet!");
+        showErrorAlert("Create tournament", "It is not possible to create a tournament!", NOTIMPLEMENTED);
     }
     @FXML
     public void deleteTournament(ActionEvent event) {
-        showErrorAlert("Delete tournament", "It is not possible to delete a tournament!", "This feature has not been implemented yet!");
+        showErrorAlert("Delete tournament", "It is not possible to delete a tournament!", NOTIMPLEMENTED);
     }
     @FXML
     public void editTournament(ActionEvent event) {
-        showErrorAlert("Edit tournament", "It is not possible to edit a tournament!", "This feature has not been implemented yet!");
+        showErrorAlert("Edit tournament", "It is not possible to edit a tournament!", NOTIMPLEMENTED);
     }
 
     @FXML @Override

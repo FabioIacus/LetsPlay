@@ -88,8 +88,8 @@ public class GUIViewDetails extends AbstractGUI {
         assert numberText != null : "fx:id=numberText was not injected: check your FXML file 'tournamentDetails.fxml'.";
         assert prizeText != null : "fx:id=prizeText was not injected: check your FXML file 'tournamentDetails.fxml'.";
         assert requirementsText != null : "fx:id=requirementsText was not injected: check your FXML file 'tournamentDetails.fxml'.";
-        assert typeText != null : "fx:id=requirementsText was not injected: check your FXML file 'tournamentDetails.fxml'.";
-        assert managerEmailText != null : "fx:id=requirementsText was not injected: check your FXML file 'tournamentDetails.fxml'.";
+        assert typeText != null : "fx:id=typeText was not injected: check your FXML file 'tournamentDetails.fxml'.";
+        assert managerEmailText != null : "fx:id=managerEmailText was not injected: check your FXML file 'tournamentDetails.fxml'.";
         assert signupButton != null : "fx:id=signupButton was not injected: check your FXML file 'tournamentDetails.fxml'.";
         assert homeButton != null : "fx:id=homeButton was not injected: check your FXML file 'tournamentDetails.fxml'.";
         assert notificationsButton != null : "fx:id=notificationsButton was not injected: check your FXML file 'tournamentDetails.fxml'.";

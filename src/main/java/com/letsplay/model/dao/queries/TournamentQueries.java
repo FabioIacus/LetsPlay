@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class TournamentQueries {
+    private static final String TOURNAMENT = "tournament";
     private TournamentQueries() {}
 
     public static int createRequest(Statement stmt, String customerEmail, String team, int numPlayers, String captain, String managerEmail, String tournament) throws SQLException {
@@ -18,7 +19,7 @@ public class TournamentQueries {
     }
 
     public static ResultSet check(Statement stmt, String email, String tournament) throws SQLException {
-        String sql = "SELECT * FROM registration WHERE customerEmail = '" + email + "' AND tournament = '" + tournament + "' AND (status = 'Pending' OR status = 'Accepted')";
+        String sql = "SELECT * FROM registration WHERE customerEmail = '" + email + "' AND " + TOURNAMENT + " = '" + tournament + "' AND (status = 'Pending' OR status = 'Accepted')";
         return stmt.executeQuery(sql);
     }
 
@@ -43,7 +44,7 @@ public class TournamentQueries {
     }
 
     public static int acceptRequest(Statement stmt, String customerEmail, String tournament, String message) throws SQLException {
-        String sql = "UPDATE registration SET status = 'Accepted', message = '" + message + "' WHERE customerEmail = '" + customerEmail + "' AND tournament = '" + tournament + "' AND status = 'Pending'";
+        String sql = "UPDATE registration SET status = 'Accepted', message = '" + message + "' WHERE customerEmail = '" + customerEmail + "' AND " + TOURNAMENT + " = '" + tournament + "' AND status = 'Pending'";
         int rows = stmt.executeUpdate(sql);
         if (rows > 0) {
             return rows;
@@ -53,7 +54,7 @@ public class TournamentQueries {
     }
 
     public static int rejectRequest(Statement stmt, String customerEmail, String tournament, String message) throws SQLException {
-        String sql = "UPDATE registration SET status = 'Rejected', message = '" + message + "'WHERE customerEmail = '" + customerEmail + "' AND tournament = '" + tournament + "' AND status = 'Pending'";
+        String sql = "UPDATE registration SET status = 'Rejected', message = '" + message + "'WHERE customerEmail = '" + customerEmail + "' AND " + TOURNAMENT + " = '" + tournament + "' AND status = 'Pending'";
         int rows = stmt.executeUpdate(sql);
         if (rows > 0) {
             return rows;

@@ -9,10 +9,10 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class TestRegistrationDAOFactory {
+class TestRegistrationDAOFactory {
     //verifica che la factory crei un'istanza di RegistrationDAO senza generare eccezioni
     @Test
-    public void testCreateReservationDAO() {
+    void testCreateReservationDAO() {
         try {
             RegistrationDAOFactory factory = new RegistrationDAOFactory();
             RegistrationDAO registrationDAO = factory.createRegistrationDAO();

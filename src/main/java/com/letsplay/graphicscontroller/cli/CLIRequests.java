@@ -82,7 +82,7 @@ public class CLIRequests extends AbstractCLI{
 
                     new CLIHomeManager().start();
                 }
-            } catch (IOException | EmailException | SQLException | DAOException | InputException | DatabaseException |
+            } catch (IOException | SQLException | DAOException | InputException | DatabaseException |
                      RequestException | CsvException | NumberFormatException e) {
                 System.out.println("An error occured: " + e.getMessage());
             }

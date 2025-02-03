@@ -14,7 +14,7 @@ public class Registration extends Subject {
     private RequestStatus status;
     private String message;
 
-    public Registration(String customerEmail, String managerEmail, String team, int numPlayers, String captain, String tournament) throws EmailException {
+    public Registration(String customerEmail, String managerEmail, String team, int numPlayers, String captain, String tournament) {
         this.customerEmail = customerEmail;
         this.managerEmail = managerEmail;
         this.team = team;

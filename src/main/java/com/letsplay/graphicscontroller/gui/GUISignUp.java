@@ -14,7 +14,6 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.logging.Level;
 
 public class GUISignUp extends NavigationController {
 
@@ -35,6 +34,8 @@ public class GUISignUp extends NavigationController {
     private ChoiceBox<String> roleBox;
     @FXML
     private Button signupButton;
+    @FXML
+    public final String REGISTRATIONERROR = "Registration error";
 
 
     @FXML
@@ -69,26 +70,21 @@ public class GUISignUp extends NavigationController {
                     usernameField.getText(), role.getId());
             int registration = signUpController.signUp(userBean);
             if (registration == 0) {
-                logger.log(Level.INFO, "Registration successful!");
                 showInfoAlert("Registration", "Registration successful!", "You can now log in to the application.");
                 goToPage("homepage.fxml");
             }
         } catch (UsernameException e) {
-            logger.log(Level.INFO, e.getMessage());
             showErrorAlert("Credential error", "Username already exists!", "Invalid username!");
         } catch (InputException e) {
-            logger.log(Level.INFO, e.getMessage());
-            showErrorAlert("Registration error", "Role not found", "Invalid role!");
+            showErrorAlert(REGISTRATIONERROR, "Role not found", "Invalid role!");
         }
         catch (EmailException e) {
-            logger.log(Level.INFO, e.getMessage());
-            showErrorAlert("Registration error", "Email already exists!", "Invalid email!");
+            showErrorAlert(REGISTRATIONERROR, "Email already exists!", "Invalid email!");
         }
         catch (DatabaseException e) {
-            logger.log(Level.INFO, e.getMessage());
             showErrorAlert("Database error", "", "");
         } catch (EmptyFieldsException e) {
-            showErrorAlert("Registration error", "", e.getMessage());
+            showErrorAlert(REGISTRATIONERROR, "", e.getMessage());
         }
     }
 
@@ -103,6 +99,7 @@ public class GUISignUp extends NavigationController {
         super.initialize();
         signUpController = new SignUpController();
 
+        assert goBackButton != null : "fx:id=goBackButton was not injected: check your FXML file 'signup.fxml'.";
         assert signupButton != null : "fx:id=loginButton was not injected: check your FXML file 'signup.fxml'.";
         assert passwordField != null : "fx:id=passwordField was not injected: check your FXML file 'signup.fxml'.";
         assert emailField != null : "fx:id=emailField was not injected: check your FXML file 'signup.fxml'.";

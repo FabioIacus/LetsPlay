@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 public class TestUserDAO {
     //verifica la corretta creazione di un utente
     @Test
-    public void testSignUp() {
+    void testSignUp() {
         int result;
         User user = new User("johnny","johnny@libero.it","mypass","John", "Doe", Role.CUSTOMER);
         try {
@@ -45,6 +45,8 @@ public class TestUserDAO {
                     ResultSet.CONCUR_READ_ONLY);
             String sql = "DELETE FROM user WHERE email = 'johnny@libero.it'";
             stmt.executeUpdate(sql);
-        } catch (SQLException ignore){}
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

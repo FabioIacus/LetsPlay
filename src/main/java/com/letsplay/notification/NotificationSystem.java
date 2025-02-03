@@ -1,6 +1,5 @@
 package com.letsplay.notification;
 
-import com.letsplay.exception.EmailException;
 import com.letsplay.exception.FileException;
 import com.letsplay.model.domain.Registration;
 

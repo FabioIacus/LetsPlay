@@ -11,10 +11,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class TestTournamentDAO {
+class TestTournamentDAO {
     //verifica la presenza di un almeno un torneo nella città indicata
     @Test
-    public void testFindTournaments() {
+    void testFindTournaments() {
         Tournament tournament = new Tournament("roma");
         try {
             List<Tournament> tournamentsList = new TournamentDAO().findTournaments(tournament);

@@ -122,7 +122,7 @@ public class JoinTournamentController {
         return registrationBeanList;
     }
 
-    public void manageRequest(RegistrationBean request, ResponseBean responseBean) throws EmailException, IOException, SQLException, CsvException {
+    public void manageRequest(RegistrationBean request, ResponseBean responseBean) throws IOException, SQLException, CsvException {
         Registration registration;
         //se la richiesta viene accettata
         if (responseBean.getChoice() == 1) {

@@ -42,6 +42,8 @@ public class GUIProfile extends AbstractGUI {
     public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
 
+        assert notificationsButton != null : "fx:id=notificationsButton was not injected: check your FXML file 'profile.fxml'.";
+        assert profileButton != null : "fx:id=profileButton was not injected: check your FXML file 'profile.fxml'.";
         assert backButton != null : "fx:id=backButton was not injected: check your FXML file 'profile.fxml'.";
         assert homeButton != null : "fx:id=homeButton was not injected: check your FXML file 'profile.fxml'.";
         this.nameField.setText(SessionManager.getInstance().getCurrentUser().getName());
