@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="completato fino alla visualizzazione dei tornei">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUITournamentSignUP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIViewDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentDetails.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentSignUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUINotifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUINotifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="progetto completato!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,7 +272,7 @@
       <workItem from="1738494129670" duration="26508000" />
       <workItem from="1738539408663" duration="1014000" />
       <workItem from="1738540461103" duration="221000" />
-      <workItem from="1738577191322" duration="20188000" />
+      <workItem from="1738577191322" duration="20548000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -657,7 +642,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738539179065</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="progetto completato!">
+      <option name="closed" value="true" />
+      <created>1738607611841</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1738607611841</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +668,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="continuo della CLIHome e aggiunta cartelle tra cui Role" />
     <MESSAGE value="commit 8/11" />
     <MESSAGE value="commit first exception" />
     <MESSAGE value="login completed" />
@@ -700,7 +692,8 @@
     <MESSAGE value="completamento notifications, profile e homepagecustomer" />
     <MESSAGE value="GUIHomeManager e GUIRequests completati" />
     <MESSAGE value="completato fino alla visualizzazione dei tornei" />
-    <option name="LAST_COMMIT_MESSAGE" value="completato fino alla visualizzazione dei tornei" />
+    <MESSAGE value="progetto completato!" />
+    <option name="LAST_COMMIT_MESSAGE" value="progetto completato!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

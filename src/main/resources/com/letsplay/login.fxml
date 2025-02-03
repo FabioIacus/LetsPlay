@@ -56,6 +56,11 @@
             <Pane prefHeight="300.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
                   <TextField fx:id="emailField" layoutX="224.0" layoutY="43.0" />
+                  <PasswordField fx:id="passwordField" layoutX="224.0" layoutY="107.0" />
+                  <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" layoutX="263.0" layoutY="140.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: FFB347; -fx-background-radius: 10; -fx-border-radius: 10;" text="Login" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
                   <Text fill="WHITE" layoutX="269.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
                      <font>
                         <Font name="System Bold" size="24.0" />
@@ -66,10 +71,6 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Text>
-                  <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" layoutX="263.0" layoutY="140.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: FFB347; -fx-background-radius: 10; -fx-border-radius: 10;" text="Login" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font></Button>
                   <Text fill="WHITE" layoutX="230.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login with...">
                      <font>
                         <Font name="System Bold" size="24.0" />
@@ -85,7 +86,6 @@
                         <Image url="@images/facebook.png" />
                      </image>
                   </ImageView>
-                  <PasswordField fx:id="passwordField" layoutX="224.0" layoutY="107.0" />
                </children>
             </Pane>
          </center>
