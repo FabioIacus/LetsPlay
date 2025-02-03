@@ -35,7 +35,7 @@ public class GUISignUp extends NavigationController {
     @FXML
     private Button signupButton;
     @FXML
-    public final String REGISTRATIONERROR = "Registration error";
+    public final static String registrationError = "Registration error";
 
 
     @FXML
@@ -76,15 +76,15 @@ public class GUISignUp extends NavigationController {
         } catch (UsernameException e) {
             showErrorAlert("Credential error", "Username already exists!", "Invalid username!");
         } catch (InputException e) {
-            showErrorAlert(REGISTRATIONERROR, "Role not found", "Invalid role!");
+            showErrorAlert(registrationError, "Role not found", "Invalid role!");
         }
         catch (EmailException e) {
-            showErrorAlert(REGISTRATIONERROR, "Email already exists!", "Invalid email!");
+            showErrorAlert(registrationError, "Email already exists!", "Invalid email!");
         }
         catch (DatabaseException e) {
             showErrorAlert("Database error", "", "");
         } catch (EmptyFieldsException e) {
-            showErrorAlert(REGISTRATIONERROR, "", e.getMessage());
+            showErrorAlert(registrationError, "", e.getMessage());
         }
     }
 

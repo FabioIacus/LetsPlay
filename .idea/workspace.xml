@@ -4,28 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="progetto completato!">
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="revisione sonarcloud">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/JoinTournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/JoinTournamentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIViewDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIViewDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/RegistrationDAOFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/queries/TournamentQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/dao/queries/TournamentQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/model/domain/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/notification/NotificationSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/notification/NotificationSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/session/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/session/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/letsplay/TestRegistrationDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestRegistrationDAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/letsplay/TestTournamentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestTournamentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/letsplay/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/letsplay/TestUserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +279,7 @@
       <workItem from="1738494129670" duration="26508000" />
       <workItem from="1738539408663" duration="1014000" />
       <workItem from="1738540461103" duration="221000" />
-      <workItem from="1738577191322" duration="24989000" />
+      <workItem from="1738577191322" duration="26011000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -680,7 +665,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738607830480</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="revisione sonarcloud">
+      <option name="closed" value="true" />
+      <created>1738616547600</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1738616547600</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,7 +691,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit 8/11" />
     <MESSAGE value="commit first exception" />
     <MESSAGE value="login completed" />
     <MESSAGE value="risolto errore sicurezza sonarcloud sul printstacktrace" />
@@ -723,7 +715,8 @@
     <MESSAGE value="GUIHomeManager e GUIRequests completati" />
     <MESSAGE value="completato fino alla visualizzazione dei tornei" />
     <MESSAGE value="progetto completato!" />
-    <option name="LAST_COMMIT_MESSAGE" value="progetto completato!" />
+    <MESSAGE value="revisione sonarcloud" />
+    <option name="LAST_COMMIT_MESSAGE" value="revisione sonarcloud" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

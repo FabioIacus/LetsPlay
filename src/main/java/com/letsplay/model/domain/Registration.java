@@ -1,6 +1,5 @@
 package com.letsplay.model.domain;
 
-import com.letsplay.exception.EmailException;
 import com.letsplay.notification.NotificationSystem;
 import com.letsplay.notification.Subject;
 

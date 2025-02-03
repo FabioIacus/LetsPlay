@@ -4,7 +4,6 @@ import com.letsplay.bean.*;
 import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
-import com.letsplay.exception.EmailException;
 import com.opencsv.exceptions.CsvException;
 import com.opencsv.exceptions.CsvValidationException;
 import javafx.collections.FXCollections;
@@ -33,7 +32,7 @@ public class GUIRequests extends AbstractGUI {
     @FXML
     public ListView<RegistrationBean> listRequests;
     @FXML
-    public final String TITLE = "Notifications";
+    public final static String title = "Notifications";
 
     @FXML
     public void acceptOrReject(MouseEvent event) {
@@ -45,7 +44,7 @@ public class GUIRequests extends AbstractGUI {
             if (selectedRequest == null) {
                 return;
             }
-            Optional<UserResponse> userResponse = showAcceptOrRejectAlert(TITLE, "Accept or reject request",
+            Optional<UserResponse> userResponse = showAcceptOrRejectAlert(title, "Accept or reject request",
                     "Enter a message:");
             if (userResponse.isEmpty()) {
                 return;
@@ -55,10 +54,10 @@ public class GUIRequests extends AbstractGUI {
             String message = response.getMessage();
             ResponseBean responseBean = new ResponseBean(choice, message);
             new JoinTournamentController().manageRequest(selectedRequest, responseBean);
-            showConfirmationAlert(TITLE, "", "Request processed successfully!");
+            showConfirmationAlert(title, "", "Request processed successfully!");
             goToPage("homeManager.fxml");
         } catch (SQLException | IOException | CsvException e) {
-            showErrorAlert(TITLE, "", e.getMessage());
+            showErrorAlert(title, "", e.getMessage());
         }
     }
 
@@ -96,7 +95,7 @@ public class GUIRequests extends AbstractGUI {
                 }
             });
         } catch (SQLException | CsvValidationException | IOException | DatabaseException e) {
-            showErrorAlert(TITLE, "", "No requests found!");
+            showErrorAlert(title, "", "No requests found!");
         }
     }
 }
