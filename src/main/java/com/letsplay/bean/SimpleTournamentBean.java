@@ -31,24 +31,12 @@ public class SimpleTournamentBean {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
     public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
-
     public String getFootballFacility() {
         return footballFacility;
-    }
-
-    public void setFootballFacility(String footballFacility) {
-        this.footballFacility = footballFacility;
     }
 
     public String getAddress() {

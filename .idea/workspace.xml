@@ -272,31 +272,7 @@
       <workItem from="1738494129670" duration="26508000" />
       <workItem from="1738539408663" duration="1014000" />
       <workItem from="1738540461103" duration="221000" />
-      <workItem from="1738577191322" duration="26425000" />
-    </task>
-    <task id="LOCAL-00002" summary="initialization scene builder">
-      <option name="closed" value="true" />
-      <created>1727877421045</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1727877421045</updated>
-    </task>
-    <task id="LOCAL-00003" summary="initialization scene builder">
-      <option name="closed" value="true" />
-      <created>1727877631601</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1727877631601</updated>
-    </task>
-    <task id="LOCAL-00004" summary="showMenu() and CLIMain creation">
-      <option name="closed" value="true" />
-      <created>1730484622045</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1730484622045</updated>
+      <workItem from="1738577191322" duration="26769000" />
     </task>
     <task id="LOCAL-00005" summary="showMenu() and CLIMain creation">
       <option name="closed" value="true" />
@@ -666,7 +642,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738617651490</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="revisione sonarcloud">
+      <option name="closed" value="true" />
+      <created>1738617917344</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1738617917344</updated>
+    </task>
+    <task id="LOCAL-00052" summary="revisione sonarcloud">
+      <option name="closed" value="true" />
+      <created>1738618042012</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1738618042012</updated>
+    </task>
+    <task id="LOCAL-00053" summary="revisione sonarcloud">
+      <option name="closed" value="true" />
+      <created>1738618182107</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1738618182107</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
