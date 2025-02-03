@@ -39,9 +39,23 @@ public class GUISignUp extends NavigationController {
 
     @FXML
     public void signup(ActionEvent event) {
-        String roleStr = roleBox.getValue();
         Role role;
         try {
+            // Controllo campi vuoti PRIMA di eseguire il parse
+            if (nameField.getText().isEmpty() ||
+                    surnameField.getText().isEmpty() ||
+                    emailField.getText().isEmpty() ||
+                    passwordField.getText().isEmpty() ||
+                    usernameField.getText().isEmpty() ||
+                    roleBox.getSelectionModel().getSelectedItem() == null ||
+                    nameField.getText().isBlank() ||
+                    surnameField.getText().isBlank() ||
+                    emailField.getText().isBlank() ||
+                    passwordField.getText().isBlank() ||
+                    usernameField.getText().isBlank()) {
+                throw new EmptyFieldsException("There are empty fields!");
+            }
+            String roleStr = roleBox.getValue();
             if (roleStr.equals("Customer")) {
                 role = Role.CUSTOMER;
             }
@@ -73,6 +87,8 @@ public class GUISignUp extends NavigationController {
         catch (DatabaseException e) {
             logger.log(Level.INFO, e.getMessage());
             showErrorAlert("Database error", "", "");
+        } catch (EmptyFieldsException e) {
+            showErrorAlert("Registration error", "", e.getMessage());
         }
     }
 

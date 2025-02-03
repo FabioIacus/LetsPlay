@@ -4,23 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="GUIHomeManager e GUIRequests completati">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISearchTournament.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/searchTournament.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="completato fino alla visualizzazione dei tornei">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUITournamentSignUP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIViewDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentDetails.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentSignUp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/NavigationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/AbstractGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIHomeManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUILogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUINotifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUINotifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUIRequests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISelectTournament2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/gui/GUISignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/session/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/session/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +31,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Exception" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -73,38 +70,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CLIMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GUIMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestRegistrationDAOFactory.testCreateReservationDAO.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestTournamentDAO.testFindTournaments.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestUserDAO.testSignUp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/39377/Desktop/SESSIONE/ISPW/Nicola/easyGuide&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CLIMain.executor": "Run",
+    "Application.GUIMain.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.TestRegistrationDAOFactory.testCreateReservationDAO.executor": "Run",
+    "JUnit.TestTournamentDAO.testFindTournaments.executor": "Run",
+    "JUnit.TestUserDAO.testSignUp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/39377/Desktop/SESSIONE/ISPW/Nicola/easyGuide",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\39377\Desktop\Università\Corsi\ISPW\LetsPlay\src\main\resources\com\letsplay\images" />
@@ -287,7 +284,10 @@
       <workItem from="1738230239887" duration="25259000" />
       <workItem from="1738320060212" duration="21537000" />
       <workItem from="1738401756204" duration="23585000" />
-      <workItem from="1738494129670" duration="25979000" />
+      <workItem from="1738494129670" duration="26508000" />
+      <workItem from="1738539408663" duration="1014000" />
+      <workItem from="1738540461103" duration="221000" />
+      <workItem from="1738577191322" duration="20188000" />
     </task>
     <task id="LOCAL-00001" summary="initialization scene builder">
       <option name="closed" value="true" />
@@ -649,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738449152375</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="completato fino alla visualizzazione dei tornei">
+      <option name="closed" value="true" />
+      <created>1738539179065</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1738539179065</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,7 +675,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="showMenu() and CLIMain creation" />
     <MESSAGE value="continuo della CLIHome e aggiunta cartelle tra cui Role" />
     <MESSAGE value="commit 8/11" />
     <MESSAGE value="commit first exception" />
@@ -692,7 +699,8 @@
     <MESSAGE value="completamento login e signup" />
     <MESSAGE value="completamento notifications, profile e homepagecustomer" />
     <MESSAGE value="GUIHomeManager e GUIRequests completati" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUIHomeManager e GUIRequests completati" />
+    <MESSAGE value="completato fino alla visualizzazione dei tornei" />
+    <option name="LAST_COMMIT_MESSAGE" value="completato fino alla visualizzazione dei tornei" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

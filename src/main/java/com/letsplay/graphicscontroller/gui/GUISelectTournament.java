@@ -1,7 +1,9 @@
 package com.letsplay.graphicscontroller.gui;
 
 import com.letsplay.bean.SearchTournamentBean;
+import com.letsplay.bean.SelectedTournamentBean;
 import com.letsplay.bean.SimpleTournamentBean;
+import com.letsplay.bean.TournamentBean;
 import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
@@ -15,6 +17,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -61,6 +64,16 @@ public class GUISelectTournament extends AbstractGUI {
     @FXML
     public void goBack(ActionEvent event) {
         goToPage("searchTournament.fxml");
+    }
+
+    @FXML
+    public void viewDetails(MouseEvent event) throws SQLException, DatabaseException {
+        SimpleTournamentBean selectedTournament = tableTournaments.getSelectionModel().getSelectedItem();
+        if (selectedTournament != null) {
+            SelectedTournamentBean selectedTournamentBean = new SelectedTournamentBean(selectedTournament.getName(), selectedTournament.getFootballFacility());
+            TournamentBean tournamentBean = new JoinTournamentController().showDetails(selectedTournamentBean);
+            goToWithController("tournamentDetails.fxml", new GUIViewDetails(tournamentBean, tournaments, city));
+        }
     }
 
 

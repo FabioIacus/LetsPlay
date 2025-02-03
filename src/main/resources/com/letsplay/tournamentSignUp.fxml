@@ -2,8 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,7 +9,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -36,7 +33,7 @@
                         <Font name="System Bold" size="30.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="139.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Join Tournament" textAlignment="CENTER">
+                  <Text fill="WHITE" layoutX="133.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration form" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="40.0" />
                      </font>
@@ -59,28 +56,37 @@
          <center>
             <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-width: 0,2,0,2; -fx-border-color: black;" BorderPane.alignment="CENTER">
                <children>
-                  <Text fx:id="cityText" fill="WHITE" layoutX="16.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City:" wrappingWidth="86.49871826171875">
-                     <font>
-                        <Font name="System Bold" size="30.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="cityField" editable="false" layoutX="87.0" layoutY="8.0" prefHeight="39.0" prefWidth="375.0" text="city">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </TextField>
-                   <VBox layoutY="61.0" prefHeight="183.0" prefWidth="600.0">
-                       <TableView fx:id="tableTournaments" onMouseClicked="#viewDetails" opacity="0.85" prefHeight="165.0" prefWidth="600.0">
-                           <columns>
-                               <TableColumn fx:id="nameColumn" editable="false" prefWidth="140.0" text="Name" />
-                               <TableColumn fx:id="footballFacilityColumn" editable="false" minWidth="0.0" prefWidth="130.66665649414062" text="Football Facility" />
-                               <TableColumn fx:id="addressColumn" editable="false" prefWidth="151.33331298828125" text="Address" />
-                               <TableColumn fx:id="startDateColumn" editable="false" prefWidth="90.0" text="Start Date" />
-                               <TableColumn fx:id="endDateColumn" editable="false" prefWidth="90.0" text="End Date" />
-                               <TableColumn fx:id="typeColumn" editable="false" prefWidth="90.0" text="Type" />
-                           </columns>
-                       </TableView>
-                   </VBox>
+                  <Pane layoutX="-1.0" layoutY="14.0" prefHeight="217.0" prefWidth="600.0" style="-fx-background-color: rgba(255, 255, 255, 0.7);">
+                     <children>
+                        <Pane layoutX="45.0" layoutY="15.0" prefHeight="188.0" prefWidth="511.0" style="-fx-background-color: white;">
+                           <children>
+                              <Text fx:id="teamNameText" layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert team name:" wrappingWidth="128.80338287353516">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="numberPlayersText" layoutX="14.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert number of players:" wrappingWidth="175.4700698852539">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="captainNameText" layoutX="14.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert captain name:" wrappingWidth="157.4700698852539">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="submitButton" layoutX="220.0" layoutY="137.0" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: FFB347; -fx-background-radius: 15; -fx-border-radius: 15;" text="SUBMIT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="teamNameField" layoutX="142.0" layoutY="23.0" promptText="Type here..." />
+                              <TextField fx:id="numberPlayersField" layoutX="188.0" layoutY="59.0" promptText="Type here..." />
+                              <TextField fx:id="captainNameField" layoutX="156.0" layoutY="96.0" promptText="Type here..." />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
          </center>

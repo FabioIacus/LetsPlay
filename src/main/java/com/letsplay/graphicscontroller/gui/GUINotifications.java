@@ -33,7 +33,7 @@ public class GUINotifications extends AbstractGUI {
         goHome(event);
     }
 
-    @FXML
+    @FXML @Override
     public void initialize() throws DAOException, CsvValidationException, SQLException, IOException, DatabaseException {
         super.initialize();
 
@@ -49,13 +49,13 @@ public class GUINotifications extends AbstractGUI {
                 } else {
                     message = bean.getMessage();
                 }
-                String formattedText = i + "    Tournament: " + bean.getTournament() +
-                        "\n      Registered team: " + bean.getTeam() +
-                        "\n      Number of players: " + bean.getNumPlayers() +
-                        "\n      Captain name: " + bean.getCaptain() +
-                        "\n      Manager email: " + bean.getManagerEmail() +
-                        "\n      Request status: " + bean.getStatus() +
-                        "\n      Message: " + message;
+                String formattedText = i + ".    Tournament: " + bean.getTournament() +
+                        "\n       Registered team: " + bean.getTeam() +
+                        "\n       Number of players: " + bean.getNumPlayers() +
+                        "\n       Captain name: " + bean.getCaptain() +
+                        "\n       Manager email: " + bean.getManagerEmail() +
+                        "\n       Request status: " + bean.getStatus() +
+                        "\n       Message: " + message;
 
                 items.add(formattedText);
                 i++;

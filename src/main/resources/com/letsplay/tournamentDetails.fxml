@@ -2,16 +2,12 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -59,28 +55,36 @@
          <center>
             <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-width: 0,2,0,2; -fx-border-color: black;" BorderPane.alignment="CENTER">
                <children>
-                  <Text fx:id="cityText" fill="WHITE" layoutX="16.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City:" wrappingWidth="86.49871826171875">
-                     <font>
-                        <Font name="System Bold" size="30.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="cityField" editable="false" layoutX="87.0" layoutY="8.0" prefHeight="39.0" prefWidth="375.0" text="city">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </TextField>
-                   <VBox layoutY="61.0" prefHeight="183.0" prefWidth="600.0">
-                       <TableView fx:id="tableTournaments" onMouseClicked="#viewDetails" opacity="0.85" prefHeight="165.0" prefWidth="600.0">
-                           <columns>
-                               <TableColumn fx:id="nameColumn" editable="false" prefWidth="140.0" text="Name" />
-                               <TableColumn fx:id="footballFacilityColumn" editable="false" minWidth="0.0" prefWidth="130.66665649414062" text="Football Facility" />
-                               <TableColumn fx:id="addressColumn" editable="false" prefWidth="151.33331298828125" text="Address" />
-                               <TableColumn fx:id="startDateColumn" editable="false" prefWidth="90.0" text="Start Date" />
-                               <TableColumn fx:id="endDateColumn" editable="false" prefWidth="90.0" text="End Date" />
-                               <TableColumn fx:id="typeColumn" editable="false" prefWidth="90.0" text="Type" />
-                           </columns>
-                       </TableView>
-                   </VBox>
+                  <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="244.0" prefWidth="600.0" style="-fx-background-color: rgba(255, 255, 255, 0.7);">
+                     <children>
+                        <Pane layoutX="30.0" layoutY="8.0" prefHeight="226.0" prefWidth="539.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="227.0" fitWidth="204.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@images/tournament.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="nameText" layoutX="219.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="footballFacilityText" layoutX="219.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="typeText" layoutX="219.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="startDateText" layoutX="219.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="endDateText" layoutX="219.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="participationFeeText" layoutX="219.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="numberText" layoutX="219.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="prizeText" layoutX="219.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="requirementsText" layoutX="219.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="cityText" layoutX="219.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Button fx:id="signupButton" layoutX="427.0" layoutY="95.0" mnemonicParsing="false" onAction="#signUp" style="-fx-background-color: FFB347; -fx-background-radius: 15; -fx-border-radius: 15;" text="SIGN UP!" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Text fx:id="addressText" layoutX="219.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="managerEmailText" layoutX="219.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
          </center>

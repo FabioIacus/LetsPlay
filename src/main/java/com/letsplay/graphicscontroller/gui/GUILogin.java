@@ -40,7 +40,7 @@ public class GUILogin extends NavigationController {
             }
         } catch (DAOException e) {
             logger.log(Level.INFO, e.getMessage());
-            showErrorAlert("Credential error", "User not found", "Incorrect email or password!");
+            showErrorAlert("Credential error", "", "Incorrect email or password!");
         } catch (SQLException e) {
             logger.log(Level.INFO, e.getMessage());
             showInfoAlert("Database error!", "", "");
