@@ -32,7 +32,7 @@ public class GUIRequests extends AbstractGUI {
     @FXML
     public ListView<RegistrationBean> listRequests;
     @FXML
-    public final static String title = "Notifications";
+    public static final String TITLE = "Notifications";
 
     @FXML
     public void acceptOrReject(MouseEvent event) {
@@ -44,7 +44,7 @@ public class GUIRequests extends AbstractGUI {
             if (selectedRequest == null) {
                 return;
             }
-            Optional<UserResponse> userResponse = showAcceptOrRejectAlert(title, "Accept or reject request",
+            Optional<UserResponse> userResponse = showAcceptOrRejectAlert(TITLE, "Accept or reject request",
                     "Enter a message:");
             if (userResponse.isEmpty()) {
                 return;
@@ -54,10 +54,10 @@ public class GUIRequests extends AbstractGUI {
             String message = response.getMessage();
             ResponseBean responseBean = new ResponseBean(choice, message);
             new JoinTournamentController().manageRequest(selectedRequest, responseBean);
-            showConfirmationAlert(title, "", "Request processed successfully!");
+            showConfirmationAlert(TITLE, "", "Request processed successfully!");
             goToPage("homeManager.fxml");
         } catch (SQLException | IOException | CsvException e) {
-            showErrorAlert(title, "", e.getMessage());
+            showErrorAlert(TITLE, "", e.getMessage());
         }
     }
 
@@ -95,7 +95,7 @@ public class GUIRequests extends AbstractGUI {
                 }
             });
         } catch (SQLException | CsvValidationException | IOException | DatabaseException e) {
-            showErrorAlert(title, "", "No requests found!");
+            showErrorAlert(TITLE, "", "No requests found!");
         }
     }
 }

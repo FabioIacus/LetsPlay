@@ -27,7 +27,7 @@ public class GUIHomeManager extends AbstractGUI {
     @FXML
     public Button editTournamentButton;
     @FXML
-    public final static String NOTIMPLEMENTED = "This feature has not been implemented yet!";
+    public static final String NOTIMPLEMENTED = "This feature has not been implemented yet!";
 
     @FXML
     public void createTournament(ActionEvent event) {
