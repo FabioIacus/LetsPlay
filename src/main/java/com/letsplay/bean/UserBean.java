@@ -48,20 +48,11 @@ public class UserBean {
     public void setEmail(String email) {
         this.email = email;
     }
-    public void setPassword(String password) {
-        this.password = password;
-    }
     public void setRole(String role) {
         this.role = role;
     }
-    public void setUsername(String username) {
-        this.username = username;
-    }
     public void setName(String name) {
         this.name = name;
-    }
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     private void checkAttributes(String name, String surname, String email, String password, String username, String role) throws InputException {
