@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="revisione sonarcloud">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIHomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/graphicscontroller/cli/CLIHomeManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +102,7 @@
       <recent name="com.letsplay" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GUIMain">
+  <component name="RunManager" selected="Application.CLIMain">
     <configuration name="CLIMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.letsplay.CLIMain" />
       <module name="LetsPlay" />
@@ -178,8 +179,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GUIMain" />
         <item itemvalue="Application.CLIMain" />
+        <item itemvalue="Application.GUIMain" />
         <item itemvalue="JUnit.TestTournamentDAO.testFindTournaments" />
         <item itemvalue="JUnit.TestRegistrationDAOFactory.testCreateReservationDAO" />
         <item itemvalue="JUnit.TestUserDAO.testSignUp" />
@@ -290,14 +291,7 @@
       <workItem from="1738540461103" duration="221000" />
       <workItem from="1738577191322" duration="33994000" />
       <workItem from="1738665704348" duration="953000" />
-    </task>
-    <task id="LOCAL-00007" summary="commit 8/11">
-      <option name="closed" value="true" />
-      <created>1731079243647</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1731079243647</updated>
+      <workItem from="1738666901184" duration="10058000" />
     </task>
     <task id="LOCAL-00008" summary="commit first exception">
       <option name="closed" value="true" />
@@ -683,7 +677,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738666787815</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="revisione sonarcloud">
+      <option name="closed" value="true" />
+      <created>1738666980291</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1738666980292</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

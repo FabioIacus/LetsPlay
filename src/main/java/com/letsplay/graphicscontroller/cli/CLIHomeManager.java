@@ -1,5 +1,6 @@
 package com.letsplay.graphicscontroller.cli;
 
+import com.letsplay.controller.JoinTournamentController;
 import com.letsplay.exception.DAOException;
 import com.letsplay.exception.DatabaseException;
 import com.letsplay.exception.InputException;
@@ -10,6 +11,11 @@ import java.sql.SQLException;
 
 public class CLIHomeManager extends AbstractCLI {
     private static final String NOTIMPLEMENTED = "This feature has not been implemented yet!";
+    JoinTournamentController joinTournamentController;
+    public CLIHomeManager(){
+        joinTournamentController = new JoinTournamentController();
+    }
+
     public void start() throws DAOException, CsvValidationException, SQLException, InputException, IOException, DatabaseException {
         while (true) {
             int choice;
