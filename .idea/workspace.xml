@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="revisione sonarcloud">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,15 +289,7 @@
       <workItem from="1738539408663" duration="1014000" />
       <workItem from="1738540461103" duration="221000" />
       <workItem from="1738577191322" duration="33994000" />
-      <workItem from="1738665704348" duration="626000" />
-    </task>
-    <task id="LOCAL-00006" summary="continuo della CLIHome e aggiunta cartelle tra cui Role">
-      <option name="closed" value="true" />
-      <created>1730991224516</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1730991224516</updated>
+      <workItem from="1738665704348" duration="953000" />
     </task>
     <task id="LOCAL-00007" summary="commit 8/11">
       <option name="closed" value="true" />
@@ -684,7 +675,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738622425397</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="revisione sonarcloud">
+      <option name="closed" value="true" />
+      <created>1738666787814</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1738666787815</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
