@@ -6,7 +6,7 @@ public class SessionManager {
     private static SessionManager instance = null;
     private User currentUser;
 
-    //applicazione del notification Singleton sulla sessione
+    //applicazione del pattern Singleton sulla sessione
     protected SessionManager() {
         currentUser = null;
     }
