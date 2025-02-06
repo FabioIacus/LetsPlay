@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="impostato a javafx21">
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="revisione no usages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,15 +294,8 @@
       <workItem from="1738666901184" duration="19961000" />
       <workItem from="1738745471299" duration="17679000" />
       <workItem from="1738774796154" duration="1099000" />
-      <workItem from="1738852886381" duration="1484000" />
-    </task>
-    <task id="LOCAL-00012" summary="risolto errore sicurezza sonarcloud sul printstacktrace">
-      <option name="closed" value="true" />
-      <created>1731600025768</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1731600025768</updated>
+      <workItem from="1738852886381" duration="5212000" />
+      <workItem from="1738861848654" duration="2166000" />
     </task>
     <task id="LOCAL-00013" summary="risolto errore sicurezza sonarcloud sul printstacktrace">
       <option name="closed" value="true" />
@@ -687,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738853120253</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="revisione no usages">
+      <option name="closed" value="true" />
+      <created>1738854753247</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1738854753248</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,7 +707,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="risolto errore sicurezza sonarcloud sul printstacktrace" />
     <MESSAGE value="creazione di CLILogin" />
     <MESSAGE value="implementazione registrazione utenti" />
     <MESSAGE value="rename in graphicController" />
@@ -730,7 +731,8 @@
     <MESSAGE value="revisione sonarcloud" />
     <MESSAGE value="revisione" />
     <MESSAGE value="impostato a javafx21" />
-    <option name="LAST_COMMIT_MESSAGE" value="impostato a javafx21" />
+    <MESSAGE value="revisione no usages" />
+    <option name="LAST_COMMIT_MESSAGE" value="revisione no usages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
