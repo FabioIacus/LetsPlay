@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="revisione">
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="impostato a javafx21">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeManager.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homepage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/notifications.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/notifications.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/profile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/searchTournament.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/searchTournament.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/signup.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentSignUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentSignUp.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,14 +293,7 @@
       <workItem from="1738666901184" duration="19961000" />
       <workItem from="1738745471299" duration="17679000" />
       <workItem from="1738774796154" duration="1099000" />
-    </task>
-    <task id="LOCAL-00011" summary="login completed">
-      <option name="closed" value="true" />
-      <created>1731598867537</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1731598867537</updated>
+      <workItem from="1738852886381" duration="1484000" />
     </task>
     <task id="LOCAL-00012" summary="risolto errore sicurezza sonarcloud sul printstacktrace">
       <option name="closed" value="true" />
@@ -701,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738769686022</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="impostato a javafx21">
+      <option name="closed" value="true" />
+      <created>1738853120253</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1738853120253</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login completed" />
     <MESSAGE value="risolto errore sicurezza sonarcloud sul printstacktrace" />
     <MESSAGE value="creazione di CLILogin" />
     <MESSAGE value="implementazione registrazione utenti" />
@@ -744,7 +729,8 @@
     <MESSAGE value="progetto completato!" />
     <MESSAGE value="revisione sonarcloud" />
     <MESSAGE value="revisione" />
-    <option name="LAST_COMMIT_MESSAGE" value="revisione" />
+    <MESSAGE value="impostato a javafx21" />
+    <option name="LAST_COMMIT_MESSAGE" value="impostato a javafx21" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

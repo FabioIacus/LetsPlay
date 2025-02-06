@@ -98,21 +98,4 @@ public class UserDAO {
         return 0;
     }
 
-    protected User getUser(ResultSet rs) throws SQLException {
-        User user;
-        Role role;
-
-        //ricavo il ruolo dell'utente
-        if(rs.getString(ROLE).equals("Customer")) {
-            role = Role.CUSTOMER;
-        } else {
-            role = Role.MANAGER;
-        }
-
-        //creo oggetto user
-        user = new User(rs.getString(USERNAME), rs.getString(EMAIL), rs.getString(NAME), rs.getString(SURNAME), role);
-
-        return user;
-    }
-
 }
