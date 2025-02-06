@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="revisione no usages">
+    <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="inserimento db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.mwb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,15 +295,8 @@
       <workItem from="1738745471299" duration="17679000" />
       <workItem from="1738774796154" duration="1099000" />
       <workItem from="1738852886381" duration="5212000" />
-      <workItem from="1738861848654" duration="2166000" />
-    </task>
-    <task id="LOCAL-00013" summary="risolto errore sicurezza sonarcloud sul printstacktrace">
-      <option name="closed" value="true" />
-      <created>1731600329279</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1731600329279</updated>
+      <workItem from="1738861848654" duration="3049000" />
+      <workItem from="1738866372656" duration="155000" />
     </task>
     <task id="LOCAL-00014" summary="creazione di CLILogin">
       <option name="closed" value="true" />
@@ -689,7 +682,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738854753248</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="inserimento db">
+      <option name="closed" value="true" />
+      <created>1738865623662</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1738865623664</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +708,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="creazione di CLILogin" />
     <MESSAGE value="implementazione registrazione utenti" />
     <MESSAGE value="rename in graphicController" />
     <MESSAGE value="rename in graphicscontroller" />
@@ -732,7 +732,8 @@
     <MESSAGE value="revisione" />
     <MESSAGE value="impostato a javafx21" />
     <MESSAGE value="revisione no usages" />
-    <option name="LAST_COMMIT_MESSAGE" value="revisione no usages" />
+    <MESSAGE value="inserimento db" />
+    <option name="LAST_COMMIT_MESSAGE" value="inserimento db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
