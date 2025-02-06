@@ -6,7 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="revisione">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/session/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/letsplay/session/SessionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/letsplay/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeManager.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homeManager.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/homepage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/notifications.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/notifications.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/requests.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/searchTournament.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/searchTournament.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/selectTournament.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/signup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentDetails.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentSignUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/letsplay/tournamentSignUp.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +116,7 @@
       <recent name="com.letsplay" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CLIMain">
+  <component name="RunManager" selected="Application.GUIMain">
     <configuration name="CLIMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.letsplay.CLIMain" />
       <module name="LetsPlay" />
@@ -179,8 +193,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CLIMain" />
         <item itemvalue="Application.GUIMain" />
+        <item itemvalue="Application.CLIMain" />
         <item itemvalue="JUnit.TestTournamentDAO.testFindTournaments" />
         <item itemvalue="JUnit.TestRegistrationDAOFactory.testCreateReservationDAO" />
         <item itemvalue="JUnit.TestUserDAO.testSignUp" />
@@ -292,15 +306,8 @@
       <workItem from="1738577191322" duration="33994000" />
       <workItem from="1738665704348" duration="953000" />
       <workItem from="1738666901184" duration="19961000" />
-      <workItem from="1738745471299" duration="10421000" />
-    </task>
-    <task id="LOCAL-00010" summary="login completed">
-      <option name="closed" value="true" />
-      <created>1731598255966</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1731598255966</updated>
+      <workItem from="1738745471299" duration="17679000" />
+      <workItem from="1738774796154" duration="1099000" />
     </task>
     <task id="LOCAL-00011" summary="login completed">
       <option name="closed" value="true" />
@@ -686,7 +693,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738690440267</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="revisione">
+      <option name="closed" value="true" />
+      <created>1738769686021</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1738769686022</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
