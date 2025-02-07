@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="943e7007-22da-4a01-a9e4-5d7169313a60" name="Changes" comment="inserimento db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EmailFile.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,14 +297,9 @@
       <workItem from="1738852886381" duration="5212000" />
       <workItem from="1738861848654" duration="3049000" />
       <workItem from="1738866372656" duration="155000" />
-    </task>
-    <task id="LOCAL-00014" summary="creazione di CLILogin">
-      <option name="closed" value="true" />
-      <created>1731608242891</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1731608242891</updated>
+      <workItem from="1738866541742" duration="1031000" />
+      <workItem from="1738881165195" duration="1945000" />
+      <workItem from="1738923277570" duration="8256000" />
     </task>
     <task id="LOCAL-00015" summary="implementazione registrazione utenti">
       <option name="closed" value="true" />
@@ -690,7 +685,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738865623664</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="inserimento db">
+      <option name="closed" value="true" />
+      <created>1738866653529</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1738866653530</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
