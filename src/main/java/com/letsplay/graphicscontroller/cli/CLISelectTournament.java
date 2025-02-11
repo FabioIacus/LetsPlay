@@ -66,6 +66,8 @@ public class CLISelectTournament extends AbstractCLI {
         return getChoice(1, i+4);
     }
 
+    //procedimento sbagliato, modificare tutti questi casi in cui viene creata una nuova istanza
+    //perché riempirebbe lo stack
     private void goBack() throws InputException {
         new CLIHomeCustomer().start();
     }

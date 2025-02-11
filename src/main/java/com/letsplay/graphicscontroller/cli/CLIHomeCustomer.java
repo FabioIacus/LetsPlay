@@ -17,11 +17,15 @@ import java.util.List;
 public class CLIHomeCustomer extends AbstractCLI {
     private static final String NOTIMPLEMENTED = "This feature has not been implemented yet!";
     JoinTournamentController joinTournamentController;
+    private CLISelectTournament cliSelectTournament;
+    //procedimento corretto, non devo fare new nei metodi
     public CLIHomeCustomer(){
         joinTournamentController = new JoinTournamentController();
+        cliSelectTournament = new CLISelectTournament();
     }
 
     public void start() throws InputException {
+        //procedimento sbagliato, non va il true ma bisogna usare una variabile booleana
         while (true) {
             int choice;
             try {
@@ -77,7 +81,7 @@ public class CLIHomeCustomer extends AbstractCLI {
                     System.out.println("No tournament found, choose another city!");
                 } else {
                     //passa alla selezione del torneo
-                    new CLISelectTournament().start(simpleTournamentBean);
+                    cliSelectTournament.start(simpleTournamentBean);
                     isTournamentSelected = true;
                 }
             } catch (IOException | InputException | DatabaseException | SQLException e) {
